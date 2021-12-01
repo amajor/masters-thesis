@@ -7,6 +7,16 @@
 ---
 ## Documents
 
+### [Lab 2 Assignment](./Alison%20Major%20-%20Lab%202.pdf)
+
+This was an assignment for the **Software Architecture** course at Lewis 
+University. It was a brief study in several different quality and 
+maintainability scores on three different repositories. The brief work on this
+assignment led to the invitation to work on this new research paper for the
+term paper (and which will ultimately be my thesis).
+
+---
+
 ### [Enabling Empirical Research: A Corpus of Large-Scale Python Systems](./conference_041818.pdf)
 
 The work done in this paper involves collecting a sub-set of Python projects
