@@ -151,6 +151,14 @@ By Len Bass, Paul Clements, and Rick Kazman
 
 ---
 
+## [How does code readability change during software evolution?](./Reviewed/How-does-code-readability-change-during-software-evolution.pdf)
+
+Code readability can impact maintainability. In this article the authors found that within the sample that they reviewed, most source code was readable and a minority of commits changed the readability. They also provide guidelines for maintaining readiability, could be useful when building conclusions from the data.
+
+> Code reading is one of the most frequent activities in software maintenance. Such an activity aims at acquiring information from the code and, thus, it is a prerequisite for program comprehension: developers need to read the source code they are going to modify before implementing changes. As the code changes, so does its readability; however, it is not clear yet how code readability changes during software evolution. To understand how code readability changes when software evolves, we studied the history of 25 open source systems. We modeled code readability evolution by defining four states in which a file can be at a certain point of time (non-existing, other-name, readable, and unreadable). We used the data gathered to infer the probability of transitioning from one state to another one. In addition, we also manually checked a significant sample of transitions to compute the performance of the state-of-the-art readability prediction model we used to calculate the transition probabilities. With this manual analysis, we found that the tool correctly classifies all the transitions in the majority of the cases, even if there is a loss of accuracy compared to the single-version readability estimation. Our results show that most of the source code files are created readable. Moreover, we observed that only a minority of the commits change the readability state. Finally, we manually carried out qualitative analysis to understand what makes code unreadable and what developers do to prevent this. Using our results we propose some guidelines (i) to reduce the risk of code readability erosion and (ii) to promote best practices that make code readable.
+
+---
+
 ## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
