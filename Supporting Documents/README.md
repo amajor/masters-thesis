@@ -32,6 +32,59 @@ different programming languages may have on the code quality of a project.
 
 ---
 
+## [Standardized code quality benchmarking for improving software maintainability](./Reviewed/Standardized-code-quality-benchmarking.pdf)
+
+- Technical quality of source code impacts software maintainability
+  1. how easy it is to determine where and how that change can be performed
+  2. how easy it is to implement that change
+  3. how easy it is to avoid unexpected effects of that change
+  4. how easy it is to validate the changes performed
+- "Measurement standardization greatly facilitates the collection of individual assessments in a structured repository."
+
+- Paper sections:
+  1. Introduction
+  2. Measuring software via code metrics
+  3. Standardized evaluation procedure
+  4. Applications
+  5. Case examples
+  6. Discussion of the approach
+  7. Related work
+  8. Concluding remarks and future work
+
+> We provide an overview of the approach developed by the Software Improvement Group for code analysis and quality consulting focused on software maintainability. The approach uses a standardized measurement model based on the ISO/IEC 9126 definition of maintainability and source code metrics. Procedural standardization in evaluation projects further enhances the comparability of results. Individual assessments are stored in a repository that allows any system at hand to be compared to the industry-wide state of the art in code quality and maintainability. When a minimum level of software maintainability is reached, the certification body of TUV Informationstechnik GmbH issues a Trusted Product Maintainability certificate for the software product.
+
+---
+
+## [ISO/IEC 9126-1:2001](https://www.iso.org/standard/22749.html)
+### Software engineering — Product quality — Part 1: Quality model
+
+- Status: Withdrawn
+- Publication date: 2001-06
+- Revised by ISO/IEC 25010:2011
+
+## [ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html)
+### Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models
+
+> THIS STANDARD WAS LAST REVIEWED AND CONFIRMED IN 2017. 
+> THEREFORE THIS VERSION REMAINS CURRENT.
+
+ISO/IEC 25010:2011 defines:
+
+1. A quality in use model composed of five characteristics (some of which are further subdivided into subcharacteristics) that relate to the outcome of interaction when a product is used in a particular context of use. This system model is applicable to the complete human-computer system, including both computer systems in use and software products in use.
+2. A product quality model composed of eight characteristics (which are further subdivided into subcharacteristics) that relate to static properties of software and dynamic properties of the computer system. The model is applicable to both computer systems and software products.
+
+Activities during product development that can benefit from the use of the quality models include:
+
+- identifying software and system requirements;
+- validating the comprehensiveness of a requirements definition;
+- identifying software and system design objectives;
+- identifying software and system testing objectives;
+- identifying quality control criteria as part of quality assurance;
+- identifying acceptance criteria for a software product and/or software-intensive computer system;
+- establishing measures of quality characteristics in support of these activities.
+
+---
+
 ## [Software Architecture in Practice: Third Edition](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/)
 
 By Len Bass, Paul Clements, and Rick Kazman
