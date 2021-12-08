@@ -1,13 +1,6 @@
 # Supporting Documents
 
-## Links
-
-* To Be Added
-
----
-## Documents
-
-### [Lab 2 Assignment](./Alison%20Major%20-%20Lab%202.pdf)
+## [Lab 2 Assignment](./Alison%20Major%20-%20Lab%202.pdf)
 
 This was an assignment for the **Software Architecture** course at Lewis 
 University. It was a brief study in several different quality and 
@@ -17,7 +10,7 @@ term paper (and which will ultimately be my thesis).
 
 ---
 
-### [Enabling Empirical Research: A Corpus of Large-Scale Python Systems](./conference_041818.pdf)
+## [Enabling Empirical Research: A Corpus of Large-Scale Python Systems](./conference_041818.pdf)
 
 The work done in this paper involves collecting a sub-set of Python projects
 that can be used for further research. The bulk of the effort in this paper is
@@ -28,7 +21,7 @@ systems into a reasonable set for further analysis.
 
 ---
 
-### [A Large-Scale Study of Programming Languages and Code Quality in GitHub](./baishakhi17.pdf)
+## [A Large-Scale Study of Programming Languages and Code Quality in GitHub](./baishakhi17.pdf)
 
 This study begins by programmatically collecting a sample set of projects in 
 GitHub that vary in languages. Then the set is appropriately culled, resulting
@@ -36,5 +29,23 @@ in a final set used for review. The results are then a study of the impact that
 different programming languages may have on the code quality of a project.
 
 > What is the effect of programming languages on software quality? This question has been a topic of much debate for a very long time. In this study, we gather a very large data set from GitHub (728 projects, 63 million SLOC, 29,000 authors, 1.5 million commits, in 17 languages) in an attempt to shed some empirical light on this question. This reasonably large sample size allows us to use a mixed-methods approach, combining multiple regression modeling with visualization and text analytics, to study the effect of language features such as static versus dynamic typing and allowing versus disallowing type confusion on software quality. By triangulating findings from different methods, and controlling for confounding effects such as team size, project size, and project history, we report that language design does have a significant, but modest effect on software quality. Most notably, it does appear that disallowing type confusion is modestly better than allowing it, and among functional languages, static typing is also somewhat better than dynamic typing. We also find that functional languages are somewhat better than procedural languages. It is worth noting that these modest effects arising from language design are overwhelmingly dominated by the process factors such as project size, team size, and commit size. However, we caution the reader that even these modest effects might quite possibly be due to other, intangible process factors, for example, the preference of certain personality types for functional, static languages that disallow type confusion.
+
+---
+
+## [Software Architecture in Practice: Third Edition](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/)
+
+By Len Bass, Paul Clements, and Rick Kazman
+
+### Chapter 18
+
+- "If you go to the trouble of creating a strong architecture, one that you expect to stand the test of time, then you _must_ go to the trouble of describing it in enough detail, without ambiguity, and organizing it so that others can quickly find and update needed information." (pg 327)
+- Documentation holds the results of major design decisions as they are confirmed (pg 328)
+- Architecture documentation is used for several purposes
+  - Means of education (pg 328)
+  - Primary vehicle for communication among stakeholders (pg 329)
+  - Basis for system analysis and construction (pg 329)
+- _Combined View_ - combination of two views to show strong association between them (pg 343)
+- "The architect should plan to issue releases of the documentation to support major project milestones, which usually means far enough ahead of the milestone to give developers time to put the architecture to work." (pg 350)
+- "Explaining the choice of approach is likely to include a discussion about the satisfaction of quality attribute requirements and tradeoffs incurred." (pg 355)
 
 ---
