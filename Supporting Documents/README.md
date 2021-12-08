@@ -159,6 +159,16 @@ Code readability can impact maintainability. In this article the authors found t
 
 ---
 
+## [Measurement and refactoring for package structure based on complex network](./Reviewed/s41109-020-00298-8.pdf)
+
+- "Refactoring, is one of powerful tools to improve software design and increase maintainability and usability for software systems (Fowler 1997)."
+- Cohesion & Coupling
+  - "Cohesion and coupling are correlated but not overlapped. Bias to any one metric is not good to measure software correctly. Based on the relation of cohesion and coupling metrics, we present an evaluation model of package structure, then update the refactoring algorithm."
+
+> Software structure is the backbone for software systems. During the long time of software evolution, it is gradually weakened by continuous code modification and expansion driven by new requirements. Therefore, measuring software and refactoring codes are necessary to keep software structure stable and clean. In this paper, we propose two metrics of cohesion and coupling to characterize package structure. We consider not only the dependencies of intra-package and inter-package, but also the backward dependencies of inter-package. The two metrics are proved theoretically that they are satisfied with Briand’s four properties. Based on these metrics, a refactoring algorithm is presented to improve the quality of package structure. Through tests on ten open source software systems, the experiment result shows our metrics can measure software structure correctly and improve codes to fit for the rule of high cohesion and low coupling.
+
+---
+
 ## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
