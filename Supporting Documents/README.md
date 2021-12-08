@@ -32,6 +32,54 @@ different programming languages may have on the code quality of a project.
 
 ---
 
+## [Pylint](https://pylint.pycqa.org/en/latest/intro.html)
+
+Pylint is a tool that can analyze code for best practices, following the 
+[PEP 8 Style Guide for Python](https://www.python.org/dev/peps/pep-0008/)
+
+> Pylint is a tool that checks for errors in Python code, tries to enforce a coding standard and looks for code smells. It can also look for certain type errors, it can recommend suggestions about how particular blocks can be refactored and can offer you details about the code's complexity.
+
+> Pylint will display a number of messages as it analyzes the code and it can also be used for displaying some statistics about the number of warnings and errors found in different files. The messages are classified under various categories such as errors and warnings.
+
+> Last but not least, the code is given an overall mark, based on the number and severity of the warnings and errors.
+
+### [Pylint Score](https://pylint.pycqa.org/en/latest/technical_reference/features.html#reports-options)
+
+> Python expression which should return a score less than or equal to 10. You have access to the variables 'error', 'warning', 'refactor', and 'convention' which contain the number of messages in each category, as well as 'statement' which is the total number of statements analyzed. This score is used by the global evaluation report (RP0004).
+
+Default Equation: 
+
+    10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+### Refactor Score
+
+- [Refactoring Checker](https://pylint.pycqa.org/en/latest/technical_reference/features.html#refactoring-checker)
+  - max-nested-blocks (default: 5)
+  - never-returning-functions (default: `sys.exit,argparse.parse_error`)
+  - simplifiable-condition
+  - condition-evals-to-constant
+  - simplify-boolean-expression
+  - consider-using-in
+  - consider-merging-isinstance
+  - consider-using-max-builtin
+  - consider-using-min-builtin
+  - consider-using-with
+  - super-with-arguments
+  - use-list-literal
+  - etc.
+
+---
+
+## [PEP 8](https://www.python.org/dev/peps/pep-0008/)
+
+> One of Guido's key insights is that code is read much more often than it is written. The guidelines provided here are intended to improve the readability of code and make it consistent across the wide spectrum of Python code. As PEP 20 says, "Readability counts".
+
+> A style guide is about consistency. Consistency with this style guide is important. Consistency within a project is more important. Consistency within one module or function is the most important.
+
+> However, know when to be inconsistent -- sometimes style guide recommendations just aren't applicable. When in doubt, use your best judgment. Look at other examples and decide what looks best. And don't hesitate to ask!
+
+---
+
 ## [Standardized code quality benchmarking for improving software maintainability](./Reviewed/Standardized-code-quality-benchmarking.pdf)
 
 - Technical quality of source code impacts software maintainability
