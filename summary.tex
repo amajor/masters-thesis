@@ -28,21 +28,14 @@ AlisonMMajor@lewisu.edu}
 \maketitle
 % \tableofcontents
 
-\begin{abstract}
+\section{Introduction}
 This paper will investigate how well the Pylint score (more specifically, the Refactor score) measures a system's structural quality. To do this, we will analyze the correlation between the Refactor score and the ease of adding features to the system.
 
 Good architecture takes into account maintainability. The effort to make a feature work should be easy and localized in maintainable projects. We will measure locality by the number of files edited in a commit. We will focus on commits that represent new features rather than bug fixes.
 
 This paper will review how structural quality can impact software evolution.
-\end{abstract}
 
-\begin{IEEEkeywords}
-software structure, code quality, software evolution
-\end{IEEEkeywords}
-
-\section{Introduction}
-
-gathering information to understand the impact that structural quality can have on the software evolution process . 
+\section{Working with Data}
 
 The work done by Dr. Omari and Dr. Martinez involves collecting a sub-set of Python projects that can be used for further research. The bulk of the effort that they have provided is in determining which classifiers to use to pare down the public set of Python systems into a reasonable set for further analysis \cite{omari:2018}. This work will be used to select appropriate Python systems for review by collecting meta-data on these code systems. With this information, we hope to understand the impact that structure quality can have on the software evolution process.
 
@@ -52,11 +45,15 @@ First, in order to understand the scores we'll be working with, we must understa
 
 A study conducted by Baishakhi Ray, Daryl Posnett, Premkumar Devanbu, and Vladimir Filkov begins by programmatically collecting a sample set of projects in GitHub that vary in languages. Then the set is appropriately culled, resulting in a final set used for review. The results are then a study of the impact that different programming languages may have on the code quality of a project \cite{baishakhi:2017}. The methods that this group used and ideas they have formed may be useful in creating direction and assumptions in our own research.
 
+\section{Insights into Maintainability}
+
 Another paper, "Standardized code quality benchmarking for improving software maintainability," provides additional insights into how code maintainability is impacted by the technical quality of source code \cite{baggen:2012}. Within their paper, they seek to show four key points: (1) how easy it is to determine where and how the change is made, (2) how easy it is to implement the change, (3) how easy it is to avoid unexpected effects, and (4) how easy it is to validate the changes. The research that this group provides could provide useful insights in our project.
 
 Reviewing the "Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models" maintained by ISO may also provide interesting insights \cite{iso/iec:25010:2011}. Does the Pylint checker follow the quality models outlined here? Are there benefits or drawbacks to the models that the ISO/IEC:25010:2011 suggests? These could influence more thoughts on interpreting final data results.
 
 Within the course's text book, "Software Architecture in Practice," chapter 18 provides some insight in documentation around architecture \cite{book:software-architecture-in-practice}. When reviewing code quality scores, it would be interesting to review some of the documentation around the highest scoring software systems and some of the lowest scoring software systems. Do these projects have adequate documentation? Does the level of documentation correlate to the ability to maintain a proper score? I would be curious to see if contributing developers are positively influenced by good documenation, or what other factors may contribute to maintainable code structures.
+
+Another variable that may impact the maintainability of code is readability. In the article "How does code readability change during software evolution?" the authors have addressed this concern, and found that within the sample that they reviewed, most source code was readable and a minority of commits changed the readability \cite{piantadosi:2020}. This variable in the maintainability of a software system can influence how easy or difficult it is to make a change. Referencing the findings from these authors, as well as the guidelines they provide for maintaining readiability, could be useful when building conclusions from the data.
 
 \newpage
 \bibliographystyle{unsrt}
