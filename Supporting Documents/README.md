@@ -1,6 +1,6 @@
 # Supporting Documents
 
-## [Lab 2 Assignment](./Alison%20Major%20-%20Lab%202.pdf)
+## [Lab 2 Assignment](./Reviewed/Alison%20Major%20-%20Lab%202.pdf)
 
 This was an assignment for the **Software Architecture** course at Lewis 
 University. It was a brief study in several different quality and 
@@ -10,7 +10,7 @@ term paper (and which will ultimately be my thesis).
 
 ---
 
-## [Enabling Empirical Research: A Corpus of Large-Scale Python Systems](./conference_041818.pdf)
+## [Enabling Empirical Research: A Corpus of Large-Scale Python Systems](./Reviewed/conference_041818.pdf)
 
 The work done in this paper involves collecting a sub-set of Python projects
 that can be used for further research. The bulk of the effort in this paper is
@@ -21,7 +21,7 @@ systems into a reasonable set for further analysis.
 
 ---
 
-## [A Large-Scale Study of Programming Languages and Code Quality in GitHub](./baishakhi17.pdf)
+## [A Large-Scale Study of Programming Languages and Code Quality in GitHub](./Reviewed/baishakhi17.pdf)
 
 This study begins by programmatically collecting a sample set of projects in 
 GitHub that vary in languages. Then the set is appropriately culled, resulting
@@ -50,7 +50,7 @@ By Len Bass, Paul Clements, and Rick Kazman
 
 ---
 
-## [Software structure evolution and relation to subgraph defectiveness](./iet-sen.2018.5060.pdf)
+## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
 - "It has been identified that the majority of faults are located in a minority of system modules/classes and that this minority of system modules/classes constitutes a minority of system share."
