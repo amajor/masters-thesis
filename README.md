@@ -14,3 +14,5 @@ The code repository started by Dr. Omari can be found on Bitbucket at https://bi
 
 * [Supporting Documents](./Supporting%20Documents)
   * This folder contains articles and links that have been used for research and understanding the topic.
+* [Paper Summary](./summary.pdf)
+  * One to two page description of the paper topic including 6 to 10 references that you intend to use in your research.
