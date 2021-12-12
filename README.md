@@ -6,11 +6,7 @@ Good architecture takes into account maintainability. The effort to make a featu
 
 ## Goal
 
-> This paper will review how structural quality can impact software evolution.
-
-## Code
-
-The code repository started by Dr. Omari can be found on Bitbucket at https://bitbucket.org/bankruptcy-guru/code-metrics/src/master/.
+This paper will review how structural quality can impact software evolution.
 
 ## Contents
 
@@ -20,3 +16,7 @@ The code repository started by Dr. Omari can be found on Bitbucket at https://bi
   * One to two page description of the paper topic including 6 to 10 references that you intend to use in your research.
 * [Course Paper](./cousreproject.pdf)
   * This is a 10-12 page paper created for the Software Architecture graduate level course at Lewis University.
+
+## Code
+
+The code repository started by Dr. Omari can be found on Bitbucket at https://bitbucket.org/bankruptcy-guru/code-metrics/src/master/.
