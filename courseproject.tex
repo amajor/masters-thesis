@@ -88,9 +88,9 @@ Like how it may be easier to change how we look and how well we can see by using
 % =============================================================================
 % =  The Problem (1 page)
 % =============================================================================
-\newpage \todo{remove page break - the problem - 1 page}
 
-\section{The Problem}
+\section{The Problem \todo{TODO: Rename Section}}
+\todo{TODO: the problem - 1 page}
 
 % --- The problem is that some projects fail to evolve ------------------------
 
@@ -144,11 +144,13 @@ If a system is large, it may involve a number of steps in order to get changes t
 % =============================================================================
 % =  My Idea (2 pages)
 % =============================================================================
-\newpage \todo{remove page break - my idea - 2 pages}
 
-\section{My Idea \todo{RENAME THIS SECTION}}
+\section{The Impact of Structural Quality}
+\todo{TODO: my idea - 2 pages}
+
 
 % --- Understand Software Maintenance -----------------------------------------
+\subsection{Understand Software Maintenance}
 
 The structural quality of a software system will impact the software evolution. If the project has poor structural quality, its ability to evolve will be minimized and the software system will eventually ``die-off'' so to speak.
 
@@ -163,6 +165,7 @@ A project is known to have good maintainability when there is an enforced set of
 Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and by fixing bugs can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
 
 % --- Understand Software Evolution -------------------------------------------
+\subsection{Understand Software Evolution}
 
 There is a distinction to be made between \textbf{software maintenance} and \textbf{software evolution}. Software maintenance is what we'll refer to as bug resolution and for minor enhancements. For example, when we must fix a broken route in the application, or provide subtle improvement on the user experience, we can consider this normal maintenance. However, when we look at upgrades to the system, adaptations to the changing and growing needs of the user, or migrating the system to a new technology, we can refer to this as evolution of the software.
 
@@ -215,12 +218,14 @@ In Lehman's sixth law, ``Continuing Growth,'' we see that the system user's sati
 
 With all of these characteristics surrounding the evolution of software, we have the benefit of the Internet that has positively improved the experience. Two common resources currently available to developers have impacted software evolution \cite{wiki:software-evolution}:
 
-\begin{itemize}
+\begin{enumerate}
     \item The rapid growth of World Wide Web and Internet Resources make it easier for users and engineers to find related information.
     \item Open source development where anybody could download the source codes and hence modify it has enabled fast and parallel evolution (through forks).
-\end{itemize}
+\end{enumerate}
 
 These two suggestions are evident if you are a developer. It is quite possible that you regularly use resources like StackOverflow to find solutions to problems, as well as using open source tools that you and your team can contribute to or adjust to your specific needs.
+
+\subsection{Measuring Maintainability}
 
 Despite the nuanced differences between \textit{maintainability} and \textit{evolution}, the two characteristics run parallel to each other. If a system is easy to maintain, it follows that it will also be easier to evolve. If we can measure our system's maintainability, we can also determine if our system is in a good position to continue evolving to meet our future needs.
 
@@ -233,88 +238,113 @@ We will look at many open-source Python systems using Pylint and attempt to corr
 % =============================================================================
 % =  The Details, defending my idea (5 pages)
 % =============================================================================
-\newpage \todo{remove page break - the details - 5 pages}
 
-\section{The Details}
+\section{The Details \todo{TODO: Rename Section}}
+\todo{TODO: the details - 5 pages}
 
 % --- How does my idea solve the problem? -------------------------------------
 % --- THE PROBLEM: Some projects fail to evolve, resulting in loss if income.
 % --- MY IDEA: Software evolution is impacted by structural quality.
 % -----------------------------------------------------------------------------
 
+Now that we have established that we have a problem with projects that fail to evolve, which can result in a loss of revenue, we need to understand how we can ensure that our systems may evolve. For this, we will look to understand how the evolution of software is impacted by the system's structural quality.
+
 % -----------------------------------------------------------------------------
-% -  We can use maintainability scores to see how structure impacts evolution.
+% -  (A) We can use maintainability scores to see how structure impacts evolution.
 % -----------------------------------------------------------------------------
 \subsection{Maintainability Scores} \label{sectionMaintainabilityScores}
 
-% --- CLAIM A -----------------------------------------------------------------
-% --- A1 - Check each claim in the introduction
-% --- A2 - Identify the evidence (analysis and comparison, theorems, measurements, case studies)
-% --- A3 - Forward-reference it from the claim
+% --- Claim A: Review each claim from the introduction
 
-\todo{claim 1}
+First, let us consider our original understanding about software maintainability. While this particular definition is focused primarily on bug fixes and minor enhancements, projects that are maintainable should also have an ease in their ability to evolve over time. Therefore, we can study the impact maintainability (that is, structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
 
-\todo{To understand the scores we will be working with, we must understand what Pylint itself is doing. Then, through the documentation of Pylint, we can understand how to use it and the scores it will provide \cite{pylint:main}. We can also review the documentation to know how the Pylint Score is calculated, as well as the various features that the Refactor Score takes into account \cite{pylint:score}. Finally, in respect to Python, it is also essential to understand PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}.}
+In this study, we will be using Pylint and will be focused on the values of the Refactor score in regards to a set of open-source Python systems. To understand the scores we will be working with, we must understand what Pylint itself is doing. 
 
-\todo{The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea with the focus on cohesion and coupling over time for a project \cite{zhou:2020}. It will be interesting to read and understand their findings and see how it compares to the data that we collect and understand.}
+\todo{Through the documentation of Pylint, we can understand how to use it and the scores it will provide \cite{pylint:main}.}
 
-\todo{Another variable that may impact the maintainability of code is readability. For example, in the article ``How does code readability change during software evolution?'' the authors have addressed this concern and found that most source codes were readable within the sample they reviewed. Additionally, a minority of commits changed the readability \cite{piantadosi:2020}. This variable in the maintainability of a software system can influence how easy or difficult it is to make a change. Referencing the findings from these authors and the guidelines they provide for maintaining readability could be helpful when building conclusions from the data we collect ourselves.}
+\todo{We can also review the documentation to know how the Pylint Score is calculated, as well as the various features that the Refactor Score takes into account \cite{pylint:score}.}
 
-\todo{Another paper, ``Standardized code quality benchmarking for improving software maintainability,'' provides additional insights into how the code's maintainability is impacted by the technical quality of source code \cite{baggen:2012}. Within their paper, the authors seek to show four key points: (1) how easy it is to determine where and how the change is made, (2) how easy it is to implement the change, (3) how easy it is to avoid unexpected effects, and (4) how easy it is to validate the changes. The research that this group provides could provide valuable insights into our project.}
+Finally, in respect to Python, it is also essential to understand PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard can be used to make code more readable, which in turn, may contribute to the code being more maintainable.
+
+% --- Claim A: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+
+The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea with the focus on cohesion and coupling over time for a project \cite{zhou:2020}. In a software system, we desire low coupling (allows for changes to one area to remain independent of changes to another area of a system) and high cohesion (indicates reduced complexity in modules, which improves maintainability). 
+
+\todo{TODO: read and understand their findings and see how it compares to the data that we collect and understand.}
+
+Another variable that may impact the maintainability of code is readability. For example, in the article ``How does code readability change during software evolution?'' the authors have addressed this concern and found that most source codes were readable within the sample they reviewed. Additionally, a minority of commits changed the readability \cite{piantadosi:2020}. This variable in the maintainability of a software system can influence how easy or difficult it is to make a change. 
+
+\todo{TODO: compare guidelines from \cite{piantadosi:2020}; do best scoring projects follow these ideas?}
+
+Another paper, ``Standardized code quality benchmarking for improving software maintainability,'' provides additional insights into how the code's maintainability is impacted by the technical quality of source code \cite{baggen:2012}. Within their paper, the authors seek to show four key points: (1) how easy it is to determine where and how the change is made, (2) how easy it is to implement the change, (3) how easy it is to avoid unexpected effects, and (4) how easy it is to validate the changes. 
+
+\todo{TODO: compare \cite{baggen:2012} to our data}
 
 % -----------------------------------------------------------------------------
-% -  Following shared standards improves maintainability.
+% -  (B) Following shared standards improves maintainability.
 % -----------------------------------------------------------------------------
 \subsection{Shared Standards} \label{sectionSharedStandards}
 
-% --- CLAIM B -----------------------------------------------------------------
-% --- B1 - Check each claim in the introduction
-% --- B2 - Identify the evidence (analysis and comparison, theorems, measurements, case studies)
-% --- B3 - Forward-reference it from the claim
-
-\todo{claim 2}
+% --- Claim B: Review each claim from the introduction
 
 \todo{Reviewing the ``Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models'' maintained by ISO may also provide interesting insights \cite{iso/iec:25010:2011}. Does the Pylint checker follow the quality models outlined here? Are there benefits or drawbacks to the models that the ISO/IEC:25010:2011 suggests? These could influence more thoughts on interpreting final data results.}
 
+% --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+
+\todo{TODO: Claim B - identify evidence (analysis and comparison, theorems, measurements, case studies).}
+
 % -----------------------------------------------------------------------------
-% -  Documentation can improve maintainability.
+% -  (C) Documentation can improve maintainability.
 % -----------------------------------------------------------------------------
 \subsection{Documentation} \label{sectionDocumentation}
 
-% --- CLAIM C -----------------------------------------------------------------
-% --- C1 - Check each claim in the introduction
-% --- C2 - Identify the evidence (analysis and comparison, theorems, measurements, case studies)
-% --- C3 - Forward-reference it from the claim
+% --- Claim C: Review each claim from the introduction
 
-\todo{claim 3}
+We can see that the Refactor score in projects correlates to the evolution of the system \todo{(TODO: Confirm this)}. This may indicate that the code and system are readable in themselves, in addition to being loosely coupled and highly cohesive. Out of curiosity, we can also review the level of documentation in several of the most maintainable projects, as well as several of the least maintainable projects. It would be useful to understand if there are any similarities in how a system is documented that could contribute to improved software evolution of a system.
 
-\todo{Within the course's textbook, ``Software Architecture in Practice,'' chapter 18 provides some insight in documentation around architecture \cite{book:software-architecture-in-practice}. When reviewing code quality scores, it would be interesting to check some of the documentation around the best scoring software systems and some of the worst scoring software systems. Do these projects have adequate documentation? Does the level of documentation correlate to the ability to maintain a decent score? I would be curious if contributing developers are positively influenced by good documentation or other factors to maintainable code structures.}
+\todo{TODO: what kind of docuemntation do the ``good'' projects have?}
+
+\todo{TODO: what kind of docuemntation do the ``bad'' projects have?}
+
+% --- Claim C: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+
+The course textbook, ``Software Architecture in Practice,'' chapter 18 provides some insight in documentation around architecture \cite{book:software-architecture-in-practice}. 
+
+\todo{TODO: Do these projects have adequate documentation?}
+
+\todo{TODO: Does the level of documentation correlate to the ability to maintain a decent score?}
 
 % =============================================================================
 % =  Related Works (1 to 2 pages)
 % =============================================================================
-\newpage \todo{remove page break - related work - 1 to 2 pages}
 
 \section{Related Work}
+\todo{TODO: related work - 1 to 2 pages - give credit to those who have come before, 1-2 pages}
 
-\todo{give credit to those who have come before, 1-2 pages}
+The work done by Dr. Omari and Dr. Martinez involves collecting a sub-set of Python projects that we can use for further research. The bulk of the effort they have provided is determining which classifiers to use to pare down the public set of Python systems into a good collection for further analysis \cite{omari:2018}. The work that they ahve provided was used to select appropriate Python systems for review by collecting meta-data on these code systems.
 
-\todo{The work done by Dr. Omari and Dr. Martinez involves collecting a sub-set of Python projects that we can use for further research. The bulk of the effort they have provided is determining which classifiers to use to pare down the public set of Python systems into a good collection for further analysis \cite{omari:2018}. We will use this work to select appropriate Python systems for review by collecting meta-data on these code systems. We hope to understand the impact of structure quality on the software evolution process with this information.}
+\todo{TODO: elaborate more on Omari and Martinez work and influence}
 
-\todo{A study conducted by Baishakhi Ray, Daryl Posnett, Premkumar Devanbu, and Vladimir Filkov begins by programmatically collecting a sample set of projects in GitHub that vary in languages. Then the group of projects is appropriately culled, resulting in a final set used for the review. The results are then a study of the impact different programming languages may have on the code quality \cite{baishakhi:2017}. The group's methods and the ideas they have formed may help create direction and assumptions in our research.}
+A study conducted by Baishakhi Ray, Daryl Posnett, Premkumar Devanbu, and Vladimir Filkov begins by programmatically collecting a sample set of projects in GitHub that vary in languages. Then the group of projects was appropriately culled, resulting in a final set used for the review. The results were then studied for the impact different programming languages may have had on the code quality \cite{baishakhi:2017}. 
+
+\todo{TODO: can these ideas provide direction and assumptions in our research?}
 
 % =============================================================================
 % =  Conclusions and Further Work (0.5 page)
 % =============================================================================
-\newpage \todo{remove page break - conclusion - half page}
 
 \section{Conclusions \& Further Work}
+\todo{TODO: conclusion - half page}
 
-\todo{By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful in regards to maintainability. Good projects will inevitably continue to grow and evolve. Understanding methods to keep code refactor on a level that makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.}
+By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful in regards to maintainability. Good projects will inevitably continue to grow and evolve. Understanding methods to keep code refactor on a level that makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.
 
-\todo{Projects that may be open source or have many contributors are especially vulnerable to maintainability degrading over the evolution of a project. Having a reliable metric can be very useful in programmatically avoiding code smells and keeping code in a state that is easy to manage through simple metric checks in deployment pipelines.}
+\todo{TODO: did bad scoring projects die off?}
 
-\todo{Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.}
+Projects that may be open source or have many contributors are especially vulnerable to maintainability degrading over the evolution of a project. Having a reliable metric can be very useful in programmatically avoiding code smells and keeping code in a state that is easy to manage through simple metric checks in deployment pipelines.
+
+\todo{TODO: elaborate.}
+
+Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.
 
 % =============================================================================
 % =  Bibliography and Sources
