@@ -77,9 +77,13 @@ To give some simple examples for tightly and loosely coupled systems, let us con
 
 Like how it may be easier to change how we look and how well we can see by using prescriptive eyewear, creating a structured software system will impact how the software can evolve with new features. If a system is difficult to evolve, users will lose favor as it cannot offer the newest features that competitors may offer.
 
-\todo{State your contributions. Do not leave the reader to guess what my contributions are. Should be provable (refutable).}
+\todo{State your contributions. Do not leave the reader to guess what my contributions are. Should be provable (refutable). Contributions will be things we have proven or worked out in the following sections. Can link to those sections as we describe those contributions.}
 
-\todo{Contributions will be things we have proven or worked out in the following sections. Can link to those sections as we describe those contributions.}
+\todo{CLAIM: We can use maintainability scores to see how structure impacts evolution} (Section \ref{sectionMaintainabilityScores}).
+
+\todo{CLAIM: Following shared standards improves maintainability} (Section \ref{sectionSharedStandards}).
+
+\todo{CLAIM: Documentation can improve maintainability} (Section \ref{sectionDocumentation}).
 
 % =============================================================================
 % =  The Problem (1 page)
@@ -166,11 +170,50 @@ Evolution of software can be a result of new laws that have come into being. As 
 
 It is also fair to say that systems will change because we can never fully determine the needs of a user at the start of a project. In fact, it would be safe to say that the needs of the user will change over time themselves. This leads to a never-ending project that will always need some form of enhancements.
 
-\todo{look into Lehman's Laws \cite{wiki:lehmans-laws}}
+Meir "Manny" Lehman and László "Les" Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws specifically apply to programs that were written to perform some real-world activity, where its behavior is linked to the environment in which it runs; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are summarized below.
+\cite{wiki:lehmans-laws}
 
-As a system changes, it is likely that its complexity will also increase. This can be due the added volume of the code from new features, or even as a result of an increasing number of developers that have edited the code. Unless this phenomenon of increased complexity is actively addressed during changes, it can impact the maintainability (and the ability of a project to continue evolving) in the future.
+\begin{enumerate}
+    % "Continuing Change" — an E-type system must be continually adapted or it becomes progressively less satisfactory.
+    \item \textbf{Continuing Change} \textit{(1974)}
+    
+    % "Increasing Complexity" — as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it.
+    \item \textbf{Increasing Complexity} \textit{(1974)}
 
-The Internet has contributed to things that impact software evolution \cite{wiki:software-evolution}:
+    % "Self Regulation" — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal.
+    \item \textbf{Self Regulation} \textit{(1974)}
+
+    % "Conservation of Organisational Stability (invariant work rate)" — the average effective global activity rate in an evolving E-type system is invariant over the product's lifetime.
+    \item \textbf{Conservation of Organisational Stability} \textit{(1978)}
+
+    % "Conservation of Familiarity" — as an E-type system evolves, all associated with it, developers, sales personnel and users, for example, must maintain mastery of its content and behaviour to achieve satisfactory evolution. Excessive growth diminishes that mastery. Hence the average incremental growth remains invariant as the system evolves.
+    \item \textbf{Conservation of Familiarity} \textit{(1978)}
+
+    % "Continuing Growth" — the functional content of an E-type system must be continually increased to maintain user satisfaction over its lifetime.
+    \item \textbf{Continuing Growth} \textit{(1991)}
+
+    % "Declining Quality" — the quality of an E-type system will appear to be declining unless it is rigorously maintained and adapted to operational environment changes.
+    \item \textbf{Declining Quality} \textit{(1996)}
+
+    % "Feedback System" (first stated 1974, formalised as law 1996) — E-type evolution processes constitute multi-level, multi-loop, multi-agent feedback systems and must be treated as such to achieve significant improvement over any reasonable base.
+    \item \textbf{Feedback System} \textit{(1996)}
+\end{enumerate}
+
+The first law, ``Continuing Change,'' tells us that if a system does not continue to adapt, it will become progressively less satisfactory. The second, ``Increasing Complexity,'' explains that as a system evolves, unless work is done to maintain or reduce complexity, the complexity will increase. This can be due the added volume of the code from new features, or even as a result of an increasing number of developers that have edited the code. Unless this phenomenon of increased complexity is actively addressed during changes, it can impact the maintainability (and the ability of a project to continue evolving) in the future.
+
+Lehman's fifth law, ``Conservation of Familiarity,'' explains how the average incremental growth does not change over time as a system evolves. The people interacting with the system, such as the developers, business personel, or users, must still be able to continue to use and work within the system at the same ``level of mastery.'' If the system grows and changes excessively, the mastery of the system will drop, slowing down the next set of changes. This could be because the source code or architecture has become more complex (impacting the developers' ability to adapt and enhance the system) or because the user features have changed in such a way that the system audience needs time to master the new interfaces or new tools. Because of this natural ``slow-down'' for excessive change occurs, the average incremental growth will remain steady. We can see a simplified visual in ``Fig.~\ref{figConservationOfFamiliarity}'' showing that when the number of changes spikes (that is to say, when there is excessive growth in a system), it will be followed by an iteration of fewer changes, leading to a nearly consistent average of incremental growth (the thick, horizontal line) over time.
+
+\begin{figure}[ht]
+    \centerline{
+        \includegraphics[width=\columnwidth]{Changes-vs-Time}
+    }
+    \caption{A simplified visual of Lehman's fifth law, ``Conservation of Familiarity.''}
+    \label{figConservationOfFamiliarity}
+\end{figure}
+
+In Lehman's sixth law, ``Continuing Growth,'' we see that the system user's satisfaction will not be maintained without continually increasing the functional content. Along a similar idea, the law pertaining to ``Declining Quality'' states that if the operational environment for the system does not change, the quality of the system will appear to decline. We must continue adapting for even the appearance of maintained quality of a system.
+
+With all of these characteristics surrounding the evolution of software, we have the benefit of the Internet that has positively improved the experience. Two common resources currently available to developers have impacted software evolution \cite{wiki:software-evolution}:
 
 \begin{itemize}
     \item The rapid growth of World Wide Web and Internet Resources make it easier for users and engineers to find related information.
@@ -202,7 +245,7 @@ We will look at many open-source Python systems using Pylint and attempt to corr
 % -----------------------------------------------------------------------------
 % -  We can use maintainability scores to see how structure impacts evolution.
 % -----------------------------------------------------------------------------
-\subsection{Maintainability Scores}
+\subsection{Maintainability Scores} \label{sectionMaintainabilityScores}
 
 % --- CLAIM A -----------------------------------------------------------------
 % --- A1 - Check each claim in the introduction
@@ -222,7 +265,7 @@ We will look at many open-source Python systems using Pylint and attempt to corr
 % -----------------------------------------------------------------------------
 % -  Following shared standards improves maintainability.
 % -----------------------------------------------------------------------------
-\subsection{Shared Standards}
+\subsection{Shared Standards} \label{sectionSharedStandards}
 
 % --- CLAIM B -----------------------------------------------------------------
 % --- B1 - Check each claim in the introduction
@@ -236,7 +279,7 @@ We will look at many open-source Python systems using Pylint and attempt to corr
 % -----------------------------------------------------------------------------
 % -  Documentation can improve maintainability.
 % -----------------------------------------------------------------------------
-\subsection{Documentation}
+\subsection{Documentation} \label{sectionDocumentation}
 
 % --- CLAIM C -----------------------------------------------------------------
 % --- C1 - Check each claim in the introduction
