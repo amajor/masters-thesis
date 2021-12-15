@@ -169,6 +169,16 @@ Code readability can impact maintainability. In this article the authors found t
 
 ---
 
+## [Impact of design patterns on software quality: a systematic literature review](./Reviewed/iet-sen.2018.5446.pdf)
+
+- "The flexibility provided by design patterns becomes clear when the software is extended."
+- "Changes performed in a class can be corrective, adaptive, perfective, or preventive. These changes can occur due to new requirements, debugging, changes that propagate from changes in other classes and refactoring."
+  - "A class that changes more frequent than others might be because the class is easy to extend or because the class is correlated to other classes, which raises an alarm about the class modularity."
+- "Our study has shown that the primary studies provide empirical evidence on the positive effect of documentation of designs pattern instances on programme comprehension, and therefore, maintainability."
+- "...developers should pay more effort to add such documentation, even if in the form of simple comments in the source code."
+
+---
+
 ## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
