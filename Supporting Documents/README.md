@@ -179,6 +179,25 @@ Code readability can impact maintainability. In this article the authors found t
 
 ---
 
+## [Software Architecture Metrics: A Literature Review](./Reviewed/1901.09050.pdf)
+
+> In Software Engineering, early detection of architectural issues is key. It helps mitigate the risk of poor performance, and lowers the cost of repairing these issues. Metrics give a quick overview of the project which helps designers with the detection of flaws or degradation in their architecture. Even though studies unveiled architectural metrics more than 25 years ago, they have not yet been embraced by the industry nor the open source community. In this study, we aim at conducting a review of existing metrics focused on the software architecture for evaluating quality, early in the design flow and throughout the project’s lifetime. We also give guidelines of their usage and study their relevance in different contexts.
+
+- Early detection of architectural issues is key
+  - Helps mitigate risk of poor performance
+  - Lowers cost of repairing these issues
+- Studies unveiled  architectural metrics 25 years ago
+  - Industry and open source community have not embraced the metrics
+- This study conducts review of existing metrics focused on software architecture for evaluating quality early in design flow AND throughout project's lifetime
+- Provides guidelines of metric usage
+- Studies relevance of metrics in different contexts
+
+> **Maintainability**: It is very important that a software is easy to maintain. It must be easy to make changes in a software, either for the addition of a new feature, or for a bug fix. This means that changes must be possible locally, without impacting all of the software. Maintainability also means that it is possible for multiple developers to work on separate parts of the software without impacting each other, which enables parallel work. Maintainability is often synonym with sustainability, as it makes it possible for the software project to be used and updated for many years. For all these reasons, making a software maintainable is key for the future of the project.
+
+> **Extensibility**: The ability for a software architecture to handle addition of new functionalities and components. It is very valuable in agile development as features are added throughout the life of the project.
+
+---
+
 ## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
