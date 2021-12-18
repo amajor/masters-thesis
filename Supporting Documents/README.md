@@ -198,6 +198,14 @@ Code readability can impact maintainability. In this article the authors found t
 
 ---
 
+## [A Beginner's Guide to Code Standards in Python - Pylint Tutorial](https://docs.pylint.org/en/1.6.0/tutorial.html)
+
+This site appears to give a walkthrough of Pylint and how to use and understand it.
+
+TODO: Review this site.
+
+---
+
 ## [Software structure evolution and relation to subgraph defectiveness](./Reviewed/iet-sen.2018.5060.pdf)
 
 - "...people are the key element in software production, and human mistakes are the main source of software faults. Good and reliable techniques for software fault prevention and early detection are one of the major concerns of organisations developing such systems."
