@@ -32,7 +32,7 @@
 \pagestyle{plain}
 
 % Create the title
-\title{Structural Quality \& Software Evolution: \newline \todo{First Draft}}
+\title{Structural Quality \& Software Evolution}
 
 %% =============================================================================
 % =  Author Information
@@ -75,9 +75,7 @@ With this understanding, we explore ways to improve the evolution of a software 
 \section{Introduction}
 \vspace{0.25cm}
 
-\todo{THE PROBLEM: quality of softare architecture is important to a project, but difficult to understand and measure... having metrics that can be checked at beginning and life of project; makes it faster to review architecture than doing by hand. Makes sure project stays maintainable with every sprint, every merge}
-
-When building systems as software engineers, we have several areas of concern. How much will it cost? How long will it take to deliver? What will the quality be? The cost and time-to-market are often the two concerns given the highest priority in a project. However, the quality must be considered to preserve the system's longevity.
+When building systems as software engineers, we have several areas of concern. How much will it cost? How long will it take to deliver? What will the quality be? The cost and time-to-market are often the two concerns given the highest priority in a project. However, the quality must be considered to preserve the system's longevity. The quality of the code and architecture can be difficult to understand and measure.
 
 When we think about projects, we can assume that as time goes on and changes and additions are made within a system's source code, the complexity of that system will grow (``Fig.~\ref{figTimeAndComplexity}''). More code means increased complexity. However, when we manage the code structure, we can keep the complexity in check, allowing systems to evolve. This structure can be maintained through simple steps like having readable code and more complex considerations, like how coupled and cohesive a system is.
 
@@ -101,12 +99,11 @@ Like how it may be easier to change how we look and how well we can see by using
 % --- MY IDEA: Software evolution is impacted by structural quality.
 % -----------------------------------------------------------------------------
 
-We will explore automated metric systems that provide evaluation scores of software systems. By using some maintainability scores, we can see how structure impacts evolution (Section \ref{sectionMaintainabilityScores}). In our case, we will explore the Pylint Refactor score on commits for new features, focusing specifically on the adaptability and evolution of a software project. \todo{TODO: what is the specific, refutable information that we found?}
+We will explore automated metric systems that provide evaluation scores of software systems. By using some maintainability scores, we can see how structure impacts evolution (Section \ref{sectionMaintainabilityScores}). In our case, we will explore the Pylint Refactor score on commits for new features, focusing specifically on the adaptability and evolution of a software project.
 
-\todo{TODO: add a section on Pylint refactor score}
-\todo{TODO: how is Pylint Refactor score calculated}
-\todo{TODO: What type of errors in this category (Pylint refactor)}
-\todo{TODO: How Pylint Refactor errors are related to architecture smells}
+\todo{TODO: what is the specific, refutable information that we found?}
+
+\todo{TODO: having metrics that can be checked at beginning and life of project; makes it faster to review architecture than doing by hand. Makes sure project stays maintainable with every sprint, every merge}
 
 In addition to using scores to predict software evolution ability, we also look at documentation used in the best and worst projects to determine that good documentation can improve maintainability (Section \ref{sectionDocumentation}).
 
@@ -120,7 +117,7 @@ In addition to using scores to predict software evolution ability, we also look 
 
 % --- The problem is that some projects fail to evolve ------------------------
 
-When developing a new system, a new software idea, getting the project off the ground and in front of users is one thing. However, keeping that project alive with a thriving community of engaged users is another thing.
+When developing a new system or a new software idea, getting the project off the ground and in front of users is one thing. However, keeping that project alive with a thriving community of engaged users is another thing.
 
 The systems we create could be customer-facing web applications, games, or internal applications used to carry out tasks. Regardless of the type of system, the product will no longer provide usefulness without evolving with the user's needs. Even in the business world with internal systems, over time, users will need change; how a system can adapt to those needs requires a level of flexibility.
 
@@ -136,7 +133,7 @@ Let us consider what software evolution is, from this simple definition on Wikip
 
 % --- Why does it matter if a project does not evolve? ------------------------
 
-When a system cannot evolve, the users mainly feel the impact. However, this impact will eventually get back to those who created and continue to support the system. With users that are either unsatisfied or unable to use the system any longer, the engagement levels will drop, and so will the users. The loss of users will ultimately result in a loss of income, as the system can no longer deliver to the needs of its audience.
+When a system cannot evolve, the users mainly feel the impact. However, this impact will eventually get back to those who created and continue to support the system. With users that are either unsatisfied or unable to use the system any longer, the engagement levels will drop. The loss of users will ultimately result in a loss of income, as the system can no longer deliver to the needs of its audience.
 
 Because organizations invest large amounts of money in the software systems that they create, they depend on the software's continued success. Software evolution will allow the system to adapt to new or changing business requirements, fix bugs and defects, and integrate with other systems that have changed and evolved that may share the same software environment.
 
@@ -150,7 +147,7 @@ Security can also impact the need for a system to be maintained. New ways to inf
 
 Because the maintainability of a system can ultimately influence the ability to generate revenue, we must find ways to ensure that a project will evolve. One of these ways could be to ensure that a project continues to be considered ``maintainable'' throughout its lifetime. This system characteristic will ensure that bugs can be fixed quickly, but new features should be easy to add as the users' needs evolve.
 
-If a system is extensive, it may involve many steps to get changes through. For example, a process like that in ``Fig.~\ref{figSystemMaintenance}'' shows steps to get to a new minor feature release. Any amount of complexity can make this process even more cumbersome.
+If a system is extensive, it may involve many steps to get changes through. For example, a process like that in ``Fig.~\ref{figSystemMaintenance}'' shows steps to get to a new minor feature release. Any amount of complexity can make this multi-step process even more cumbersome.
 
 \begin{figure}[ht]
     \centerline{
@@ -179,22 +176,30 @@ If we look at the process for System Evolution, we see that it is very similar t
 \vspace{0.25cm}
 
 % --- Understand Software Maintenance -----------------------------------------
-\subsection{Understand Software Maintenance}
+\subsection{Software Maintenance}
 
 The structural quality of a software system will impact the software evolution. If the project has poor structural quality, its ability to evolve will be minimized, and the software system will eventually ``die-off'' so to speak.
 
 There is much planning involved in all software creation projects in what the product will be, will do, who it is for, etc. One of the things that should also be on the planning list is long-term maintenance and growth. That is, how do we build a thing that will be easier to add features to down the road?
 
-Let us define maintainability in the context of software. For example, a system would be considered easy to maintain if it is easy to debug and adds new features.
+Let us define maintainability in the context of software. For example, a system would be considered easy to maintain if it is easy to debug and adds new features. These new features can often be reported as bugs by users, when in reality, they are looking for functionality enhancements \cite{wiki:software-maintenance}.
+
+\vspace{0.25cm}
+
+\begin{displayquote}
+``Software maintenance in software engineering is the modification of a software product after delivery to correct faults, to improve performance or other attributes.'' \cite{wiki:software-maintenance}
+\end{displayquote}
+
+\vspace{0.25cm}
 
 It may be easier to understand what characteristics define a system with poor maintainability. These types of systems will have poor code quality, leading to defects. For example, there could be undetected vulnerabilities or vulnerabilities that have been ignored. It may be that the system is overly complex. In addition to the complexity, it could be hard to read due to poor naming or dead (unused) code throughout the source code.
 
 A project is known to have good maintainability when there is an enforced set of clean and consistent standards for the code. This often involves having human-readable names for functions, methods, and variables. Any complex code is minimized, and methods are small and focus on a single thing. Parts of the system are decoupled and organized, making it easy to work on different parts with low impact on unrelated parts. For example, the code is DRY (there is limited redundancy), unused code has been removed, and there is a level of documentation that supports an easy understanding of the system.
 
-Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and fix bugs can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
+Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and fix bugs, even working on different parts in parallel, can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
 
 % --- Understand Software Evolution -------------------------------------------
-\subsection{Understand Software Evolution}
+\subsection{Software Evolution}
 
 There is a distinction to be made between \textbf{software maintenance} and \textbf{software evolution}. We will refer to software maintenance as bug resolution and for minor enhancements. For example, we can consider this routine maintenance when we must fix a broken route in the application or provide a subtle improvement on the user experience. However, when we look at upgrades to the system, adaptations to the changing and growing needs of the user, or migrating the system to a new technology, we can refer to this as evolution of the software.
 
@@ -202,7 +207,7 @@ The evolution of software can result from new laws that have come into being. As
 
 It is also fair to say that systems will change because we can never fully determine a user's needs at the start of a project. It would be safe to say that the user's needs will change over time themselves. This leads to a never-ending project that will always need some form of enhancement.
 
-Meir "Manny" Lehman and László "Les" Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws apply to programs that were written to perform some real-world activity, where its behavior is linked to the environment in which it runs; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are summarized below.
+Meir "Manny" Lehman and László "Les" Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws apply to programs that were written to perform some real-world activity, where its behavior is linked to the environment in which it runs; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are listed below.
 \cite{wiki:lehmans-laws}
 
 \vspace{0.25cm}
@@ -260,7 +265,7 @@ With all of these characteristics surrounding the evolution of software, we bene
 
 \vspace{0.25cm}
 
-These two suggestions are evident for developers. For example, a developer may regularly use resources like StackOverflow to find solutions to problems and use open-source tools that the developer and their team can contribute to or adjust to their specific needs.
+These two suggestions are very evident in modern development. For example, a developer may regularly use resources like StackOverflow to find solutions to problems and use open-source tools that the developer and their team can contribute to or adjust to their specific needs.
 
 \subsection{Measuring Maintainability}
 
@@ -290,9 +295,25 @@ Now that we have established that we have a problem with projects that fail to e
 % -----------------------------------------------------------------------------
 % -  (A) We can use maintainability scores to see how structure impacts evolution.
 % -----------------------------------------------------------------------------
-\subsection{Maintainability Scores} \label{sectionMaintainabilityScores}
+\subsection{Open Source Software Systems} \label{sectionSoftwareData}
 
 % --- Claim A: Review each claim from the introduction
+On order to gain better understanding of software systems and the metrics we seek to use in order to understand the quality of the software structure, we scanned a collection of open source Python systems from GitHub. There were 129 repositories that were downloaded and the Pylint report was applied to each.
+
+Of these repositories, we found there were a total of 88 different messages called out. There were 52 messages categorized as refactor warnings and 35 flagged for conventions that should be used.
+
+When measuring the Refactor score, we are looking at the number of lines of code called out with Refactor warnings. Smaller scores are better (fewer warnings). The ``best'' repository in regards to Refactor scores was \textbf{Munki} with the lowest Refactor at 8 \cite{data:munki}. This repository has only 82 contributors.
+
+The repository for \textbf{Ansible}, on the other hand, scored the worst in the batch, with a Refactor score at 16990 \cite{data:ansible}. However, this repository has over 5,000 contributors, which emphasizes the difficulty in keeping a project on track.
+
+% --- Claim A: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+
+% -----------------------------------------------------------------------------
+% -  (B) We can use maintainability scores to see how structure impacts evolution.
+% -----------------------------------------------------------------------------
+\subsection{Maintainability Scores} \label{sectionMaintainabilityScores}
+
+% --- Claim B: Review each claim from the introduction
 
 First, let us consider our original understanding of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
 
@@ -320,11 +341,18 @@ Numbers closer to \code{10} reflect systems that have fewer errors, fewer warnin
 
 \vspace{0.25cm}
 
+\todo{TODO: add a section on Pylint refactor score}
+\todo{TODO: how is Pylint Refactor score calculated}
+\todo{TODO: What type of errors in this category (Pylint refactor)}
+\todo{TODO: How Pylint Refactor errors are related to architecture smells}
+
 The Refactor score is of special interest to us and considers many features that are meticulously outlined on the Pylint site \cite{pylint:refactor}. These types of warnings include a number of checks, such as when a boolean condition could be simplified, or a useless \code{return}, and so on. This score, in particular, will be part of our focus. Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value.
+
+\todo{TODO: examples from best and worst}
 
 Finally, in respect to Python, it is also helpful to understand PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard can be used to make code more readable and more consistent, which may contribute to the code being more maintainable. These standards cover things like indentation spacing, maximum line length, where to break lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
 
-% --- Claim A: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+% --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
 The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea focusing on cohesion and coupling over time for a project \cite{zhou:2020}. In a software system, we desire low coupling (allowing for changes to one area to remain independent of changes to another area) and high cohesion (indicating reduced complexity in modules, which improves maintainability). Through a few experiments on open-source software systems, the authors determined that their algorithm that calculated metrics was capable of improving package structures to have high cohesion and low coupling. Their study gives us confidence that metrics around the software's structure can provide value in keeping systems in a maintainable state, which allows for software evolution.
 
@@ -377,7 +405,7 @@ The book describes how documentation holds the results of significant design dec
 
 \vspace{0.25cm}
 
-In research done by Wedyan and Abufakher (quoted above), it was found that documenting design patterns was useful in enhancing code understanding. In turn, the comprehensibility impacts the maintainability of the code in a positive way, which continues to reinforce the impact that documentation can have and how it ties well into considerations for software structure.
+In research done by Wedyan and Abufakher (quoted above), it was found that documenting design patterns was useful in enhancing code understanding \cite{wedyan:2020}. In turn, the comprehensibility impacts the maintainability of the code in a positive way, which continues to reinforce the impact that documentation can have and how it ties well into considerations for software structure.
 
 % =============================================================================
 % =  Related Works (1 to 2 pages)
@@ -430,7 +458,9 @@ Projects that may be open source or have many contributors are especially vulner
 
 \todo{TODO: elaborate.}
 
-Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.
+We have further work to do in this study to gain better understanding. With a set of several ``best'' and ``worst'' Python software systems, we will look into the history of the projects' commits. It would be useful to see how the Refactor scores have changed over time, and if the rate at which changes were pushed correlated to the increase or decrease in that Refactor score. 
+
+Additional data can be gathered from this set that may provide more insights than this first brush of the data provides us. Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.
 
 % =============================================================================
 % =  Bibliography and Sources
