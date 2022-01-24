@@ -12,7 +12,7 @@ This paper will review how structural quality can impact software evolution.
 
 * [Supporting Documents](./Supporting%20Documents)
   * This folder contains articles and links that have been used for research and understanding the topic.
-* [Initial Proposal](./initialproposal)
+* [Initial Proposal](./initialproposal.pdf)
   * This is a 2-3 page paper created for the Masters Thesis course at Lewis University.
   * The proposal must be two to three pages in length.
   * It should provide a title and a detailed description of the problem you are going to solve or the topic you are going to research.
