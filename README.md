@@ -12,10 +12,18 @@ This paper will review how structural quality can impact software evolution.
 
 * [Supporting Documents](./Supporting%20Documents)
   * This folder contains articles and links that have been used for research and understanding the topic.
-* [Paper Summary](./summary.pdf)
-  * One to two page description of the paper topic including 6 to 10 references that you intend to use in your research.
-* [Course Paper](./cousreproject.pdf)
-  * This is a 10-12 page paper created for the Software Architecture graduate level course at Lewis University.
+* [Initial Proposal](./initialproposal)
+  * This is a 2-3 page paper created for the Masters Thesis course at Lewis University.
+  * The proposal must be two to three pages in length.
+  * It should provide a title and a detailed description of the problem you are going to solve or the topic you are going to research.
+  * The proposal must give a very clear picture of what you intend to do this semester.
+  * It must include a minimum of 3 references, preferably 5 references, cited using the format stated in the thesis template. The references must be cited within the body of the proposal, just as they will be in the final paper.
+* Software Architecture Course
+  * This course was taken prior to writing the full thesis and stood as a foundational study to scratch the surface of the topic.
+  * [Paper Summary](./summary.pdf)
+    * One to two page description of the paper topic including 6 to 10 references that you intend to use in your research.
+  * [Course Paper](./courseproject.pdf)
+    * This is a 10-12 page paper created for the Software Architecture graduate level course at Lewis University.
 
 ## Code
 
