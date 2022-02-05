@@ -1,12 +1,14 @@
 # Supporting Documents
 
-## [Lab 2 Assignment](./Reviewed/Alison%20Major%20-%20Lab%202.pdf)
+## [Predicting Maintainability with Object-Oriented Metrics - An Empirical Comparison](./Reviewed/Jahnke03.pdf)
 
-This was an assignment for the **Software Architecture** course at Lewis 
-University. It was a brief study in several different quality and 
-maintainability scores on three different repositories. The brief work on this
-assignment led to the invitation to work on this new research paper for the
-term paper (and which will ultimately be my thesis).
+From Dr. Safwan Omari:
+
+> Attached is a nice paper that does similar work on C/C++ and Java. Here a few notes.
+> - The paper performs correlation analysis between OO metrics and software maintainability to find best metrics to predict maintainability, which is similar to what we are trying to do.
+> - Authors used log history to quantify maintainability,  we kind of lowered the scope of our work to avoid having to do the same.
+> - The paper performs the study on a few hand-picked software systems and log analysis appears to be manual. Our analysis is large-scale, should be  on the order 50 to 100 projects
+> - Our work is more industry driven and oriented for practitioners, we use Pylint metrics and MI and these are tools/metrics used by practitioners.
 
 ---
 
@@ -214,5 +216,15 @@ TODO: Review this site.
 - "Analysing the evolution of software by representing the software system using the frequencies of subgraph types is beneficial because it allows for structural analysis involving communication patterns"
 
 > Network analysis has been successfully applied in software engineering to understand structural effects in the software. System software is represented as a network graph, and network metrics are used to analyse system quality. This study is motivated by a previous study, which represents the software structure as three-node subgraphs and empirically identifies that software structure continuously evolves over system releases. Here, the authors extend the previous study to analyse the relation of structural evolution and the defectiveness of subgraphs in the software network graph. This study investigates the behaviour of subgraph defects through software evolution and their impact on system defectiveness. Statistical methods were used to study subgraph defectiveness across versions of the systems and across subgraph types. The authors conclude that software versions have similar behaviours in terms of average subgraph type defectiveness and subgraph frequency distributions. However, different subgraph types have different defectiveness distributions. Based on these conclusions, the authors motivate the use of subgraph-based software representation in defect predictions and software modelling. These promising findings contribute to the further development of the software engineering discipline and help software developers and quality management in terms of better modelling and focusing their testing efforts within the code structure represented by subgraphs.
+
+---
+
+## [Lab 2 Assignment](./Reviewed/Alison%20Major%20-%20Lab%202.pdf)
+
+This was an assignment for the **Software Architecture** course at Lewis 
+University. It was a brief study in several different quality and 
+maintainability scores on three different repositories. The brief work on this
+assignment led to the invitation to work on this new research paper for the
+term paper (and which will ultimately be my thesis).
 
 ---
