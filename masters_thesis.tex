@@ -1,0 +1,129 @@
+\documentclass[12pt,letterpaper]{report}
+
+% =============================================================================
+% =  CUSTOM INFORMATION (stored as variables, used in template)
+% =============================================================================
+
+% The title of the paper.
+\newcommand{\paperTitle}{My Thesis Title}
+
+% The name of the author.
+\newcommand{\paperAuthor}{Alison Major}
+
+% The author's concentration in their Master of Science in Computer Science
+\newcommand{\authorConcentration}{Software Engineering}
+
+% =============================================================================
+% =  PREAMBLE (packages and custom code)
+% =============================================================================
+
+\usepackage{paperPreamble}
+
+% =============================================================================
+% =  BEGINNING OF THE DOCUMENT
+% =============================================================================
+\begin{document}
+
+% Include Page Numbers - Roman Numerals for Front Matter
+\pagenumbering{roman}
+\pagestyle{plain}
+
+% =============================================================================
+% =  Paper Title & Author Information
+% =============================================================================
+
+\input{Ancillary Pages/_title_page.tex}
+
+% Set the document to be double spaced 
+% http://kb.mit.edu/confluence/pages/viewpage.action?pageId=3907092
+\doublespacing
+
+% =============================================================================
+% =  Signature Page
+% =============================================================================
+
+\newpage
+\input{Ancillary Pages/_signature_page.tex}
+
+% =============================================================================
+% =  Paper Abstract
+% =============================================================================
+
+\newpage
+\input{abstract}
+
+% =============================================================================
+% =  Acknowledgements
+% =============================================================================
+
+\newpage
+\input{acknowledgements}
+
+% =============================================================================
+% =  Table of Contents
+% =============================================================================
+
+\newpage
+\tableofcontents
+
+% =============================================================================
+% =  List of Tables
+% =============================================================================
+
+\newpage
+\listoftables
+
+% =============================================================================
+% =  List of Figures
+% =============================================================================
+
+\newpage
+\listoffigures
+
+% =============================================================================
+% =  Paper Content
+% =============================================================================
+
+% Include Page Numbers - Numbers (Arabic) for Main Matter
+\pagenumbering{arabic}
+
+\newpage
+\include{Chapters/1_Introduction/1_Introduction}
+
+\newpage
+\include{Chapters/2_Background/2_Background}
+
+\newpage
+\include{Chapters/3_Methodology/3_Methodology}
+
+\newpage
+\include{Chapters/4_Results/4_Results}
+
+\newpage
+\include{Chapters/5_Conclusion/5_Conclusion}
+
+% =============================================================================
+% =  References
+% =============================================================================
+
+\newpage
+\include{references}
+
+% =============================================================================
+% =  Appendices
+% =============================================================================
+
+\newpage
+\include{Appendix/_appendix_1}
+
+% =============================================================================
+% =  Author Bibliography (Optional)
+% =============================================================================
+
+\newpage
+% \include{Ancillary Pages/_bibliography_page}
+
+% =============================================================================
+% =  END OF THE DOCUMENT
+% =============================================================================
+\end{document}

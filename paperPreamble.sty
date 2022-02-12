@@ -1,0 +1,25 @@
+\ProvidesPackage{paperPreamble}
+
+% Preset Packages
+\usepackage{cite} % Used to cite sources
+\usepackage[hyphens]{url} % Used to prevent hypens in URLs
+\usepackage{hyperref} % Used to make URLs clickable
+\usepackage{graphicx} % Used to set the image path
+\usepackage{xcolor} % Used to provide font color
+\usepackage{csquotes} % Used to display quotes
+\usepackage{setspace} % Used to provide line spacing
+\usepackage{import} % Used to import additional pages
+\usepackage{tabularx} % Used to set fixed width on tables
+% \usepackage{tabluar} % Used to create signature lines on signature page
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Set the path to keep images
+\graphicspath{ {Images/} }
+
+% Create a "todo" style (just red text)
+\newcommand\todo[1]{\textcolor{red}{#1}}
+
+% Create a "code" monospaced style
+\newcommand{\code}[1]{\texttt{#1}}
