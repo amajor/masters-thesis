@@ -1,0 +1,30 @@
+% =============================================================================
+% =  The Details, defending my idea (5 pages)
+% =============================================================================
+
+\section{Reviewing Python Software Projects}
+
+% --- How does my idea solve the problem? -------------------------------------
+% --- THE PROBLEM: Some projects fail to evolve, resulting in loss if income.
+% --- MY IDEA: Software evolution is impacted by structural quality.
+% -----------------------------------------------------------------------------
+
+We have established that we have a problem with projects that fail to evolve, resulting in a loss of revenue. We also understand that evolving software is essential in order to keep users engaged; without it, there is an appearance in the decline of quality and the program becomes less satisfactory to the user, as well as potential for competitors to outpace us with features available. We must now understand how we can ensure that our systems evolve. For this, we will look to understand how the system's structural quality impacts software evolution.
+
+% -----------------------------------------------------------------------------
+% -  (A) We can use maintainability scores to see how structure impacts evolution.
+% -----------------------------------------------------------------------------
+\subsection{Open Source Software Systems} \label{sectionSoftwareData}
+
+% --- Claim A: Review each claim from the introduction
+On order to gain better understanding of software systems and the metrics we seek to use in order to understand the quality of the software structure, we scanned a collection of open source Python systems from GitHub. There were 129 repositories that were downloaded and the Pylint report was applied to each.
+
+Of these repositories, we found there were a total of 88 different messages called out. There were 52 messages categorized as \emph{refactor} warnings and 35 flagged for \emph{conventions} that should be used.
+
+When measuring the Refactor score, we are looking at the number of lines of code called out with Refactor warnings. Smaller scores are better (fewer warnings). The ``best'' repository in regards to Refactor scores was \emph{Munki} with the lowest Refactor at 8 \cite{data:munki}. This repository has only 82 contributors.
+
+The repository for \emph{Ansible}, on the other hand, scored the worst in the batch, with a Refactor score at 16990 \cite{data:ansible}. However, this repository has over 5,000 contributors, which emphasizes the difficulty in keeping a project on track in regards to low technical debt.
+
+% --- Claim A: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
+
+% \todo{TODO: examples or evidence?}

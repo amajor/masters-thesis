@@ -6,13 +6,12 @@ When building software systems, we have several areas of concern: cost, delivery
 
 When we think about projects, we can assume that as time goes on and changes and additions occur within a system's source code, the complexity of that system will grow (``Fig.~\ref{figTimeAndComplexity}''). However, when we manage the code structure, we can keep the complexity in check, allowing systems to evolve. Developers can maintain this structure through simple steps like having readable code and more complex considerations, like how coupled and cohesive a system is.
 
-\begin{figure}[ht]
-    \centerline{
-        \includegraphics[width=0.7\columnwidth]{TimeAndComplexity}
-    }
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{TimeAndComplexity}
     \caption{Generally speaking, a software system will get more complex as it grows over time.}
     \label{figTimeAndComplexity}
-\end{figure}
+\end{wrapfigure}
 
 One way to understand the quality around a system is to discuss its ``maintainability,'' the ease of receiving new features or resolving bugs. For example, developers may find that adjusting one area to add a new feature requires touching several other code areas in tightly coupled systems. Some code measuring systems provide a Maintainability Index, a well-known quality measure. However, its effectiveness in quantifying software quality is debated \cite{vandeursen:2014}.
 
@@ -28,40 +27,20 @@ Why should we care about whether the code is maintainable? It is assumed that a 
 
 We will look at many open-source Python systems using Pylint and attempt to correlate the data from the Pylint scores to the level of ease in adding new features to the system. This will determine if a system is more maintainable with better Pylint scores. 
 
-In this study, we will be using Pylint and will be focused on the values of the Refactor score regarding a set of open-source Python systems. To understand the scores we will be working with; we must understand what Pylint itself is doing. 
-
-Through the documentation of Pylint, we can understand how to use it and the scores it will provide \cite{pylint:main}. The Pylint score itself is calculated by the following equation \cite{pylint:score}:
-
-\vspace{0.25cm}
-\code{10.0-((float(5*e+w+r+c)/s)*10)}
-\vspace{0.25cm}
-
-Numbers closer to \code{10} reflect systems that have fewer errors, fewer warnings, and have overall better structure and consistency. In the above equation, we are using the following values \cite{pylint:docs}:
-
-\vspace{0.25cm}
-\begin{itemize}
-    \item \textbf{statement} (\code{s}): the total number of statements analyzed
-    \item \textbf{error} (\code{e}): the total number of errors, which are likely bugs in the code
-    \item \textbf{warning} (\code{w}): the total number of warnings, which are python specific problems
-    \item \textbf{refactor} (\code{r}): the total number of refactor warnings for bad code smells
-    \item \textbf{convention} (\code{c}): the total number of convention warnings for programming standard violations
-\end{itemize}
-\vspace{0.25cm}
-
-The Refactor score is of particular interest to us and considers many features that are meticulously outlined on the Pylint site \cite{pylint:refactor}. These types of warnings include several checks, such as when a boolean condition could be simplified, or a useless \code{return}, and so on. This score, in particular, will be part of our focus.
-
-To calculate the Refactor score, Pylint will check the code for code smells based on the definitions for checks that have been documented. For every infraction, the score increases by one count. 
-
-\vspace{0.25cm}
-\begin{displayquote}
-``In computer programming, a \textbf{code smell} is any characteristic in the source code of a program that possibly indicates a deeper problem.'' \cite{wiki:code-smells}
-\end{displayquote}
-\vspace{0.25cm}
-
-We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. There are fundamental design principles that have been established that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction.
-
-Work done by Dr. Omari and Dr. Martinez involves collecting a sub-set of Python projects that we can use for further research. The bulk of the effort they have provided is determining which classifiers to use to pare down the public set of Python systems into a good collection for further analysis \cite{omari:2018}. The work that they have provided will be used to select appropriate Python systems for review by collecting meta-data on these code systems.
-
-From their subset of repositories, we will then be able to collect current Pylint scores from each of our selected systems. This will give us a sampling of data that we can dig deeper into, comparing similar systems (similar size, similar number of contributors, etc.) and their evolution process by reviewing past commits rather than merely the current state of the system.
-
 \todo{TODO: Conclude with a summary of the organization of the thesis, including identification of the general content of specific chapters and appendices.}
+
+% --- SUMMARY OF CONTRIBUTIONS ------------------------------------------------
+% --- How does my idea solve the problem? -------------------------------------
+% --- THE PROBLEM: Some projects fail to evolve, resulting in loss if income.
+% --- MY IDEA: Software evolution is impacted by structural quality.
+% -----------------------------------------------------------------------------
+
+We will explore automated measurements that provide evaluation scores of software systems. By using some of these quality and maintainability scores, we can see how structure impacts evolution (Section \ref{sectionMyIdea}). In our case, we will explore the Pylint Refactor score on commits for new features, focusing specifically on the adaptability and evolution of a software project (Sections \ref{sectionSoftwareData} and \ref{sectionMaintainabilityScores}).
+
+When a team is able to embrace and use these types of measurements from the beginning of a project, it enables faster architecture review than checking it only by hand. These types of measurements can inform us of areas with ``smells,'' providing insight on where to focus on improvements. In addition to the usefulness at the beginning of a project, continuing to revisit these numbers on a regular basis (every sprint, for example, in a scrum team) keeps the project in a maintainable state.
+
+% \todo{TODO: what is the specific, refutable information that we found?}
+
+In addition to using scores to predict software evolution ability, we also look at documentation used in the best and worst projects to determine that good documentation can improve maintainability (Section \ref{sectionDocumentation}).
+
+\todo{TODO: Update sections listed above?}

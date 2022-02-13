@@ -1,5 +1,25 @@
-\chapter{Conclusion} \label{chapterConclusion}
+\chapter{Conclusions and Recommendations} \label{chapterConclusion}
 
 \todo{TODO: Chapter 5 - what it all means, putting the pieces together (what is my contribution to the research field)}
 
-This chapter could also be called “Conclusions and Recommendations” or “Conclusions and Implications.” In general, there should be no new information presented here.  It should be a synthesis of information that you’ve already discussed. 
+% This chapter could also be called “Conclusions and Recommendations” or “Conclusions and Implications.” In general, there should be no new information presented here.  It should be a synthesis of information that you’ve already discussed. 
+
+By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful regarding maintainability. Good projects will inevitably continue to grow and evolve. Understanding methods to keep code refactor on a certain level makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.
+
+When reviewing our surface-level data with current project Refactor scores, our three worst offendors were \emph{Ansible} \cite{data:ansible}, \emph{SymPy} \cite{data:sympy}, and \emph{Salt} \cite{data:salt}. All three projects are still quite active with development despite their poor current scores. The projects have high download rates, which may be the reason for continued development despite potential difficulty in maintenance. 
+
+Projects that may be open source or have many contributors are especially vulnerable to maintainability degrading over the evolution of a project. Having a reliable metric can be very useful in programmatically avoiding code smells and keeping code in a state that is easy to manage through simple metric checks in deployment pipelines.
+
+We can see an example of this in reviewing some current symptoms that \emph{SymPy} is experiencing, with only 72\% code coverage and a failing build (see ``Fig.~\ref{figSymPyStatus}''). Despite the engagement and continued development, we suspect that real adaptations and evolution of the software may be difficult with this code.
+
+\begin{figure}[ht]
+    \centerline{
+        \includegraphics[width=1.0\columnwidth]{SymPy_status}
+    }
+    \caption{A snapshot of the badges from \emph{SymPy}'s repository.}
+    \label{figSymPyStatus}
+\end{figure}
+
+We have further work to do in this study to gain better understanding. With a set of several ``best'' and ``worst'' Python software systems, we will look into the history of the projects' commits. It would be useful to see how the Refactor scores have changed over time, and if the rate at which changes were pushed correlated to the increase or decrease in that Refactor score. 
+
+Additional data can be gathered from this set that may provide more insights than this first brush of the data provides us. Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.

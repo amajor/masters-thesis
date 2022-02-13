@@ -1,0 +1,24 @@
+% =============================================================================
+% =  Related Works
+% =============================================================================
+
+\section{Related Work}
+
+In the paper ``Impact of design patterns on software quality: a systematic literature review'' the authors compared the use of design patterns to software evolution and maintainability. They found that design patterns provided clear flexibility when they reviewed changes that extended (evolved) software \cite{wedyan:2020}.
+
+\vspace{0.25cm}
+\begin{displayquote}
+``Changes performed in a class can be corrective, adaptive, perfective, or preventive. These changes can occur due to new requirements, debugging, changes that propagate from changes in other classes and refactoring.''
+\end{displayquote}
+\vspace{0.25cm}
+
+Wedyan and Abufakher found that there were two reasons that a class had more frequent changes \cite{wedyan:2020}:
+
+\vspace{0.25cm}
+\begin{enumerate}
+    \item The class was easy to extend.
+    \item The class correlated to other classes (raising alarms about class modularity).
+\end{enumerate}
+\vspace{0.25cm}
+
+With these findings in mind, we intentionally aim to focus future research on changes for system extensions and adaptations rather than bug fixes that appeared to be larger change due to high coupling. Within this paper, we were able to focus on Refactor scores (code smells) rather than Error scores (bugs) within the system.

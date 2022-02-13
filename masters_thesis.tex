@@ -25,6 +25,7 @@
 \begin{document}
 
 % Include Page Numbers - Roman Numerals for Front Matter
+\cleardoublepage% \clearpage
 \pagenumbering{roman}
 \pagestyle{plain}
 
@@ -87,6 +88,7 @@
 % =============================================================================
 
 % Include Page Numbers - Numbers (Arabic) for Main Matter
+\cleardoublepage% \clearpage
 \pagenumbering{arabic}
 
 \newpage
@@ -94,9 +96,18 @@
 
 \newpage
 \include{Chapters/2_Background/2_Background}
+\include{Chapters/2_Background/sections/2_1_TheProblem.tex}
+\include{Chapters/2_Background/sections/2_2_MyIdea.tex}
+\include{Chapters/2_Background/sections/2_3_PythonProjects.tex}
+\include{Chapters/2_Background/sections/2_4_MaintainabilityScores.tex}
+\include{Chapters/2_Background/sections/2_5_Documentation.tex}
+\include{Chapters/2_Background/sections/2_6_RelatedWorks.tex}
+
 
 \newpage
 \include{Chapters/3_Methodology/3_Methodology}
+\include{Chapters/3_Methodology/sections/3_1_InitialRepositorySet.tex}
+\include{Chapters/3_Methodology/sections/3_2_FilteredRespositorySet.tex}
 
 \newpage
 \include{Chapters/4_Results/4_Results}
