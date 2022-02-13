@@ -1,7 +1,7 @@
 % -----------------------------------------------------------------------------
 % -  (B) We can use maintainability scores to see how structure impacts evolution.
 % -----------------------------------------------------------------------------
-\subsection{Maintainability Scores} \label{sectionMaintainabilityScores}
+\subsection{Maintainability Scores} \label{subMaintainabilityScores}
 
 % --- Claim B: Review each claim from the introduction
 
@@ -47,13 +47,13 @@ To calculate the Refactor score, Pylint will check the code for code smells base
 We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. There are fundamental design principles that have been established that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and, when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction.
 
 % -- Examples from our data set of the most common Refactor messages ----------
-Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value. The most common Refactor error returned in our data set was the \code{no-else-return} message. This particular message highlights when an unnecessary block of code follows an if-statement that contains a \code{return}. The second most common Refactor message was \code{too-few-public-methods}, which reminds the developer to consider whether that class is appropriate to create.
+Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value. \todo{The most common Refactor error returned in our data set was the \code{no-else-return} message. This particular message highlights when an unnecessary block of code follows an if-statement that contains a \code{return}. The second most common Refactor message was \code{too-few-public-methods}, which reminds the developer to consider whether that class is appropriate to create.}
 
 Finally, in respect to Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard can be used to make code more readable and more consistent, which may contribute to the code being more maintainable. These standards cover things like indentation spacing, maximum line length, where to break lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
 
 % --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
-\subsection{Other Maintainability Characteristics}
+\subsection{Other Maintainability Characteristics} \label{subOtherCharacteristics}
 
 The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea focusing on cohesion and coupling over time for a project \cite{zhou:2020}. In a software system, we desire low coupling (allowing for changes to one area to remain independent of changes to another area) and high cohesion (indicating reduced complexity in modules, which improves maintainability). Through a few experiments on open-source software systems, the authors determined that their algorithm that calculated metrics was capable of improving package structures to have high cohesion and low coupling. Their study gives us confidence that metrics around the software's structure can provide value in keeping systems in a maintainable state, which allows for software evolution.
 
