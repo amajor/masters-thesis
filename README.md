@@ -28,3 +28,9 @@ This paper will review how structural quality can impact software evolution.
 ## Code
 
 The code repository started by Dr. Omari can be found on Bitbucket at https://bitbucket.org/bankruptcy-guru/code-metrics/src/master/.
+
+## LaTeX Links
+
+* [Masters Thesis Template](https://github.com/amajor/template-masters-thesis)
+* [LaTeX Document Structure Wiki](https://en.wikibooks.org/wiki/LaTeX/Document_Structure)
+* [Overleaf Guides](https://www.overleaf.com/learn)

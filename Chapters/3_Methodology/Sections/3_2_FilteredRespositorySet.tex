@@ -1,0 +1,40 @@
+\section{Filtered Respository Set} \label{sectionFilteredSet}
+
+Once we had a narrowed set of projects from GitHub that were primarily written in Python, we culled the set more using several criteria:
+
+\vspace{0.25cm}
+\begin{enumerate}
+    \item Projects that are at least 80\% Python
+    \item Projects with a long history of commits
+    \item Projects with large development teams (contributors)
+    \item Projects with many releases
+    \item Projects of a substantial age
+\end{enumerate}
+\vspace{0.25cm}
+
+Armed with this list, we were able to use the metadata from GitHub for each of our repositories already collected and determine a cross-section of these criteria that would result in about 50 repositories for futher study.
+
+Beginning with the languages field from GitHub, we could easily narrow down projects that had at least 80\% of the code in Python. In our set, 103 repositories contained 80\% or more Python code.
+
+With this narrowed set, we then looked to see at which percentile all the remaining criteria would yield the desired number of repositories. We determined that using the value at the 20th percentile in each of the above categories would yield the size set we'd need.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabularx}{0.8\textwidth} {
+    | >{\centering\arraybackslash}X 
+    | >{\centering\arraybackslash}X |
+  }
+    \hline
+      Criteria & 20th Percentile Value \\ 
+    \hline\hline
+      Number of Commits & 2,968 \\
+      Number of Contributors & 90 \\
+      Number of Releases & 44 \\
+      Age (in months) & 66.4 \\
+    \hline
+  \end{tabularx}
+  \caption{Criteria used to filter down the initial set of repositories.}
+  \label{table:repositoryPercentiles}
+\end{table}
+
+Table \ref{table:repositoryPercentiles} shows the values found for each of our criteria. Using these values as our minimum requirements, we can narrow our repository set to 46 repositories.
