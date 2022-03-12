@@ -29,6 +29,19 @@ This paper will review how structural quality can impact software evolution.
 
 The code repository started by Dr. Omari can be found on Bitbucket at https://bitbucket.org/bankruptcy-guru/code-metrics/src/master/.
 
+### cloc
+
+Used to count the lines of code, [cloc](https://github.com/AlDanial/cloc) can
+be easily run. Just tell it where to go!
+
+```
+cloc ansible/.
+```
+
+From there, we're specifically targeting the Python data:
+
+![Using cloc to get Python count](./Images/cloc.png "cloc")
+
 ## LaTeX Links
 
 * [Masters Thesis Template](https://github.com/amajor/template-masters-thesis)
