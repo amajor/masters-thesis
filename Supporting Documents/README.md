@@ -1,5 +1,19 @@
 # Supporting Documents
 
+## Spreadsheets
+
+Information has been gathered and organized in Google Spreadsheets in order to
+understand the data. You can find copies of the spreadsheets below.
+
+* Filtered Repositories 
+  * [Google Sheet](https://docs.google.com/spreadsheets/d/1qIyOSli28WGFCRCH7v7OL79zOm2wITmFz70vlBlPGN8/edit?usp=sharing)
+  * [Excel Download Version](./Spreadsheets/Filtered%20Repositories.xlsx)
+* Final Repository Set
+  * [Google Sheet](https://docs.google.com/spreadsheets/d/14dJZ0UlfvQ-opwzeiR3mYqNDzONMj2Uqb6tDACKT-og/edit?usp=sharing)
+  * [Excel Download Version](./Spreadsheets/Thesis%20Repositories.xlsx)
+
+---
+
 ## [Predicting Maintainability with Object-Oriented Metrics - An Empirical Comparison](./Reviewed/Jahnke03.pdf)
 
 From Dr. Safwan Omari:
