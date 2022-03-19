@@ -14,6 +14,12 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [An Empirical Study of Lehman’s Law on Software Quality Evolution](./Reviewed/Yu_SoftwareQualityEvolution.pdf)
+
+> Software systems must change to adapt to new functional requirements and nonfunctional requirements. According to Lehman’s laws of software evolution, on the one side, the size and the complexity of a software system will continually increase in its life time; on the other side, the quality of a software system will decrease unless it is rigorously maintained and adapted. Lehman’s laws of software evolution, especially of those on software size and complexity, have been widely validated. However, there are few empirical studies of Lehman’s law on software quality evolution, despite the fact that quality is one of the most important measurements of a software product. This paper defines a metric—accumulated defect density—to measure the quality of evolving software systems. We mine the bug reports and measure the size and complexity growth of four evolution lines of Apache Tomcat and Apache Ant projects. Based on these studies, Lehman’s law on software quality evolution is examined and evaluated.
+
+---
+
 ## [Predicting Maintainability with Object-Oriented Metrics - An Empirical Comparison](./Reviewed/Jahnke03.pdf)
 
 From Dr. Safwan Omari:
