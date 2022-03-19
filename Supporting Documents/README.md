@@ -14,6 +14,12 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [Programs, Life Cycles, and Laws of Software Evolution](./Reviewed/lehman.pdf)
+
+> By classifying programs according to their relationship to the environment in which they are executed, the paper identities the sources of evolutionary pressure on computer applications and programs and shows why this results in a process of never ending maintenance activity. The resultant life cycle processes are then briefly discussed. The paper then introduces laws of Program Evolution that have been formulated following quantitative studies of the evolution of a number of different systems. Finally an example is provided of the application of Evolution Dynamics models to program release plnnning.
+
+---
+
 ## [An Empirical Study of Lehman’s Law on Software Quality Evolution](./Reviewed/Yu_SoftwareQualityEvolution.pdf)
 
 > Software systems must change to adapt to new functional requirements and nonfunctional requirements. According to Lehman’s laws of software evolution, on the one side, the size and the complexity of a software system will continually increase in its life time; on the other side, the quality of a software system will decrease unless it is rigorously maintained and adapted. Lehman’s laws of software evolution, especially of those on software size and complexity, have been widely validated. However, there are few empirical studies of Lehman’s law on software quality evolution, despite the fact that quality is one of the most important measurements of a software product. This paper defines a metric—accumulated defect density—to measure the quality of evolving software systems. We mine the bug reports and measure the size and complexity growth of four evolution lines of Apache Tomcat and Apache Ant projects. Based on these studies, Lehman’s law on software quality evolution is examined and evaluated.
