@@ -1,5 +1,145 @@
 \chapter{Results} \label{chapterResults}
 
-\todo{TODO: Chapter 4 - what I found}
-
 % Results, findings, discussion of results OR manuscripts.  It is best to also reiterate information in your literature review to help substantiate the findings of your research.
+
+With our narrowed focus of repositories, we can now spend some more efforts looking through the data that can be collected. Specifically, we gathered data on the Refactor Warnings provided by Pylint. In Table \ref{table:refactorWarningTotals} we have a listing of all repositories from our set with their total count of refactor warning messages, in addition to the most commonly appearing refactor warning message.
+
+\begin{table}[ht]
+  \tiny
+  \centering
+  \begin{tabularx}{0.8\textwidth} {
+    | l 
+    | c
+    | >{\centering\arraybackslash}X 
+    | c |
+  }
+    \hline
+    Repository Name & Msg Count & Top Msg & Top Msg Count \\
+    \hline\hline
+    ansible & 16,990 & use-dict-literal & 3,406 (20\%) \\ \hline
+    sympy & 14,669 & too-many-arguments & 6,601 (45\%) \\ \hline
+    salt & 9,075 & too-many-arguments & 1,800 (20\%) \\ \hline
+    nova & 3,193 & no-self-use & 684 (21\%) \\ \hline
+    pandas & 2,833 & no-else-return & 576 (20\%) \\ \hline
+    sqlalchemy & 2,283 & no-else-return & 700 (31\%) \\ \hline
+    biopython & 2,040 & no-else-return & 273 (13\%) \\ \hline
+    matplotlib & 2,040 & too-many-arguments & 380 (19\%) \\ \hline
+    astropy & 1,996 & no-else-return & 503 (25\%) \\ \hline
+    cython & 1,900 & no-else-return & 417 (22\%) \\ \hline
+    celery & 1,773 & no-self-use & 779 (44\%) \\ \hline
+    scikit-learn & 1,734 & too-many-arguments & 364 (21\%) \\ \hline
+    django & 1,714 & no-else-return & 397 (23\%) \\ \hline
+    boto & 1,518 & too-many-arguments & 300 (20\%) \\ \hline
+    pip & 1,469 & no-else-return & 191 (13\%) \\ \hline
+    swift & 1,262 & too-many-arguments & 190 (15\%) \\ \hline
+    buildbot & 1,123 & no-self-use & 178 (16\%) \\ \hline
+    youtube-dl & 1,036 & too-many-locals & 352 (34\%) \\ \hline
+    conda & 910 & super-with-arguments & 190 (21\%) \\ \hline
+    electrum & 797 & no-self-use & 168 (21\%) \\ \hline
+    aws-cli & 703 & no-self-use & 177 (25\%) \\ \hline
+    beets & 677 & super-with-arguments & 172 (25\%) \\ \hline
+    networkx & 622 & too-many-locals & 119 (19\%) \\ \hline
+    scikit-image & 573 & too-many-arguments & 134 (23\%) \\ \hline
+    autobahn-python & 560 & useless-object-inheritance & 97 (17\%) \\ \hline
+    mitmproxy & 513 & no-self-use & 133 (26\%) \\ \hline
+    pyramid & 464 & useless-object-inheritance & 116 (25\%) \\ \hline
+    mongo-python-driver & 462 & too-many-arguments & 100 (22\%) \\ \hline
+    scrapy & 453 & useless-object-inheritance & 107 (24\%) \\ \hline
+    luigi & 412 & no-self-use & 85 (21\%) \\ \hline
+    tornado & 397 & useless-object-inheritance & 71 (18\%) \\ \hline
+    werkzeug & 367 & useless-object-inheritance & 95 (26\%) \\ \hline
+    django-rest-framework & 349 & super-with-arguments & 95 (27\%) \\ \hline
+    paramiko & 324 & no-self-use & 60 (19\%) \\ \hline
+    mopidy & 298 & super-with-arguments & 58 (19\%) \\ \hline
+    cobbler & 293 & no-self-use & 64 (22\%) \\ \hline
+    mongoengine & 265 & super-with-arguments & 108 (41\%) \\ \hline
+    fail2ban & 235 & no-else-return & 30 (13\%) \\ \hline
+    peewee & 217 & super-with-arguments & 52 (24\%) \\ \hline
+    ranger & 191 & consider-using-with & 40 (21\%) \\ \hline
+    pelican & 156 & super-with-arguments & 25 (16\%) \\ \hline
+    numba & 140 & too-few-public-methods & 54 (39\%) \\ \hline
+    sentry & 71 & no-self-use & 32 (45\%) \\ \hline
+    raven-python & 24 & too-few-public-methods & 7 (29\%) \\ \hline
+
+  \end{tabularx}
+  \caption{Total refactor messages per repository. Also provided with the refactor message that had the most warnings and its total count (and the percentage of that message from the total refactor warnings for that repository).}
+  \label{table:refactorWarningTotals}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabularx}{1.0\textwidth} {
+    | c
+    | >{\centering\arraybackslash}X 
+    | c |
+  }
+    \hline
+      Repository & Refactor Message & Refactor Message Sum \\
+    \hline\hline
+      ansible & use-dict-literal & 3,406 \\
+      ansible & no-else-return & 1,711 \\
+      ansible & inconsistent-return-statements & 1,496 \\
+      ansible & too-many-branches & 1,265 \\
+      ansible & use-list-literal & 1,170 \\
+      ansible & useless-object-inheritance & 1,060 \\
+      ansible & super-with-arguments & 973 \\
+      ansible & no-self-use & 869 \\
+      ansible & too-many-locals & 779 \\
+      ansible & too-many-statements & 633 \\
+    \hline
+  \end{tabularx}
+  \caption{Top 10 refactor warning message counts (ansible).}
+  \label{table:refactorMessagesAnsible}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabularx}{1.0\textwidth} {
+    | c
+    | >{\centering\arraybackslash}X 
+    | c |
+  }
+    \hline
+      Repository & Refactor Message & Refactor Msg Sum \\
+    \hline\hline
+      sympy & too-many-arguments & 6,601 \\
+      sympy & no-else-return & 2,813 \\
+      sympy & no-self-use & 831 \\
+      sympy & inconsistent-return-statements & 810 \\
+      sympy & too-many-locals & 700 \\
+      sympy & too-many-branches & 608 \\
+      sympy & too-many-return-statements & 376 \\
+      sympy & too-many-statements & 294 \\
+      sympy & super-with-arguments & 169 \\
+      sympy & too-many-nested-blocks & 159 \\
+    \hline
+  \end{tabularx}
+  \caption{Top 10 refactor warning message counts (sympy).}
+  \label{table:refactorMessagesSymPy}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabularx}{1.0\textwidth} {
+    | c
+    | >{\centering\arraybackslash}X 
+    | c |
+  }
+    \hline
+      Repository & Refactor Message & Refactor Msg Sum \\
+    \hline\hline
+      salt & too-many-arguments & 1,800 \\
+      salt & no-else-return & 1,606 \\
+      salt & too-many-branches & 1,039 \\
+      salt & too-many-locals & 900 \\
+      salt & too-many-statements & 498 \\
+      salt & too-many-nested-blocks & 341 \\
+      salt & inconsistent-return-statements & 297 \\
+      salt & too-many-return-statements & 245 \\
+      salt & use-dict-literal & 217 \\
+      salt & too-few-public-methods & 210 \\
+    \hline
+  \end{tabularx}
+  \caption{Top 10 refactor warning message counts (salt).}
+  \label{table:refactorMessagesSalt}
+\end{table}
