@@ -1,4 +1,9 @@
 \documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+% Set graphics location
+\graphicspath{ {Images/} }
 
 %Information to be included in the title page:
 \title{Structural Quality \& Software Evolution}
@@ -6,36 +11,51 @@
 \institute{Lewis University}
 \date{2022}
 
+% \logo{
+%   \includegraphics[width=0.2\textwidth]{UniversityLogo}
+% }
+
 \begin{document}
 
 \frame{\titlepage}
 
 % 1 Introduction
 % 1.1 Maintainability Index and Pylint Refactor Scores
-% 1.2 PaperStructure
+% 1.2 Paper Structure
 \begin{frame}
   \frametitle{Introduction}
   Maintainability Index and Pylint Refactor Scores
+  \begin{enumerate}
+    \item Areas of concern: cost, timeline, quality
+    \item Quality is hard to understand
+    \item Pylint is a static analysis tool
+    \item Refactor violations point out code smells
+  \end{enumerate}
 \end{frame}
 
 % 2 Background and Literature Review
-\begin{frame}
-  \frametitle{Background and Literature Review}
-  \begin{enumerate}
-    \item Keeping Users Engaged Long Term
-    \item The Impact of Structural Quality \& Software Maintenance
-    \item Related Work
-  \end{enumerate}
-\end{frame}
 
 % 2.1 Keeping Users Engaged Long Term
 % 2.1.1 Why does software evolution matter?
 % 2.1.2 How do we ensure software evolution?
 \begin{frame}
   \frametitle{Keeping Users Engaged Long Term}
+  Why does software evolution matter?
   \begin{enumerate}
-    \item Why does software evolution matter?
-    \item How do we ensure software evolution?
+    \item Users find bugs
+    \item Users want new features
+    \item New security threats
+  \end{enumerate}
+  Need a thriving community of engaged users in order to keep apps and games successful.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Keeping Users Engaged Long Term}
+  How do we ensure software evolution?
+  \begin{enumerate}
+    \item Keep the project maintainable
+    \item --- bugs should be quick and easy to fix
+    \item --- new features should be easy to add
   \end{enumerate}
 \end{frame}
 
@@ -46,13 +66,65 @@
 % 2.2.5 Other Maintainability Characteristics
 % 2.2.6 Documentation and Maintainability
 \begin{frame}
-  \frametitle{The Impact of Structural Quality \& Software Maintenance}
+  \frametitle{The Impact of Structural Quality}
+  Software Maintenance
   \begin{enumerate}
-    \item Software Evolution
-    \item Measuring Maintainability
-    \item Maintainability Scores
-    \item Other Maintainability Characteristics
-    \item Documentation and Maintainability
+    \item ADD TO PAPER: don't touch too many files (SOLID principal)
+    \item Consistent standards (naming, small methods, etc)
+    \item 90\% cost typical software system is in the maintenance phase
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Impact of Structural Quality}
+  Software Evolution
+  \begin{enumerate}
+    \item Maintenance --- bug fixes and minor functional improvements
+    \item Evolution --- new laws from governing bodies
+    \item Evolution --- new user needs (system must adapt!)
+    \item Lehman's laws
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Impact of Structural Quality}
+  Measuring Maintainability
+  \begin{enumerate}
+    \item easy to maintain = easy to evolve
+    \item Pylint Maintainability Index (MI)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Impact of Structural Quality}
+  Maintainability Scores
+  \begin{enumerate}
+    \item Refactor Score (Pylint) --- code smells
+    \item TODO: List type of checks for Refactor
+    \item Code smells point out problems in Architecture
+    \item PEP 8 is a set of Python standards
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Impact of Structural Quality}
+  Other Maintainability Characteristics
+  \begin{enumerate}
+    \item low coupling, high cohesion
+    \item confidence that metrics around software structure provide value in keeping systems maintainable (and therefore can evolve) % \cite{zhou:2020}
+    \item readability --- big commits reduce maintainability
+    \item PEP 8 enforces readability
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Impact of Structural Quality}
+  Documentation and Maintainability
+  \begin{enumerate}
+    \item documentation holds the results of significant design decisions
+    \item can influence the ability to evolve because\dots
+    \item --- enhances code understanding
+    \item --- comprehensibility impacts maintainability in a positive way
   \end{enumerate}
 \end{frame}
 
@@ -62,11 +134,38 @@
 % 2.3.3 Software Architecture and Maintainability
 \begin{frame}
   \frametitle{Related Work}
+  Considering Data Sets (TODO: New title?)
   \begin{enumerate}
-    \item Considering Data Sets
-    \item Design Patterns and Software Quality
-    \item Software Architecture and Maintainability
+    \item 23 --- which language prone to defects
+    \item 24 --- OOP metrics and maintainability
   \end{enumerate}
+  IS THIS SECTION WORTH HAVING?
+\end{frame}
+
+\begin{frame}
+  \frametitle{Related Work}
+  Design Patterns and Software Quality
+  \begin{enumerate}
+    \item design patterns provide flexibility
+    \item classes with frequent changes
+    \item --- easy to extend or
+    \item --- correlates to other classes (red flag!)
+    \item keeping this in mind, we focus on changes for system extensions and adaptiation, not bug fixes
+    \item --- we look at refactor score (code smell) not error score (bugs)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Related Work}
+  Software Architecture and Maintainability
+  \begin{enumerate}
+    \item maintainability
+    \item extensibility
+    \item simplicity, understanding
+    \item re-usability
+    \item performance
+  \end{enumerate}
+  Keep these in mind for easier future development when adding or changing code
 \end{frame}
 
 % 3 Methodology
@@ -74,10 +173,26 @@
 % 3.2 Filtered Respository Set
 \begin{frame}
   \frametitle{Methodology}
+  Initial Repository Set
   \begin{enumerate}
-    \item Initial Repository Set
-    \item Filtered Respository Set
+    \item previous project collected open source Python projects
+    \item --- popular
+    \item --- long development history
+    \item --- multiple release cycles
   \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Methodology}
+  Filtered Respository Set
+  We chose only those with 80\% Python and then top 20th percentile in these categories:
+  \begin{enumerate}
+    \item Long history of commits (2,968+ commits)
+    \item Large number of contributors (90+ contributors)
+    \item Many releases (44+ releases)
+    \item Substantial Age (66.4+ months)
+  \end{enumerate}
+  Results in 46 repositories for further research.
 \end{frame}
 
 % 4 Results
