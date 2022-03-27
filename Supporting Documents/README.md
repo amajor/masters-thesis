@@ -14,6 +14,20 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [A systematic literature review of open source software quality assessment models](./Reviewed/A-systematic-literature-review-of-open-source-software-quality-assessment-models.pdf)
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
+
+> **Background:** Many open source software (OSS) quality assessment models are proposed and available in the literature. However, there is little or no adoption of these models in practice. In order to guide the formulation of newer models so they can be acceptable by practitioners, there is need for clear discrimination of the existing models based on their specific properties. Based on this, the aim of this study is to perform a systematic literature review to investigate the properties of the existing OSS quality assessment models by classifying them with respect to their quality characteristics, the methodology they use for assessment, and their domain of application so as to guide the formulation and development of newer models. Searches in IEEE Xplore, ACM, Science Direct, Springer and Google Search is performed so as to retrieve all relevant primary studies in this regard. Journal and conference papers between the year 2003 and 2015 were considered since the first known OSS quality model emerged in 2003.
+
+> **Results:** A total of 19 OSS quality assessment model papers were selected. To select these models we have developed assessment criteria to evaluate the quality of the existing studies. Quality assessment models are classified into five categories based on the quality characteristics they possess namely: single-attribute, rounded category, community-only attribute, non-community attribute as well as the non-quality in use models. Our study reflects that software selection based on hierarchical structures is found to be the most popular selection method in the existing OSS quality assessment models. Furthermore, we found that majority (47%) of the existing models do not specify any domain of application.
+
+> **Conclusions:** In conclusion, our study will be a valuable contribution to the community and helps the quality assessment model developers in formulating newer models and also to the practitioners (software evaluators) in selecting suitable OSS in the midst of alternatives.
+
+This study has a lot of interesting data points about the process quality model characteristics (found in ISO 25010) and how maintainability is the most important attribute being measured in Open Source Software (OSS) in the different quality assessment models out there.
+
+---
+
 ## [Gamification for software process improvement: a practical approach](./Reviewed/iet-sen.2018.5120.pdf)
 
 > Gamification is a research field that is intended to increase motivation, so it is especially indicated in human capital intensive environments such as the software industry. Within Software Engineering, one of the main issues regarding software process improvement (SPI) is personnel motivation in specific SPI initiatives. These issues are stronger in small and medium software development companies where employees have to deal with the pressure of deadlines and occasional work overload. To address the adoption of SPI initiatives, the researchers implemented a defined gamification framework for deployment in SPI efforts in order to increase motivation among software workers and to enhance SPI results. The framework was rolled out in a small Spanish software development organisation, which is conducting internal SPI initiatives. To validate the effectiveness of the implemented framework, a controlled experiment was carried out in which an experimental group adopted SPI improvements using a gamification approach. The implementation results show that the application of the framework does not increase personnel motivation in SPI tasks although it contributes to enhancing the SPI tasks performance. This study discusses the limitations and recommendations to implement appropriately the SPI-gamification framework in the scope of small and medium software development companies.
@@ -59,6 +73,8 @@ The EvoStreets approach follows 3 models to build up the map:
 ---
 
 ## [An Extensive Analysis of Machine Learning Based Boosting Algorithms for Software Maintainability Prediction](./Reviewed/ijimai7_2_9_0.pdf)
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
 
 > Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability & growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.
 
@@ -162,6 +178,8 @@ Default Equation:
 
 ## [Standardized code quality benchmarking for improving software maintainability](./Reviewed/Standardized-code-quality-benchmarking.pdf)
 
+_Refers to [ISO 9126](https://www.iso.org/standard/22749.html), which becomes [ISO 25010](https://www.iso.org/standard/35733.html)._
+
 - Technical quality of source code impacts software maintainability
   1. how easy it is to determine where and how that change can be performed
   2. how easy it is to implement that change
@@ -192,6 +210,8 @@ Default Equation:
 
 ## [ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html)
 ### Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
 
 > THIS STANDARD WAS LAST REVIEWED AND CONFIRMED IN 2017. 
 > THEREFORE THIS VERSION REMAINS CURRENT.
