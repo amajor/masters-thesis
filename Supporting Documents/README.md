@@ -14,6 +14,28 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [Understanding software evolution with software cities](./Reviewed/1473871612438785.pdf)
+
+> Software cities are visualizations of software systems in the form of virtual cities. They are used as platforms to integrate a large variety of product- and process-related analysis data. Their usability, however, for real-world software development often suffers from their inability to appropriately deal with software changes. Even small structural changes can disrupt the overall structure of the city, which in turn corrupts the mental maps of its users. In this article we describe a systematic approach to utilize the city metaphor for the visualization of evolving software systems as growing software cities. The main contribution is a new layout approach which explicitly takes the development history of software systems into account. The approach has two important effects: first, it creates a stable gestalt of software cities even when the underlying software systems evolve; thus, by preserving its users’ mental maps these cities are especially suitable for use during ongoing system development. Second, it makes history directly visible in the city layouts, which allows for supporting novel analysis scenarios. We illustrate such scenarios by presenting several thematic cities’ maps, each capturing specific development history aspects.
+
+Systematic approach to utilize the city metaphor:
+1. Creates a stable gestalt of software cities even when the underlying software systems evolve
+2. It makes history directly visible in the city layouts
+
+The EvoStreets approach follows 3 models to build up the map:
+1. The **primary model** for software cities captures structural and analysis data.
+    - Structural data refer to the static software structure, i.e. the decomposition into subsystems and modules, as well as dependencies among modules.
+2. The secondary model is a 2.5D **geometric model**, representing primary model data
+    - captures the main structural and evolutionary properties of the software system
+    - provides a specific, stable gestalt for each software system
+      - mainly influenced by the particular layout of the system elements
+3. **Thematic tertiary models**
+    - designed to support specific application scenarios by visualizing particular aspects of a given software system and its development history
+
+> The EvoStreets approach particularly focuses on aspects of evolution by capturing the information about the creation time of system elements in the layout and by creating stable layout sequences during the evolution of systems. This allows for supporting several application scenarios which are based on information about the history of development activities and their effects on the system structure. Typical questions developers and project managers in this context ask are “How did this component evolve?”, “Who is working on what?”,29 or “Who owns a piece of code?” and “What is the history of a piece of code?”.
+
+---
+
 ## [A Systematic Literature Review of Machine Learning Techniques for Software Maintainability Prediction](./Reviewed/Alsolai_Roper_IST_2019_A_systematic_literature_review_of_machine_learning_techniques.pdf)
 
 > **Context:** Software maintainability is one of the fundamental quality attributes of software engineering. The accurate prediction of software maintainability is a significant challenge for the effective management of the software maintenance process. 
