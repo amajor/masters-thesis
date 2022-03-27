@@ -14,6 +14,12 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [Review of approaches to manage architectural knowledge in Agile Global Software Development](./Reviewed/iet-sen.2016.0197.pdf)
+
+> Nowadays, Agile and Global Software Development (AGSD) has brought benefits and new challenges to the software industry. Among the main challenges is Architecture Knowledge Management (AKM), due to the following reasons: (i) in Agile Software Development team members prefer to convey knowledge in a face-to-face manner, over transmitting it through formal documents; and (ii) an efficient AKM in Global Software Development involves managing explicit knowledge. These opposite paradigms turn AKM into an unsolved issue in AGSD. In this study, the authors present a systematic mapping review about AKM in AGSD. From this review, they identified nine approaches that AGSD companies use to overcome the AKM challenge, which are grouped in three areas: (i) documentation artefact-based, (ii) communication-based, and (iii) methodological-based. Also, they found that the selected papers evenly support the three phases of the integrated knowledge management cycle (creation/capture, sharing/dissemination and acquisition/application), although only 7% of them support the capture of architectural knowledge in a formalised way. Finally, they conclude proposing critical points to consider in the implementation of AKM solutions in AGSD, and presenting their directions of future work.
+
+---
+
 ## [A systematic literature review of open source software quality assessment models](./Reviewed/A-systematic-literature-review-of-open-source-software-quality-assessment-models.pdf)
 
 _Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
