@@ -14,6 +14,20 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [A Systematic Literature Review of Machine Learning Techniques for Software Maintainability Prediction](./Reviewed/Alsolai_Roper_IST_2019_A_systematic_literature_review_of_machine_learning_techniques.pdf)
+
+> **Context:** Software maintainability is one of the fundamental quality attributes of software engineering. The accurate prediction of software maintainability is a significant challenge for the effective management of the software maintenance process. 
+
+> **Objective:** The major aim of this paper is to present a systematic review of studies related to the prediction of maintainability of object-oriented software systems using machine learning techniques. This review identifies and investigates a number of research questions to comprehensively summarize, analyse and discuss various viewpoints concerning software maintainability measurements, metrics, datasets, evaluation measures, individual models and ensemble models. 
+
+> **Method:** The review uses the standard systematic literature review method applied to the most common computer science digital database libraries from January 1991 to July 2018. 
+
+> **Results:** We survey 56 relevant studies in 35 journals and 21 conference proceedings. The results indicate that there is relatively little activity in the area of software maintainability prediction compared with other software quality attributes. CHANGE maintenance effort and the maintainability index were the most commonly used software measurements (dependent variables) employed in the selected primary studies, and most made use of class-level product metrics as the independent variables. Several private datasets were used in the selected studies, and there is a growing demand to publish datasets publicly. Most studies focused on regression problems and performed k-fold cross-validation. Individual prediction models were employed in the majority of studies, while ensemble models relatively rarely. 
+
+> **Conclusion:** Based on the findings obtained in this systematic literature review, ensemble models demonstrated increased accuracy prediction over individual models, and have been shown to be useful models in predicting software maintainability. However, their application is relatively rare and there is a need to apply these, and other, models to an extensive variety of datasets with the aim of improving the accuracy and consistency of results.
+
+---
+
 ## [An Extensive Analysis of Machine Learning Based Boosting Algorithms for Software Maintainability Prediction](./Reviewed/ijimai7_2_9_0.pdf)
 
 > Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability & growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.
