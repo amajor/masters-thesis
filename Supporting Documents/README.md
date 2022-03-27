@@ -14,6 +14,14 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [An Extensive Analysis of Machine Learning Based Boosting Algorithms for Software Maintainability Prediction](./Reviewed/ijimai7_2_9_0.pdf)
+
+> Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability & growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.
+
+> This study would open new doors for the software developers for carrying out comparatively more precise predictions well in time and hence reduce the overall maintenance costs.
+
+---
+
 ## [Programs, Life Cycles, and Laws of Software Evolution](./Reviewed/lehman.pdf)
 
 > By classifying programs according to their relationship to the environment in which they are executed, the paper identities the sources of evolutionary pressure on computer applications and programs and shows why this results in a process of never ending maintenance activity. The resultant life cycle processes are then briefly discussed. The paper then introduces laws of Program Evolution that have been formulated following quantitative studies of the evolution of a number of different systems. Finally an example is provided of the application of Evolution Dynamics models to program release plnnning.
