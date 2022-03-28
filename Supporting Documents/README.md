@@ -14,6 +14,31 @@ understand the data. You can find copies of the spreadsheets below.
 
 ---
 
+## [Design Principles and Design Patterns](./Reviewed/DesignPrinciplesAndPatterns.pdf)
+
+> The immediate cause of the degradation of the design is well understood. The requirements have been changing in ways that the initial design did not anticipate. Often these changes need to be made quickly, and may be made by engineers who are not familiar with the original design philosophy. 
+
+_From [Wikipedia](https://en.wikipedia.org/wiki/SOLID):_
+
+The SOLID ideas are:
+
+1. The **single-responsibility principle**: "There should never be more than one reason for a class to change." In other words, every class should have only one responsibility.
+2. The **open–closed principle**: "Software entities ... should be open for extension, but closed for modification."
+3. The **Liskov substitution principle**: "Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it." See also design by contract.
+4. The **interface segregation principle**: "Many client-specific interfaces are better than one general-purpose interface."
+5. The **dependency inversion principle**: "Depend upon abstractions, not concretions."
+
+The SOLID acronym was introduced later, around 2004, by Michael Feathers.
+
+### [Single Responsibility Principle](./Reviewed/RobertMartin_SingleResponsibilityPrinciple.pdf)
+
+> This principle was described in the work of Tom DeMarco and Meilir Page-Jones. They called it cohesion.
+
+> SRP: The Single Responsibility Principle
+> THERE SHOULD NEVER BE MORE THAN ONE REASON FOR A CLASS TO CHANGE.
+
+---
+
 ## [Review of approaches to manage architectural knowledge in Agile Global Software Development](./Reviewed/iet-sen.2016.0197.pdf)
 
 > Nowadays, Agile and Global Software Development (AGSD) has brought benefits and new challenges to the software industry. Among the main challenges is Architecture Knowledge Management (AKM), due to the following reasons: (i) in Agile Software Development team members prefer to convey knowledge in a face-to-face manner, over transmitting it through formal documents; and (ii) an efficient AKM in Global Software Development involves managing explicit knowledge. These opposite paradigms turn AKM into an unsolved issue in AGSD. In this study, the authors present a systematic mapping review about AKM in AGSD. From this review, they identified nine approaches that AGSD companies use to overcome the AKM challenge, which are grouped in three areas: (i) documentation artefact-based, (ii) communication-based, and (iii) methodological-based. Also, they found that the selected papers evenly support the three phases of the integrated knowledge management cycle (creation/capture, sharing/dissemination and acquisition/application), although only 7% of them support the capture of architectural knowledge in a formalised way. Finally, they conclude proposing critical points to consider in the implementation of AKM solutions in AGSD, and presenting their directions of future work.
@@ -31,6 +56,10 @@ _Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
 > **Conclusions:** In conclusion, our study will be a valuable contribution to the community and helps the quality assessment model developers in formulating newer models and also to the practitioners (software evaluators) in selecting suitable OSS in the midst of alternatives.
 
 This study has a lot of interesting data points about the process quality model characteristics (found in ISO 25010) and how maintainability is the most important attribute being measured in Open Source Software (OSS) in the different quality assessment models out there.
+
+### [The SQO-OSS Quality Model: Measurement Based Open Source Software Evaluation](./Reviewed/Samoladas2008_Chapter_TheSQO-OSSQualityModelMeasurem.pdf)
+
+> Software quality evaluation has always been an important part of software business. The quality evaluation process is usually based on hierarchical quality models that measure various aspects of software quality and deduce a characterization of the product quality being evaluated. The particular nature of open source software has rendered existing models inappropriate for detailed quality evaluations. In this paper, we present a hierarchical quality model that evaluates source code and community processes, based on automatic calculation of metric values and their correlation to a set of predefined quality profiles.
 
 ---
 

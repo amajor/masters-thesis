@@ -66,7 +66,9 @@
 % =============================================================================
 
 \newpage
-\tableofcontents
+\begin{singlespace}
+  \tableofcontents
+\end{singlespace}
 
 % =============================================================================
 % =  List of Tables
@@ -74,7 +76,9 @@
 
 \newpage
 \addcontentsline{toc}{section}{List of Tables}
-\listoftables
+\begin{singlespace}
+  \listoftables
+\end{singlespace}
 
 % =============================================================================
 % =  List of Figures
@@ -82,7 +86,9 @@
 
 \newpage
 \addcontentsline{toc}{section}{List of Figures}
-\listoffigures
+\begin{singlespace}
+  \listoffigures
+\end{singlespace}
 
 % =============================================================================
 % =  Paper Content
@@ -92,112 +98,55 @@
 \cleardoublepage% \clearpage
 \pagenumbering{arabic}
 
-\todo{========== INSERT SOMEWHERE ==========} 
+% \todo{========== INSERT SOMEWHERE ==========} 
 
-The art of programming begin as something quite frankly tedious and error prone, with programmers writing every step of a process in a machine language. As this was not a great way to grow the industry, languages were developed so that programmers could reduce the manual effort of their programming and also improve the quality of their work by allowing the machine itself to transform the high-level code into something executable and efficient. \cite{lehman:1980}
+% \begin{figure}[ht]
+%   \centerline{
+%     \includegraphics[width=0.7\columnwidth]{Lehman_Figure4.png}
+%   }
+%   \caption{Lehman's depiction of ``E-Programs'' \cite{lehman:1980}}
+%   \label{figEPrograms}
+% \end{figure}
 
-``Of the total U.S. expenditure for 1977, some 70 percent was spent on program maintenance and only about 30 percent on program development.'' \cite{lehman:1980}
+% The programs we write become part of the world around that it models. These programs, especially with the advent of mobile technology, have become embedded in our world. Lehman recognized this decades ago and acknowledged the relationship of these types of programs to our world, as seen in Fig. \ref{figEPrograms}. \cite{lehman:1980}
 
-``The unit cost of change must initially be made as low as possible and its growth, as the system ages, minimized. Programs must be made more alterable, and the alterability maintained throughout their lifetime. The change process itself must be planned and controlled.'' \cite{lehman:1980}
+% ``Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability \& growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.'' \cite{gupta:2021}
 
-\begin{figure}[ht]
-  \centerline{
-      \includegraphics[width=0.7\columnwidth]{Lehman_Figure4.png}
-  }
-  \caption{Lehman's depiction of ``E-Programs'' \cite{lehman:1980}}
-  \label{figEPrograms}
-\end{figure}
+% ``This study would open new doors for the software developers for carrying out comparatively more precise predictions well in time and hence reduce the overall maintenance costs.'' \cite{gupta:2021}
 
-The programs we write become part of the world around that it models. These programs, especially with the advent of mobile technology, have become embedded in our world. Lehman recognized this decades ago and acknowledged the relationship of these types of programs to our world, as seen in Fig. \ref{figEPrograms}. \cite{lehman:1980}
+% ``There are ten software maintainability measurements used in selected primary studies: CHANGE maintenance effort, corrective maintenance, adaptive maintenance effort, maintenance evaluation by maintainability index, maintenance evaluation by change proneness, maintenance time, maintenance cost, maintenance attributes, maintenance components and other measurements.'' \cite{alsolai:2019}
 
-``As they become familiar with a system whose design and attributes depend at least in part on user attitudes and practice before system installation, users will modify their behavior to minimize effort or maximize effectiveness.'' \cite{lehman:1980}
+% There have been studies done to help visualize the evolution of software through the use of city maps. \cite{steinbruckner:2012}
 
-``Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability \& growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.'' \cite{gupta:2021}
+% The EvoStreets approach follows 3 models to build up the map \cite{steinbruckner:2012}:
+% \begin{enumerate}
+%   \item The \textbf{primary model} for software cities captures structural and analysis data.
+%   \begin{itemize}
+%     \item Structural data refer to the static software structure, i.e. the decomposition into subsystems and modules, as well as dependencies among modules.
+%   \end{itemize}
+%   \item The secondary model is a 2.5D \textbf{geometric model}, representing primary model data
+%   \begin{itemize}
+%     \item captures the main structural and evolutionary properties of the software system
+%     \item provides a specific, stable gestalt for each software system
+%     \item --mainly influenced by the particular layout of the system elements
+%   \end{itemize}
+%   \item \textbf{Thematic tertiary models}
+%   \begin{itemize}
+%     \item designed to support specific application scenarios by visualizing particular aspects of a given software system and its development history
+%   \end{itemize}
+% \end{enumerate}
 
-``This study would open new doors for the software developers for carrying out comparatively more precise predictions well in time and hence reduce the overall maintenance costs.'' \cite{gupta:2021}
+% ``Software process improvement (SPI) is seen as the dominant approach to improving software products in software development organisations [1].'' \cite{herranz:2019}
 
-``A significant proportion of the comprehensive cost of software during the Software Development Life Cycle (SDLC) is spent in the maintenance phase alone since the cost of maintenance keeps on accumulating with each phase of SDLC. It has been observed that only 30-40\% of the resources, including money, time, and effort, are utilized in the development phase, whereas the remaining 60-70\% is used for the maintenance activities [1].'' \cite{gupta:2021}
+% % [1] --> Shih, C.-C., Huang, S.-J.: ‘Exploring the relationship between organizational culture and software process improvement deployment’, Inf. Manage., 2010, 47, (5–6), pp. 271–281
 
-% [1] “IEEE Standard for Software Maintenance,” IEEE Std 1219-1993, 1993, doi: 10.1109/IEEESTD.1993.11557.
+% ``SPI has become the primary approach to improving software quality and reliability, employee and customer satisfaction, and return on investment [2].'' \cite{herranz:2019}
 
-``There exists a detailed standard for software quality known as ISO/IEC 25010:2011. It describes eight product quality characteristics, where each characteristic further comprises various sub-related characteristics [2]. Fig. 1 depicts these eight quality characteristics, along with the sub characteristics. Of all the quality characteristics, maintainability is considered for evaluation in the current study since it is one of the most significant characteristics.''
+% % [2] --> Mathiassen, L., Ngwenyama, O.K., Aaen, I.: ‘Managing change in software process improvement’, IEEE Softw.., 2005, 22, (6), pp. 84–91
 
-% [2] “ISO/IEC 25010:2011(en) Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models,” 2011. https://www.iso.org/obp/ ui/#iso:std:iso-iec:25010:ed-1:v1:en.
+% ``The result of this study shows that maintainability is the most significant and ubiquitous product quality characteristic considered in the literature while usability is the most significant attribute in the quality in use category.'' \cite{adewumi:2016}
 
-\begin{figure}[ht]
-  \centerline{
-      \includegraphics[width=0.7\columnwidth]{ProductQualityModel.png}
-  }
-  \caption{The eight product quality characteristics and sub-characteristics.}
-  \label{figProductQualityModel}
-\end{figure}
-
-See ``Fig.~\ref{figProductQualityModel}'' which comes from ISO/IEC 25010:2011 \cite{iso/iec:25010:2011} (already referenced in this paper).
-
-``Software maintainability these days has become one of the essential external attributes of software, which further forms a basis of research for many researchers working in the fields related to software engineering. Software maintainability can be described as the extent to which a particular software system can be changed concerning the number of Lines of Code (LOC).'' \cite{gupta:2021}
-
-``Software maintainability is one of the fundamental external quality attributes and is recognised as a research area of primary concern in software engineering.'' \cite{alsolai:2019}
-
-``There are ten software maintainability measurements used in selected primary studies: CHANGE maintenance effort, corrective maintenance, adaptive maintenance effort, maintenance evaluation by maintainability index, maintenance evaluation by change proneness, maintenance time, maintenance cost, maintenance attributes, maintenance components and other measurements.'' \cite{alsolai:2019}
-
-There have been studies done to help visualize the evolution of software through the use of city maps. \cite{steinbruckner:2012}
-
-The EvoStreets approach follows 3 models to build up the map:
-1. The **primary model** for software cities captures structural and analysis data.
-    - Structural data refer to the static software structure, i.e. the decomposition into subsystems and modules, as well as dependencies among modules.
-2. The secondary model is a 2.5D **geometric model**, representing primary model data
-    - captures the main structural and evolutionary properties of the software system
-    - provides a specific, stable gestalt for each software system
-      - mainly influenced by the particular layout of the system elements
-3. **Thematic tertiary models**
-    - designed to support specific application scenarios by visualizing particular aspects of a given software system and its development history
-\cite{steinbruckner:2012}
-
-``Software process improvement (SPI) is seen as the dominant approach to improving software products in software development organisations [1].'' \cite{herranz:2019}
-
-% [1] --> Shih, C.-C., Huang, S.-J.: ‘Exploring the relationship between organizational culture and software process improvement deployment’, Inf. Manage., 2010, 47, (5–6), pp. 271–281
-
-``SPI has become the primary approach to improving software quality and reliability, employee and customer satisfaction, and return on investment [2].'' \cite{herranz:2019}
-
-% [2] --> Mathiassen, L., Ngwenyama, O.K., Aaen, I.: ‘Managing change in software process improvement’, IEEE Softw.., 2005, 22, (6), pp. 84–91
-
-``It is important to note that ISO 25010 can serve as standard for OSS only in terms of product quality and quality in use. It does not address unique characteristics of OSS such as the community. A key distinguishing feature of OSS is that it is built and maintained by a community (Haaland et al. 2010). The quality of this community also determines the quality of the OSS (Samoladas et al. 2008).'' \cite{adewumi:2016}
-
-% (Haaland et al. 2010) --> Haaland K, Groven AK, Regnesentral N, Glott R, Tannenberg A, FreeCode AS (2010) Free/libre open source quality models—a comparison between two approaches. In: 4th FLOS international workshop on Free/Libre/Open Source Software, July 2010
-
-% (Samoladas et al. 2008) --> Samoladas I, Gousios G, Spinellis D, Stamelos I (2008) The SQO-OSS quality model: measurement based open source software evaluation. In: IFIP International Conference on Open Source Systems. Springer, Milano, pp 237–248
-
-``Maintenance capacity refers to the number of con- tributors to an OSS project and the amount of time they are willing and able to contribute to the development effort as observed from versioning logs, mailing lists, discussion forums and bug report systems. Furthermore, sustainability refers to the ability of the community to grow in terms of new contributors and to regenerate by attracting and engaging new members to take the place of those leaving the community.'' \cite{adewumi:2016}
-
-Why did we choose certain aspects when narrowing down our repository list? Here is an example of process maturity: ``In addition, process maturity refers to the adoption and use of standard practices in the development process such as submission and review of changes, peer review of changes, provision of a test suite, and planned releases.'' \cite{adewumi:2016}
-
-``It shows that maintainability is measured by 55\% of the existing OSS quality models making it the most common product quality character- istic measured by existing OSS quality models.'' \cite{adewumi:2016}
-
-From ``Fig.~\ref{figFreqDistProductQualityModel}'', ``it can be inferred that the maintainability of a given OSS is of more importance than the functionality it possesses. This is because being an OSS; the code is accessible making it possible to incorporate missing fea- tures. However, such missing features can be difficult to implement if the code is not well documented, readable and understandable which are all attributes of maintainable code.'' \cite{adewumi:2016}
-
-\begin{figure}[ht]
-  \centerline{
-      \includegraphics[width=0.7\columnwidth]{adewole_ProductQualityCharacteristics_in_OSS_quality_models.png}
-  }
-  \caption{Frequency distribution of ISO 25010 product quality characteristics in OSS quality models, as found by Adewumi et. al in 2016 \cite{adewumi:2016}.}
-  \label{figFreqDistProductQualityModel}
-\end{figure}
-
-``Emphasis should shift from trying to build compre- hensive models (containing all the possible software characteristics) to building models that include only essential quality characteristics. This study has shown that these essential quality characteristics include: maintainability, usability and maintenance capacity of software community.'' \cite{adewumi:2016}
-
-``The result of this study shows that maintainability is the most significant and ubiquitous product quality characteristic consid- ered in the literature while usability is the most signifi- cant attribute in the quality in use category.'' \cite{adewumi:2016}
-
-``We should recognise that a software development team must have access to AK, since it is the base to build and understand the technical part of any software development cycle.'' \cite{borrego:2017}
-
-``it has been proven that a good KM is an important factor for any software development project; KM absence is a failure factor [19].'' \cite{borrego:2017}
-
-% [19] --> Levy, M., Hazzan, O.: ‘Knowledge management in practice: the case of Agile software development’. 2009 ICSE Work. Coop. Hum. Asp. Software Engineering, 2009, pp. 60–65
-
-``They found that, in software engineering, knowledge is managed mostly through repositories that support knowledge flows.'' \cite{borrego:2017}
-
-% "they" --> Bjørnson and Dingsøyr [22] --> Bjørnson, F.O., Dingsøyr, T.: ‘Knowledge management in software engineering: a systematic review of studied concepts, findings and research methods used’, Inf. Softw. Technol., 2008, 50, (11), pp. 1055–1068
-
-\todo{========== END THINGS TO INSERT ==========}
+% \todo{========== END THINGS TO INSERT ==========}
 
 \newpage
 \include{Chapters/1_Introduction/1_Introduction}

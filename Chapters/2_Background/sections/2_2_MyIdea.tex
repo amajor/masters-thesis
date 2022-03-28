@@ -7,7 +7,7 @@
 % --- Understand Software Maintenance -----------------------------------------
 \subsection{Software Maintenance} \label{subSoftwareMaintenance}
 
-The structural quality of a software system will impact the software evolution. If the project has poor structural quality, its ability to evolve will be minimized, and the software system will eventually ``die-off'' so to speak.
+The structural quality of a software system will impact the software evolution. Similarly, as a project evolves, there is a likelihood that it will degrade, as changes are often made quickly and in ways that the original design did not anticipate \cite{martin:2000}. If the project has poor structural quality, its ability to evolve will be minimized, and the software system will eventually ``die-off'' so to speak.
 
 There is much planning involved in all software creation projects in what the product will be, will do, who it is for, etc. One of the things that should also be on the planning list is long-term maintenance and growth. That is, how do we build a thing that will be easier to add features to down the road?
 
@@ -15,7 +15,7 @@ Let us define maintainability in the context of software. For example, a system 
 
 \vspace{0.25cm}
 \begin{displayquote}
-``Software maintenance in software engineering is the modification of a software product after delivery to correct faults, to improve performance or other attributes.'' \cite{wiki:software-maintenance}
+  ``Software maintenance in software engineering is the modification of a software product after delivery to correct faults, to improve performance or other attributes.'' \cite{wiki:software-maintenance}
 \end{displayquote}
 \vspace{0.25cm}
 
@@ -23,7 +23,11 @@ It may be easier to understand what characteristics define a system with poor ma
 
 A project is known to have good maintainability when there is an enforced set of clean and consistent standards for the code. This often involves having human-readable names for functions, methods, and variables. Any complex code is minimized, and methods are small and focus on a single thing. Parts of the system are decoupled and organized, making it easy to work on different parts with low impact on unrelated parts. For example, the code is DRY (there is limited redundancy in the code), unused code has been removed, and there is a level of documentation that supports an easy understanding of the system.
 
-Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and fix bugs, even working on different parts in parallel, can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
+Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' (1975) even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. In 1977, Meir M. Lehman noted that 70\% of a program budget was spent on maintenance, with the remaining 30\% spent on development. In 1993, it was again observed that only 20-40\% of the resources (money, time, effort) were used for development of a project, with 60-70\% used for maintenance activities \cite{ieee:1219}.
+
+Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and fix bugs, even working on different parts in parallel, can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
+
+\todo{TODO: Anything about SOLID and when too many files are being touched? \cite{martin:2000}}
 
 % --- Understand Software Evolution -------------------------------------------
 \subsection{Software Evolution} \label{subSoftwareEvolution}
@@ -36,7 +40,7 @@ It is also fair to say that systems will change because we can never fully deter
 
 Meir ``Manny'' Lehman and László ``Les'' Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws apply to programs that were written to perform some real-world activity, where its behavior is linked to the environment in which it runs; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are listed below. \cite{wiki:lehmans-laws}
 
-\todo{TODO: Read and reference ``An Empirical Study of Lehman’s Law on Software Quality Evolution'' \cite{yu:2013}}.
+\todo{TODO: Read and reference ``An Empirical Study of Lehman's Law on Software Quality Evolution'' \cite{yu:2013}}.
 
 \vspace{0.25cm}
 \begin{enumerate}
@@ -94,6 +98,12 @@ These two suggestions are very evident in modern development. For example, a dev
 \subsection{Measuring Maintainability} \label{subMeasureMaintainability}
 
 Despite the nuanced differences between \textit{maintainability} and \textit{evolution}, the two characteristics run parallel to each other. If a system is easy to maintain, it will also be easier to evolve. If we can measure our system's maintainability, we can also determine if our system is in a good position to continue evolving to meet our future needs.
+
+\vspace{0.25cm}
+\begin{displayquote}
+``The unit cost of change must initially be made as low as possible and its growth, as the system ages, minimized. Programs must be made more alterable, and the alterability maintained throughout their lifetime. The change process itself must be planned and controlled.'' \cite{lehman:1980}
+\end{displayquote}
+\vspace{0.25cm}
 
 Several tools attempt to provide some value around these ideas. In this paper, we will focus on the metrics that Pylint provides, specifically looking into the Refactor score of Pylint.
 
