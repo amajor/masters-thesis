@@ -2,7 +2,7 @@
 
 % Results, findings, discussion of results OR manuscripts.  It is best to also reiterate information in your literature review to help substantiate the findings of your research.
 
-\todo{TODO: Tie this all together.}
+\todo{TODO: Tie this all together. Data still being finalized with Dr. Omari and Dr. Wedyan. Tables below list primary data of interest, but additional data is being gathered and will be added. As data is finalized, the context and results will be fleshed out, appropriately referencing the data and tables.}
 
 With our narrowed focus of repositories, we can now spend some more efforts looking through the data that can be collected. Specifically, we gathered data on the Refactor Warnings provided by Pylint. In Table \ref{table:refactorWarningTotals} we have a listing of all repositories from our set with their total count of refactor warning messages, in addition to the most commonly appearing refactor warning message.
 
@@ -62,10 +62,74 @@ With our narrowed focus of repositories, we can now spend some more efforts look
     numba & 140 & too-few-public-methods & 54 (39\%) \\ \hline
     sentry & 71 & no-self-use & 32 (45\%) \\ \hline
     raven-python & 24 & too-few-public-methods & 7 (29\%) \\ \hline
-
   \end{tabularx}
   \caption{Total refactor messages per repository. Also provided with the refactor message that had the most warnings and its total count (and the percentage of that message from the total refactor warnings for that repository).}
   \label{table:refactorWarningTotals}
+\end{table}
+
+\begin{table}[ht]
+  \tiny
+  \centering
+  \begin{tabularx}{1.0\textwidth} {
+    | l % Respository
+    | c % Files
+    | c % Blank Lines
+    | c % Comment Lines
+    | c % Code Lines
+    | >{\centering\arraybackslash}X | % Comment-to-Code Ratio
+  }
+    \hline
+    Respository & Files & Blank Lines & Comment Lines & Code Lines & Comment-to-Code Ratio \\
+    \hline\hline
+    ansible & 3634 & 15025 & 354848 & 544414 & 65.18\% \\ \hline
+    astropy & 700 & 49670 & 74389 & 133458 & 55.74\% \\ \hline
+    autobahn-python & 288 & 9632 & 15300 & 25212 & 60.69\% \\ \hline
+    aws-cli & 499 & 12573 & 13715 & 63797 & 21.50\% \\ \hline
+    beets & 161 & 9518 & 10285 & 35302 & 29.13\% \\ \hline
+    biopython & 550 & 32931 & 55349 & 164221 & 33.70\% \\ \hline
+    boto & 498 & 16752 & 39547 & 57284 & 69.04\% \\ \hline
+    buildbot & 752 & 29251 & 28282 & 121524 & 23.27\% \\ \hline
+    celery & 312 & 12792 & 7274 & 47231 & 15.40\% \\ \hline
+    cobbler & 134 & 5805 & 8525 & 21578 & 39.51\% \\ \hline
+    conda & 250 & 11136 & 13501 & 46810 & 28.84\% \\ \hline
+    cython & 248 & 13884 & 14408 & 65970 & 21.84\% \\ \hline
+    django & 1942 & 51497 & 48871 & 224782 & 21.74\% \\ \hline
+    django-rest-framework & 131 & 6740 & 5234 & 24229 & 21.60\% \\ \hline
+    electrum & 195 & 7475 & 6176 & 40219 & 15.36\% \\ \hline
+    fail2ban & 82 & 3323 & 6002 & 17386 & 34.52\% \\ \hline
+    gensim & 56 & 2248 & 2934 & 5513 & 53.22\% \\ \hline
+    luigi & 163 & 6161 & 6764 & 17155 & 39.43\% \\ \hline
+    matplotlib & 854 & 39816 & 61005 & 118108 & 51.65\% \\ \hline
+    mongoengine & 60 & 7563 & 4504 & 22324 & 20.18\% \\ \hline
+    mitmproxy & 449 & 9779 & 5355 & 42209 & 12.69\% \\ \hline
+    mongo-python-driver & 150 & 10447 & 12690 & 37306 & 34.02\% \\ \hline
+    mopidy & 192 & 8711 & 4281 & 23856 & 17.95\% \\ \hline
+    networkx & 537 & 20649 & 44977 & 58334 & 77.10\% \\ \hline
+    paramiko & 77 & 2969 & 6883 & 12946 & 53.17\% \\ \hline
+    nova & 1476 & 73923 & 68883 & 321764 & 21.41\% \\ \hline
+    numba & 69 & 1965 & 1550 & 7625 & 20.33\% \\ \hline
+    pandas & 736 & 76113 & 77667 & 239227 & 32.47\% \\ \hline
+    peewee & 72 & 6810 & 1974 & 27727 & 7.12\% \\ \hline
+    pelican & 37 & 2060 & 1346 & 9621 & 13.99\% \\ \hline
+    pip & 431 & 16697 & 21556 & 77670 & 27.75\% \\ \hline
+    pyramid & 329 & 13367 & 8893 & 46704 & 19.04\% \\ \hline
+    ranger & 100 & 3182 & 2515 & 12546 & 20.05\% \\ \hline
+    raven-python & 41 & 538 & 575 & 1609 & 35.74\% \\ \hline
+    salt & 2560 & 172838 & 270502 & 531895 & 50.86\% \\ \hline
+    scikit-image & 446 & 15185 & 25948 & 41309 & 62.81\% \\ \hline
+    scikit-learn & 714 & 44218 & 69676 & 116582 & 59.77\% \\ \hline
+    scrapy & 280 & 6902 & 4202 & 25122 & 16.73\% \\ \hline
+    sentry & 78 & 1500 & 1011 & 5539 & 18.25\% \\ \hline
+    sqlalchemy & 444 & 62135 & 44207 & 208778 & 21.17\% \\ \hline
+    swift & 360 & 32626 & 38660 & 196815 & 19.64\% \\ \hline
+    sympy & 1233 & 107063 & 127176 & 354131 & 35.91\% \\ \hline
+    tornado & 119 & 7905 & 11249 & 27784 & 40.49\% \\ \hline
+    web2py & 362 & 14620 & 20585 & 83034 & 24.79\% \\ \hline
+    werkzeug & 128 & 6466 & 8012 & 20600 & 38.89\% \\ \hline
+    youtube-dl & 863 & 16442 & 7249 & 116735 & 6.21\% \\ \hline
+  \end{tabularx}
+  \caption{Repositories listed with facts about Lines of Code (LOC).}
+\label{table:repositoryLOC}
 \end{table}
 
 \begin{table}[ht]
