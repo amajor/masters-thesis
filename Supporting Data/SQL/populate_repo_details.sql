@@ -140,7 +140,7 @@ SET
   python_comment_line_count = 0,
   python_code_line_count    = 0,
   repo_last_commit_date     = 'Wed Dec 5 20:30:15 2018 -0700'
-WHERE repo_name = 'astrophy';
+WHERE repo_name = 'astropy';
 
 UPDATE repo_details
 SET
@@ -257,7 +257,7 @@ SET
   python_comment_line_count = 0,
   python_code_line_count    = 0,
   repo_last_commit_date     = 'Fri Jan 25 19:14:28 2019 +0100'
-WHERE repo_name = 'electrun';
+WHERE repo_name = 'electrum';
 
 UPDATE repo_details
 SET
