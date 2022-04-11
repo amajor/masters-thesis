@@ -343,17 +343,14 @@ SET
   repo_last_commit_date     = 'Wed Sep 19 11:30:34 2018 -0700'
 WHERE repo_name = 'networkx';
 
--- UNABLE TO PULL???
-/*
 UPDATE repo_details
 SET
   python_file_count         = 0,
   python_blank_line_count   = 0,
   python_comment_line_count = 0,
   python_code_line_count    = 0,
-  repo_last_commit_date     = ''
+  repo_last_commit_date     = 'Fri Oct 5 12:50:20 2018 +0000'
 WHERE repo_name = 'nova';
-*/
 
 UPDATE repo_details
 SET
