@@ -123,14 +123,426 @@ This will provide information; read the Python row for files, blank, comment, an
 Also run `git log` to capture the timestamp for the last commit date.
 */
 
--- Values from running CLOC
+-- Values from running SLOC and git status
 UPDATE repo_details
 SET
   python_file_count         = 0,
   python_blank_line_count   = 0,
   python_comment_line_count = 0,
   python_code_line_count    = 0,
-  repo_last_commit_date     = '1/1/1999'
+  repo_last_commit_date     = 'Thu Dec 13 09:26:14 2018 -0800'
 WHERE repo_name = 'ansible';
 
-SELECT * FROM repo_details;
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Dec 5 20:30:15 2018 -0700'
+WHERE repo_name = 'astrophy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Dec 17 18:21:13 2018 +0100'
+WHERE repo_name = 'autobahn-python';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Jan 25 14:56:01 2019 -0800'
+WHERE repo_name = 'aws-cli';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue May 29 16:07:00 2018 -0400'
+WHERE repo_name = 'beets';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue Dec 18 11:40:50 2018 +0000'
+WHERE repo_name = 'biopython';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Sep 16 14:42:28 2013 -0700'
+WHERE repo_name = 'boto';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Dec 21 17:22:45 2018 +0100'
+WHERE repo_name = 'buildbot';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Jul 18 11:15:09 2018 +0300'
+WHERE repo_name = 'celery';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sat Nov 17 16:10:11 2018 +0100'
+WHERE repo_name = 'cobbler';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Oct 22 21:56:50 2018 -0500'
+WHERE repo_name = 'conda';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Dec 14 15:11:22 2018 +0100'
+WHERE repo_name = 'cython';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Dec 3 17:36:55 2018 +0100'
+WHERE repo_name = 'django';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Thu Oct 18 09:54:33 2018 +0100'
+WHERE repo_name = 'django-rest-framework';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Jan 25 19:14:28 2019 +0100'
+WHERE repo_name = 'electrun';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Apr 4 01:06:14 2018 -0400'
+WHERE repo_name = 'fail2ban';
+
+-- UNABLE TO PULL REPOSITORY; MISSING TAG
+/*
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = ''
+WHERE repo_name = 'gensim';
+*/
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue May 26 11:53:00 2015 +0200'
+WHERE repo_name = 'luigi';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Nov 9 20:06:33 2018 -0500'
+WHERE repo_name = 'matplotlib';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue Jul 31 13:45:02 2018 +0200'
+WHERE repo_name = 'mitmproxy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Oct 10 11:41:40 2018 -0700'
+WHERE repo_name = 'mongo-python-driver';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Thu Dec 6 21:56:31 2018 +0800'
+WHERE repo_name = 'mongoengine';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Oct 15 22:09:53 2018 +0200'
+WHERE repo_name = 'mopidy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Sep 19 11:30:34 2018 -0700'
+WHERE repo_name = 'networkx';
+
+-- UNABLE TO PULL???
+/*
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = ''
+WHERE repo_name = 'nova';
+*/
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Aug 31 17:00:23 2012 -0500'
+WHERE repo_name = 'numba';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Jan 25 09:32:26 2019 -0600'
+WHERE repo_name = 'pandas';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Dec 12 16:08:03 2016 -0800'
+WHERE repo_name = 'paramiko';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Thu Jan 17 16:50:28 2019 -0600'
+WHERE repo_name = 'peewee';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Nov 30 08:31:43 2018 -0800'
+WHERE repo_name = 'pelican';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Oct 5 14:37:26 2018 +0530'
+WHERE repo_name = 'pip';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue Nov 6 20:40:24 2018 -0600'
+WHERE repo_name = 'pyramid';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sun Sep 9 21:18:12 2018 +0200'
+WHERE repo_name = 'ranger';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Oct 24 12:48:03 2011 -0700'
+WHERE repo_name = 'raven-python';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Aug 6 15:50:11 2018 -0400'
+WHERE repo_name = 'salt';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Tue Oct 2 10:47:13 2018 +1000'
+WHERE repo_name = 'scikit-image';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Dec 19 19:52:01 2018 +1100'
+WHERE repo_name = 'scikit-learn';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Wed Jan 30 18:00:40 2019 -0300'
+WHERE repo_name = 'scrapy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Thu Nov 3 17:55:02 2011 -0700'
+WHERE repo_name = 'sentry';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Nov 16 23:04:42 2018 -0500'
+WHERE repo_name = 'sqlalchemy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sat Dec 15 05:10:56 2018 +0000'
+WHERE repo_name = 'swift';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Fri Sep 14 12:51:02 2018 -0600'
+WHERE repo_name = 'sympy';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sun Sep 16 14:53:14 2018 -0400'
+WHERE repo_name = 'tornado';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sat Oct 6 11:41:01 2018 -0700'
+WHERE repo_name = 'web2py';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Sun Dec 31 22:16:29 2017 +0100'
+WHERE repo_name = 'werkzeug';
+
+UPDATE repo_details
+SET
+  python_file_count         = 0,
+  python_blank_line_count   = 0,
+  python_comment_line_count = 0,
+  python_code_line_count    = 0,
+  repo_last_commit_date     = 'Mon Dec 17 05:37:50 2018 +0700'
+WHERE repo_name = 'youtube-dl';
+
+-- Display the current table data
+SELECT * FROM repo_details ORDER BY repo_name;
