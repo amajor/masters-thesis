@@ -15,7 +15,7 @@ Through the documentation of Pylint, we can understand how to use it and the sco
 
 \vspace{0.25cm}
 \begin{center}
-\code{10.0-((float(5*e+w+r+c)/s)*10)}
+\code{10.0 - (( float( 5 * e + w + r + c) / s ) * 10 )}
 \end{center}
 \vspace{0.25cm}
 
@@ -44,10 +44,7 @@ To calculate the Refactor score, Pylint will check the code for code smells base
 \vspace{0.25cm}
 
 % \todo{TODO: expand on this idea more}
-We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. There are fundamental design principles that have been established that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and, when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction.
-
-% -- Examples from our data set of the most common Refactor messages ----------
-Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value. \todo{The most common Refactor error returned in our data set was the \code{no-else-return} message. This particular message highlights when an unnecessary block of code follows an if-statement that contains a \code{return}. The second most common Refactor message was \code{too-few-public-methods}, which reminds the developer to consider whether that class is appropriate to create.}
+We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. There are fundamental design principles that have been established that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and, when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction. Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value.
 
 Finally, in respect to Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard can be used to make code more readable and more consistent, which may contribute to the code being more maintainable. These standards cover things like indentation spacing, maximum line length, where to break lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
 
