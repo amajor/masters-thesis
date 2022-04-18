@@ -25,7 +25,17 @@ SELECT
     ) AS "Total Convention Msgs",
     MAX(t4_repo_details.commit_count) AS "Repo Commit Count",
     MAX(t4_repo_details.contributer_count) AS "Repo Contributer Count",
-    MAX(t4_repo_details.release_count) AS "Repo Release Count"
+    MAX(t4_repo_details.release_count) AS "Repo Release Count",
+    MAX(t4_repo_details.url) AS "Repo URL",
+    MAX(t4_repo_details.stars_count) AS "Repo Stars Count",
+    MAX(t4_repo_details.watchers_count) AS "Repo Watchers Count",
+    MAX(t4_repo_details.latest_tag) AS "Repo Latest Tag",
+    MAX(t4_repo_details.latest_commit_sha) AS "Repo Latest Commit",
+    MAX(t4_repo_details.created_date) AS "Repo Created Date",
+    MAX(t4_repo_details.last_push_date) AS "Repo Last Push Date",
+    MAX(t4_repo_details.languages_list) AS "Repo Languages",
+    MAX(t4_repo_details.topics) AS "Repo Topics",
+    MAX(t4_repo_details.description) AS "Repo Description"
 FROM new_radon_raw_metrics AS t1_radon_raw
 INNER JOIN new_radon_mi_metric AS t2_radon_mi
 	ON t1_radon_raw.module_name = t2_radon_mi.module_name
