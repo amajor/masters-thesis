@@ -5,4 +5,35 @@
 
 \section{Pylint: Refactor Scores} \label{appendixPylintRefactor}
 
+The score in Pylint is a value out of 10, with 10 being the best.
+
+Pylint has a number of types of messages:
+\begin{singlespace}
+  \begin{enumerate}
+    \item Convention
+    \item Error
+    \item Fatal
+    \item Information
+    \item Refactor
+    \item Warning
+  \end{enumerate}
+\end{singlespace}
+
+There is a very large list of all messages at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html}{Overview of All Pylint Messages}.
+
+We spend most of our time reviewing the Refactor messages, found at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html#refactor}{Pylint Refactor Messages}.
+
+Additionally, the Convention messages are also helpful for review, found at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html#convention}{Pylint Convention Messages}.
+
 \section{Radon: Refactor Scores} \label{appendixRadonRefactor}
+
+In this paper, we use Radon as one method for finding the Maintainability Index (MI) for projects, at the module (file) level.
+
+\begin{center}
+  \begin{tabular}{ c c c }
+    MI Score & Rank & Maintainability \\ \hline\hline
+    100 - 20 & A & Very high \\ \hline
+    19 - 10 & B & Medium \\ \hline
+    9 - 0 & C & Extremely Low \\ \hline    
+  \end{tabular}
+\end{center}
