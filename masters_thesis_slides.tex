@@ -24,13 +24,13 @@
 % 1.2 Paper Structure
 \begin{frame}
   \frametitle{Introduction}
-  Maintainability Index and Pylint Refactor Scores
-  \begin{enumerate}
+  \textbf{Maintainability Index and Refactor Scores}
+  \begin{itemize}
     \item Areas of concern: cost, timeline, quality
     \item Quality is hard to understand
-    \item Pylint is a static analysis tool
+    \item Pylint \& Radon are a static analysis tools
     \item Refactor violations point out code smells
-  \end{enumerate}
+  \end{itemize}
 \end{frame}
 
 % 2 Background and Literature Review
@@ -40,132 +40,115 @@
 % 2.1.2 How do we ensure software evolution?
 \begin{frame}
   \frametitle{Keeping Users Engaged Long Term}
-  Why does software evolution matter?
-  \begin{enumerate}
+  \textbf{Why does software evolution matter?}
+  \begin{itemize}
     \item Users find bugs
     \item Users want new features
     \item New security threats
-  \end{enumerate}
+    \item New laws from governing bodies
+  \end{itemize}
+  
+  \vspace{0.35cm}
   Need a thriving community of engaged users in order to keep apps and games successful.
+
+  \vspace{0.35cm}
+  In an open source system, need a thriving community of engaged developers in order to continue evolving.
 \end{frame}
 
 \begin{frame}
   \frametitle{Keeping Users Engaged Long Term}
-  How do we ensure software evolution?
-  \begin{enumerate}
-    \item Keep the project maintainable
-    \item --- bugs should be quick and easy to fix
-    \item --- new features should be easy to add
-  \end{enumerate}
-\end{frame}
+  \textbf{How do we ensure software evolution?}
 
-% 2.2 The Impact of Structural Quality & Software Maintenance
-% 2.2.2 Software Evolution
-% 2.2.3 Measuring Maintainability
-% 2.2.4 Maintainability Scores
-% 2.2.5 Other Maintainability Characteristics
-% 2.2.6 Documentation and Maintainability
-\begin{frame}
-  \frametitle{The Impact of Structural Quality}
-  Software Maintenance
-  \begin{enumerate}
-    \item ADD TO PAPER: don't touch too many files (SOLID principal)
+  \vspace{0.35cm}
+  Keep the project maintainable.
+  \begin{itemize}
+    \item Bugs should be quick and easy to fix
+    \item New features should be easy to add
+  \end{itemize}
+
+  \vspace{0.35cm}
+  \textbf{Software Maintenance}
+  \begin{itemize}
     \item Consistent standards (naming, small methods, etc)
-    \item 90\% cost typical software system is in the maintenance phase
-  \end{enumerate}
+    \item Large portion of project cost in a typical software system is in the maintenance phase
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Impact of Structural Quality}
-  Software Evolution
-  \begin{enumerate}
-    \item Maintenance --- bug fixes and minor functional improvements
-    \item Evolution --- new laws from governing bodies
-    \item Evolution --- new user needs (system must adapt!)
-    \item Lehman's laws
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}
-  \frametitle{The Impact of Structural Quality}
-  Measuring Maintainability
-  \begin{enumerate}
+  \textbf{Measuring Maintainability}
+  \begin{itemize}
     \item easy to maintain = easy to evolve
-    \item Pylint Maintainability Index (MI)
-  \end{enumerate}
-\end{frame}
+    \item Pylint \& Radon Maintainability Index (MI)
+  \end{itemize}
 
-\begin{frame}
-  \frametitle{The Impact of Structural Quality}
-  Maintainability Scores
-  \begin{enumerate}
-    \item Refactor Score (Pylint) --- code smells
-    \item TODO: List type of checks for Refactor
+  \vspace{0.35cm}
+  \textbf{Maintainability Scores}
+  \begin{itemize}
+    \item Refactor Messages (Pylint) --- code smells
     \item Code smells point out problems in Architecture
     \item PEP 8 is a set of Python standards
-  \end{enumerate}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Impact of Structural Quality}
-  Other Maintainability Characteristics
-  \begin{enumerate}
-    \item low coupling, high cohesion
-    \item confidence that metrics around software structure provide value in keeping systems maintainable (and therefore can evolve) % \cite{zhou:2020}
-    \item readability --- big commits reduce maintainability
-    \item PEP 8 enforces readability
-  \end{enumerate}
+  \textbf{Other Maintainability Characteristics}
+  \begin{itemize}
+    \item Low coupling, high cohesion
+    \item Confidence that metrics around software structure provide value in keeping systems maintainable (and therefore can evolve) % \cite{zhou:2020}
+    \item Readability
+    \begin{itemize}
+      \item Big commits reduce maintainability
+      \item PEP 8 enforces readability
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Impact of Structural Quality}
-  Documentation and Maintainability
-  \begin{enumerate}
-    \item documentation holds the results of significant design decisions
-    \item can influence the ability to evolve because\dots
-    \item --- enhances code understanding
-    \item --- comprehensibility impacts maintainability in a positive way
-  \end{enumerate}
-\end{frame}
-
-% 2.3 Related Work
-% 2.3.1 Considering Data Sets
-% 2.3.2 Design Patterns and Software Quality
-% 2.3.3 Software Architecture and Maintainability
-\begin{frame}
-  \frametitle{Related Work}
-  Considering Data Sets (TODO: New title?)
-  \begin{enumerate}
-    \item 23 --- which language prone to defects
-    \item 24 --- OOP metrics and maintainability
-  \end{enumerate}
-  IS THIS SECTION WORTH HAVING?
+  \textbf{Documentation and Maintainability}
+  \begin{itemize}
+    \item Documentation holds the results of significant design decisions
+    \item Can influence the ability to evolve because\dots
+    \begin{itemize}
+      \item Enhances code understanding
+      \item Comprehensibility impacts maintainability in a positive way  
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Related Work}
-  Design Patterns and Software Quality
-  \begin{enumerate}
-    \item design patterns provide flexibility
-    \item classes with frequent changes
-    \item --- easy to extend or
-    \item --- correlates to other classes (red flag!)
-    \item keeping this in mind, we focus on changes for system extensions and adaptiation, not bug fixes
-    \item --- we look at refactor score (code smell) not error score (bugs)
-  \end{enumerate}
+  \textbf{Design Patterns and Software Quality}
+  \begin{itemize}
+    \item Design patterns provide flexibility
+    \item Classes with frequent changes
+    \begin{itemize}
+      \item Easy to extend (okay)
+      \item Correlates to other classes (high coupling... red flag!)
+    \end{itemize}
+    \item We look at refactor score (code smell) not error score (bugs)
+  \end{itemize}
+  
+  \vspace{0.35cm}
+  Keeping this in mind, we focus on \emph{changes for system extensions and adaptiation}, not bug fixes.
 \end{frame}
 
 \begin{frame}
   \frametitle{Related Work}
-  Software Architecture and Maintainability
-  \begin{enumerate}
-    \item maintainability
-    \item extensibility
-    \item simplicity, understanding
-    \item re-usability
-    \item performance
-  \end{enumerate}
-  Keep these in mind for easier future development when adding or changing code
+  \textbf{Software Architecture and Maintainability}
+  \begin{itemize}
+    \item Maintainability
+    \item Extensibility
+    \item Simplicity, understanding
+    \item Re-usability
+    \item Performance
+  \end{itemize}
+
+  \vspace{0.35cm}
+  Keep these in mind for easier future development 
+  \newline when adding or changing code.
 \end{frame}
 
 % 3 Methodology
@@ -173,38 +156,102 @@
 % 3.2 Filtered Respository Set
 \begin{frame}
   \frametitle{Methodology}
-  Initial Repository Set
-  \begin{enumerate}
-    \item previous project collected open source Python projects
-    \item --- popular
-    \item --- long development history
-    \item --- multiple release cycles
-  \end{enumerate}
-\end{frame}
+  \textbf{Initial Repository Set}
+  \begin{itemize}
+    \item Popular
+    \item Long development history
+    \item Multiple release cycles
+  \end{itemize}
 
-\begin{frame}
-  \frametitle{Methodology}
-  Filtered Respository Set
-  We chose only those with 80\% Python and then top 20th percentile in these categories:
-  \begin{enumerate}
+  \vspace{0.35cm}
+  \textbf{Filtered Respository Set}
+  
+  \emph{At least 80\% Python code and top 20th percentile in these categories:}
+  \begin{itemize}
     \item Long history of commits (2,968+ commits)
     \item Large number of contributors (90+ contributors)
     \item Many releases (44+ releases)
     \item Substantial Age (66.4+ months)
-  \end{enumerate}
+  \end{itemize}
+
+  \vspace{0.35cm}
   Results in 46 repositories for further research.
 \end{frame}
 
 % 4 Results
 \begin{frame}
   \frametitle{Results}
-  We found that...
+  \begin{itemize}
+    \item Radon MI for all repositories rank as grade ``A''
+    \newline which is considered ``very high maintainability''
+    \item Open source systems with engaged community 
+    \newline of developers tend to have higher scores
+  \end{itemize}
+
+  \vspace{0.35cm}
+  To normalize, calculated ratio of refactor message count to SLOC.
+  
+  \vspace{0.35cm}
+  \begin{itemize}
+    \item Worst Score: \textbf{Raven-Python} - now deprecated
+    \item Best Score: \textbf{Cython} - still active development
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results}
+  \begin{center}
+    \includegraphics[width=0.8\columnwidth]{Histogram of Refactor Msg Ratio to SLOC.png}
+  \end{center}
+  \begin{center}
+    {\small \emph{Diligent development communities can keep refactor warnings low,}}
+    
+    {\small \emph{regardless of system size (lines of code).}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results}
+  \begin{center}
+    % \includegraphics[width=0.8\columnwidth]{Histogram of Project Average Maintainability Index.png}
+    \includegraphics[width=0.8\columnwidth]{Histogram of Project Average Maintainability Index_BucketSize_10.png}
+  \end{center}
+  \begin{center}
+    {\small \emph{Many repositories average in the mid-score to high-score.}} 
+    
+    {\small \emph{Radon considers 20 points and up to be very maintainable.}}
+  \end{center}
 \end{frame}
 
 % 5 Conclusions and Recommendations
 \begin{frame}
-  \frametitle{Conclusions and Recommendations}
-  We recommend that...
+  \frametitle{Conclusions}
+  \begin{itemize}
+    \item Good projects will grow and evolve.
+    
+    \vspace{0.35cm}
+    \item Structural quality impacts software evolution.
+    
+    \vspace{0.35cm}
+    \item Poor structure leads to deprecation.
+    \newline {\small \emph{(if the development community is engaged, deprecation of \newline the project may lead to a fresh, improved code base)}}
+    
+    \vspace{0.35cm}
+    \item Open source and many contributor projects are vulnerable to degrading maintainability.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Recommendations}
+  \begin{itemize}
+    \item Reliable metric can be useful.
+    
+    \vspace{0.35cm}
+    \item Good architecture is important for evolution.
+    
+    \vspace{0.35cm}
+    \item Pick a set of standards and auto-enforce to maintain good architecture even with a large, open source community.
+  \end{itemize}
 \end{frame}
 
 \end{document}
