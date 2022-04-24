@@ -4,11 +4,11 @@
 
 By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful regarding maintainability. Good projects will inevitably continue to grow and evolve. Understanding methods to keep code refactor on a certain level makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.
 
-When reviewing our surface-level data with current project Refactor scores, our three worst offenders were \emph{Ansible} \cite{data:ansible}, \emph{SymPy} \cite{data:sympy}, and \emph{Salt} \cite{data:salt}. All three projects are still quite active with development despite their poor current scores. The projects have high download rates, which may be the reason for continued development despite potential difficulty in maintenance.
+When reviewing our data with current project Refactor message ratios, our three worst offenders were \emph{Raven-Python}, \emph{Scrapy}, and \emph{Numba} \cite{data:raven-python}, \cite{data:scrapy}, \cite{data:numba}.  \emph{Raven-Python} has been deprecated in favor of a newer system,  \emph{Sentry-Python}. The other two projects are still quite active with development despite their poor scores. The two active projects are used in thousands of projects each, which may be the reason for continued development despite potential difficulty in maintenance.
 
 Projects that may be open source or have many contributors are especially vulnerable to maintainability degrading over the evolution of a project. Having a reliable metric can be very useful in programmatically avoiding code smells and keeping code in a state that is easy to manage through simple metric checks in deployment pipelines.
 
-We can see an example of this in reviewing some current symptoms that \emph{SymPy} is experiencing, with only 72\% code coverage and a failing build (see ``Fig.~\ref{figSymPyStatus}''). Despite the engagement and continued development, we suspect that real adaptations and evolution of the software may be difficult with this code.
+While not one of our worst refactor-to-SLOC ratios, \emph{SymPy} is a repository with a large number of refactor warnings. We can see an example of code smell issues in reviewing some current symptoms that \emph{SymPy} is experiencing, with only 72\% code coverage and a failing build (see ``Fig.~\ref{figSymPyStatus}''). Despite the engagement and continued development, we suspect that real adaptations and evolution of the software may be difficult with this code.
 
 \begin{figure}[ht]
   \centerline{

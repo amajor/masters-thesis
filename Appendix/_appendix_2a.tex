@@ -1,0 +1,50 @@
+\section{Data: Repository Refactor Messages} \label{appendixRefactorCounts}
+
+\todo{TODO: fill this table with ALL the respositories}
+\begin{singlespace}
+  \begin{verbatim}
+    -- Find total number of refactor messages
+    SELECT 
+      t1.name AS "Repository Name",
+      SUM(t1.n::numeric) AS "Total Refactor"
+    FROM new_pylint_metrics_by_msg AS t1
+      WHERE t1.code = 'R'
+    GROUP BY t1.name
+    ORDER BY SUM(t1.n::numeric) DESC;
+
+    -- Find "worst offender" messages for each repository
+    SELECT
+      t2.name AS "Repository Name",
+      t2.msg AS "Most Common Refactor Message",
+      SUM(t2.n::numeric) AS "Most Common Refactor Message Count"
+    FROM new_pylint_metrics_by_msg AS t2
+      WHERE name = 'sympy'  -- set repository name here
+      AND code = 'R'
+    GROUP BY t2.name, t2.msg
+    ORDER BY SUM(t2.n::numeric) DESC
+    LIMIT 1;
+  \end{verbatim}
+\end{singlespace}
+
+\begin{table}[ht]
+  \small
+  \centering
+  \begin{tabularx}{1.0\textwidth} {
+    | l 
+    | c
+    | >{\centering\arraybackslash}X 
+    | c |
+  }
+    \hline
+    Repository Name & Msg Count & Top Msg & Top Msg Count \\
+    \hline\hline
+    sympy & 14,206 & too-many-arguments & 6,601 (46\%) \\ \hline
+    ansible &  10,431 & no-else-return & 1,711 (16\%) \\ \hline
+    salt &  7,814 & too-many-arguments & 1,640 (21\%) \\ \hline
+    ranger & 109 & no-else-return & 29 (27\%) \\ \hline
+    sentry & 66 & no-self-use & 32 (48\%) \\ \hline
+    raven-python & 20 & too-few-public-methods & 7 (35\%) \\ \hline
+  \end{tabularx}
+  \caption{Total refactor messages per repository. Also provided with the refactor message that had the most warnings and its total count (and the percentage of that message from the total refactor warnings for that repository).}
+  \label{table:allRefactorWarningTotals}
+\end{table}
