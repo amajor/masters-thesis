@@ -109,14 +109,14 @@
     \item Low coupling, high cohesion
     
     \vspace{0.35cm}
-    \item Confidence that metrics around software structure provide value in keeping systems maintainable (and therefore can evolve) % \cite{zhou:2020}
-    
-    \vspace{0.35cm}
     \item Readability
     \begin{itemize}
       \item Big commits reduce maintainability
       \item PEP 8 enforces readability
     \end{itemize}
+    
+    \vspace{0.35cm}
+    \item Confidence that metrics around software structure provide value in keeping systems maintainable (and therefore can evolve) % \cite{zhou:2020}
   \end{itemize}
 \end{frame}
 
@@ -144,10 +144,14 @@
     \item Design patterns provide flexibility
     
     \vspace{0.35cm}
-    \item Classes with frequent changes
+    \item Classes with frequent changes are either...
     \begin{itemize}
+      \vspace{0.15cm} 
       \item Easy to extend (okay)
-      \item Correlates to other classes (high coupling... red flag!)
+      \vspace{0.15cm} 
+      \newline ...or...
+      \vspace{0.15cm}
+      \item Correlate to other classes (high coupling... red flag!)
     \end{itemize}
     
     \vspace{0.35cm}
@@ -297,7 +301,8 @@
     \item Reliable quality metric can be a useful way to measure maintainability, which promotes ability to evolve a project.
     
     \vspace{0.35cm}
-    \item Pick a set of standards to maintain good architecture even with a large, open source community.
+    \item Pick a set of standards to maintain good architecture 
+    \newline even with a large, open source community.
     \begin{itemize}
       \item Limit complexity as project changes and grows.
       \item SOLID principles.
@@ -306,7 +311,8 @@
     \end{itemize}
     
     \vspace{0.35cm}
-    \item Auto-enforce by using quality measurements for desired standards in the project's CI/CD pipeline.
+    \item Auto-enforce by using quality measurements for desired standards 
+    \newline in the project's CI/CD pipeline.
   \end{itemize}
 \end{frame}
 
