@@ -55,12 +55,12 @@
 % ----- Introduction Notes ----------------------------------------------------
 \note{
   \begin{itemize}
-    \item When we build new software systems, there are several areas of concern.
+    \item When we build new software solutions, there are several areas of concern.
     \item Namely, COST, TIME-TO-DELIVER, and also, often to a lesser extent, QUALITY.
-    \item Though quality can be a factor we consider when planning a project, it is a hard attribute to understand and measure.
-    \item There are a number of tools available, some built into IDEs and others as 3rd party linter tools.
+    \item Though quality can be a factor we consider when planning a project, it is a hard characteristic to understand and measure.
+    \item There are a number of tools available for enforcing standards, some built into IDEs (like Visual Studio Code) and others as 3rd party linter tools.
     \item Two such tools are Pylint and Radon, which can be used to analyze Python projects.
-    \item In particular, we will focus on the refactor violations that are noted in these code reports, as these warnings can lead us to code smells.
+    \item In particular, we will focus on the REFACTOR violations that are noted in the code reports from Pylint and Radon, as these warnings can lead us to code smells.
   \end{itemize}
 }
 
@@ -87,9 +87,9 @@
 \note{
   \begin{itemize}
     \item Sometimes ``evolution'' is just a matter of maintenance and fixing bugs that users find.
-    \item However, if users are engaged and actively using software, changes are they are going to push it to its limits and want new features.
+    \item However, if users are engaged and actively using software, they are going to push the software to its limits and want new features.
     \item Over time, there can also be new security threats and new laws that require software to be updated.
-    \item These types of driving forces require a community of engaged users and in repsect to open source software, a community of engaged developers.
+    \item These different driving forces require a community of engaged users and in repsect to open source software, a community of engaged developers.
   \end{itemize}
 }
 
@@ -119,15 +119,15 @@
     \item We need to make sure the project stays maintainable.
     \begin{itemize}
       \item Bugs and new features should be easy to do
-      \item Part of what allows for easy changes is having consistent standards.
     \end{itemize}
     \item Part of what allows for easy changes is having consistent standards.
     \begin{itemize}
-      \item Naming
-      \item Small methods
-      \item Organized files
+      \item Naming conventions
+      \item Keeping methods small
+      \item Having organized files
     \end{itemize}
-    \item Studies have shown that a large project of a typical project's cost lies not in the development phase, but in the maintenance phase!
+    \item The majority of a typical project's cost lies not in the development phase, but in the maintenance phase!
+    \item Maintenance is an important part of a software solution's lifecycle; we cannot ignore it!
   \end{itemize}
 }
 
@@ -192,13 +192,13 @@
 \note{
   \begin{itemize}
     \item Refactor warnings aren't the only only thing we should care about for good maintainability.
-    \item We should also remember other good practices, like low couping and high cohesion.
+    \item We should also remember other good practices, like low coupling and high cohesion.
     \begin{itemize}
-      \item Remember, coupling refers to the degree to which different modules depend on each other (we want modules to be independent from each other)
+      \item Coupling refers to the degree to which different modules depend on each other (we want modules to be independent from each other)
       \item and cohesion refers to the degree in which elements of a module belong together (we want to bind related code together)
     \end{itemize}
     \item We also want good readability (big commits can be hard to follow)
-    \item And having condience around the metrics that tools like Pylint and Radon can offer should be able to help us keep our systems maintainable.
+    \item And having confidence around the metrics that tools like Pylint and Radon can offer should be able to help us keep our systems maintainable.
   \end{itemize}
 }
 
@@ -225,7 +225,7 @@
   \begin{itemize}
     \item To add to the ideas of maintainability and readable code, we should also remember that documentation can feed into our success.
     \item When we build a software system, good documentation can hold significant design decisions.
-    \item This ``historical record'' can help developers in the open source community understand the code.
+    \item This ``historical record'' can help developers in the open source community understand the code and why things are the way they are.
     \item Better comprehension makes it easier to maintain and evolve the code.
   \end{itemize}
 }
@@ -262,10 +262,10 @@
 \note{
   \begin{itemize}
     \item Through our studies, we also know that design patterns can lead us to better ways to build our code, which provides us with more flexibility.
-    \item As we review open source systems, finding classes with frequent changes generally mean one of two things\dots
+    \item As we review open source systems, finding code classes with frequent changes generally mean one of two things\dots
     \begin{itemize}
       \item the class is easy to extend (which is good!)
-      \item or the class is highly coupled to other classes (code smell!)
+      \item or the class is highly coupled to other classes which means updating one requires updates to another (code smell!)
     \end{itemize}
     \item Keeping this in mind, we again are reminded to steer towards understanding the frequency of refactor messages, or code smells, over error scores, which are just bugs and not an indicator of how maintainable the code is.
   \end{itemize}
@@ -383,8 +383,8 @@
 \note{
   \begin{itemize}
     \item With our smaller data set on hand, we ran Radon against each repository to gain a Maintainability Index.
-    \item For a very simplified view, we averaged the Maintainability Index of each project file in a repository, giving us a single number for general comparison with each repository.
-    \item In Radon's grading system, any value over 20 is considered ``very maintainable''.
+    \item For a very simplified view, we averaged the Maintainability Index of each project files, giving us a single number for general comparison with each repository.
+    \item In Radon's grading system, any value over 20 is considered ``very maintainable'' code.
     \item We also used a count of the Pylint REFACTOR messages and calculated the ratio of messages to source-line-of-code for an idea of how many code smells each project contained, relative to its size.
     \item Listed in the table are the ``best 3'' (cython, youtube-dl, and electrum) and the ``worst 3'' (raven-python, scrapy, and numba) in regards to their refactor ratios.
   \end{itemize}
@@ -407,10 +407,10 @@
 % ----- Results Pt. 2 Notes ---------------------------------------------------
 \note{
   \begin{itemize}
-    \item With some of this information, we can now get an idea of where these projects stand in regards to their refactor message ratios compared to each other.
+    \item With this information, we can get an idea of where these projects stand in regards to their refactor message ratios compared to each other.
     \item This histogram shows that the majority of our repository set have a very low ratio of refactor messages.
     \item This could indicate that our projects are all highly maintainable.
-    \item This may be a impacted by the data set we chose; perhaps projects with highly engaged communities tend to keep their code in a maintainable fashion, because this would be the only way for many people to be involved.
+    \item This may be a impacted by the data set we chose; perhaps projects with highly engaged communities tend to keep their code in a maintainable state, because this would be the only way for many people to be involved.
   \end{itemize}
 }
 
@@ -433,6 +433,7 @@
 \note{
   \begin{itemize}
     \item To view the same repository set with their Maintainability Index averages, we have another histogram.
+    \item This score can range from 0 (awful) to 100 (perfect).
     \item Remember that Radon considers any value above 20 to be an ``A'' or ``very maintainable''.
     \item We can see that all of our projects receive an ``A'' grade, with the majority in the middle of the range, which can be from zero to 100.
   \end{itemize}
@@ -469,9 +470,9 @@
 \note{
   \begin{itemize}
     \item Our very best and very worst repositories are all still actively being improved and evolving, even today.
-    \item The one exception is our ``worst'' repository, raven-python, which was deprecated, but in exchange for an improved system.
+    \item An exception to this is our ``worst'' repository, raven-python, which was deprecated, but in exchange for an improved system.
     \item It didn't actually die, but the community recognized that a better architecture was needed for the system to continue to evolve.
-    \item Open source systems, and any project with many contributors, can be very vulnerable to degrading quality. It's the nature of change over time.
+    \item Open source systems, and any project with many contributors or many changes are vulnerable to degrading quality. It's the nature of change over time.
     \item However, when we review a set of popular repositories that already have a long history of commits, we find that they tend to have good maintainability.
   \end{itemize}
 }
@@ -506,11 +507,12 @@
 \note{
   \begin{itemize}
     \item Where do we go from here?
-    \item What we've found is a reinforcement of what we already know.
+    \item In regards to the data, we'd like to do more study to understand the correlation between the Pylint metrics and Maintainability Index in order to gain further insight.
+    \item What we've found so far is a reinforcement of what many of us already know.
     \item Good architecture is important for software to evolve.
     \item Reliable quality metrics can be helpful to keep an architecture ready for enhancements.
-    \item Regardless of your code base, understand what set of standards will work best for your team.
-    \item Then auto-enforce these standards in your pipeline. This keeps everyone honest and will imporve the ability to evolve your project.
+    \item Regardless of your code base, your team should understand what set of standards will work best for your software solution.
+    \item Then auto-enforce these standards in your pipeline. This keeps everyone honest and will improve the ability to evolve your project.
     \item Thank you for your time and attention!
     \item Any questions?
   \end{itemize}
