@@ -7,11 +7,11 @@
 % --- Understand Software Maintenance -----------------------------------------
 \subsection{Software Maintenance} \label{subSoftwareMaintenance}
 
-The structural quality of a software system will impact the software evolution. Similarly, as a project evolves, there is a likelihood that it will degrade, as changes are often made quickly and in ways that the original design did not anticipate \cite{martin:2000}. If the project has poor structural quality, its ability to evolve will be minimized, and the software system will eventually ``die-off'' so to speak.
+The structural quality of a software system will impact the software evolution. Similarly, as a project evolves, it is likely to degrade, as developers often make changes quickly and in ways that the original design did not anticipate \cite{martin:2000}. However, if the project has poor structural quality, its ability to evolve will be minimized, and the software system will eventually ``die off.''
 
-There is much planning involved in all software creation projects in what the product will be, will do, who it is for, etc. One of the things that should also be on the planning list is long-term maintenance and growth. That is, how do we build a thing that will be easier to add features to down the road?
+There is much planning involved in all software creation projects in what the product will be, will do, who it is for, and so on. One of the things that should also be on the planning list is long-term maintenance and growth. So how do we build a thing that will be easier to add features to down the road?
 
-Let us define maintainability in the context of software. For example, a system would be considered easy to maintain if it is easy to debug and easy to add new features. These new features are generally considered minor features, and may often be reported as bugs by users, when in reality, they are looking for functionality enhancements \cite{wiki:software-maintenance}.
+Let us define maintainability in the context of software. For example, it would be easy to maintain if a system is easy to debug and easy to add new features. These new features are generally considered minor features and may often be reported as bugs by users when, in reality, they are looking for functionality enhancements \cite{wiki:software-maintenance}.
 
 \vspace{0.25cm}
 \begin{displayquote}
@@ -19,11 +19,11 @@ Let us define maintainability in the context of software. For example, a system 
 \end{displayquote}
 \vspace{0.25cm}
 
-It may be easier to understand what characteristics define a system with poor maintainability. These types of systems will have poor code quality, leading to defects. For example, there could be undetected vulnerabilities or vulnerabilities that have been ignored. It may be that the system is overly complex. In addition to the complexity, it could be hard to read due to poor naming or dead (unused) code throughout the source code.
+It may be easier to understand what characteristics define a system with poor maintainability. These types of systems will have poor code quality, leading to defects. For example, there could be undetected vulnerabilities or vulnerabilities. However, it may be that the system is overly complex. In addition to the complexity, it could be hard to read due to the poor naming of dead (unused) code throughout the source code.
 
-A project is known to have good maintainability when there is an enforced set of clean and consistent standards for the code. This often involves having human-readable names for functions, methods, and variables. Any complex code is minimized, and methods are small and focus on a single thing. Parts of the system are decoupled and organized, making it easy to work on different parts with low impact on unrelated parts. For example, the code is DRY (there is limited redundancy in the code), unused code has been removed, and there is a level of documentation that supports an easy understanding of the system.
+A project is known to have good maintainability when there is an enforced set of clean and consistent standards for the code. These standards often involve having human-readable names for functions, methods, and variables. Minimize any complex code and methods should be small and focus on a single thing. Parts of the system are decoupled and organized, making it easy to work on different parts with low impact on unrelated parts. For example, the code is DRY (there is limited redundancy in the code), unused code has been removed, and there is a level of documentation that supports an easy understanding of the system.
 
-Why should we care about whether the code is maintainable? It is assumed that a large amount of the cost over the lifetime of a project is attributed to maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' (1975) even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. In 1977, Meir M. Lehman noted that 70\% of a program budget was spent on maintenance, with the remaining 30\% spent on development. In 1993, it was again observed that only 20-40\% of the resources (money, time, effort) were used for development of a project, with 60-70\% used for maintenance activities \cite{ieee:1219}.
+Why should we care about whether the code is maintainable? There is an assumption that the majority of cost over the lifetime of a project falls under maintainability. Fred Brooks, in his book ``The Mythical Man-Month'' (1975), even claimed that over 90\% of the costs for a typical software system come up in the maintenance phase \cite{brooks:mythical}. In 1977, Meir M. Lehman noted that maintenance accounts for 70\% of a program budget, with 30\% spent on development. In 1993, there was another observation that the development of a typical project uses only 20-40\% of the resources (money, time, effort), with 60-70\% used for maintenance activities \cite{ieee:1219}.
 
 Once the bulk of the system is off the ground and live worldwide, how well the team can improve the system with new features and fix bugs, even working on different parts in parallel, can be impacted by its maintainability. Any successful piece of software will inevitably need to be maintained.
 
@@ -32,13 +32,13 @@ Once the bulk of the system is off the ground and live worldwide, how well the t
 % --- Understand Software Evolution -------------------------------------------
 \subsection{Software Evolution} \label{subSoftwareEvolution}
 
-There is a distinction to be made between \textbf{software maintenance} and \textbf{software evolution}. We will refer to software maintenance as bug resolution and for minor functional improvements. For example, we can consider this routine maintenance when we must fix a broken route in the application or provide a subtle enhancement on the user experience. However, when we look at upgrades to the system, adaptations to the changing and growing needs of the user, or migrating the system to a new technology, we can refer to this as evolution of the software.
+There is a distinction to be made between \textbf{software maintenance} and \textbf{software evolution}. We will refer to software maintenance as bug resolution and minor functional improvements. For example, we can consider this routine maintenance when we must fix a broken route in the application or provide a subtle enhancement to the user experience. However, when we look at upgrades, adaptations to the changing and growing needs of the user, or migrating the system to new technology, we can refer to this as the evolution of the software.
 
-The evolution of software can result from new laws that have come into being. As technology itself changes, governing bodies must continually revisit data collection and information sharing policies. Changes in technology and laws may lead to adaptations in the software systems.
+The evolution of software can result from new laws that have come into being. As technology changes, governing bodies must continually revisit data collection and information sharing policies. As a result, changes in technology and laws may lead to adaptations in the software systems.
 
-It is also fair to say that systems will change because we can never fully determine a user's needs at the start of a project. It would be safe to say that the user's needs will change over time themselves. This leads to a never-ending project that will always need some form of enhancement.
+It is also fair to say that systems will change because we can never fully determine a user's needs at the start of a project. So, for example, it would be safe to say that users' needs will change over time. However, the changing user needs can lead to a never-ending project that will always need some form of enhancement.
 
-Meir ``Manny'' Lehman and László ``Les'' Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws apply to programs that were written to perform some real-world activity, where its behavior is linked to the environment in which it runs; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are listed below. \cite{wiki:lehmans-laws}
+Meir ``Manny'' Lehman and László ``Les'' Bélády contributed to a list of laws involving software evolution known as Lehman's Laws that describe a balance between forces that drive new developments while also slowing progress. These laws apply to programs written to perform some real-world activity. The software environment and the software's behavior are linked; additionally, this program category assumes that the program needs to adapt to varying requirements and circumstances in that environment. Eight laws were created and are listed below. \cite{wiki:lehmans-laws}
 
 \todo{TODO: Read and reference ``An Empirical Study of Lehman's Law on Software Quality Evolution'' \cite{yu:2013}}.
 
@@ -70,9 +70,9 @@ Meir ``Manny'' Lehman and László ``Les'' Bélády contributed to a list of law
 \end{enumerate}
 \vspace{0.25cm}
 
-The first law, ``Continuing Change,'' tells us that if a system does not adapt, it will become progressively less satisfactory. The second, ``Increasing Complexity,'' explains that as a system evolves, unless work is done to maintain or reduce complexity, the complexity will increase. This can be due to the added volume of the code from new features or even an increasing number of developers that have edited the code. Unless this phenomenon of increased complexity is actively addressed during changes, it can impact the maintainability (and the ability of a project to continue evolving) in the future.
+The first law, ``Continuing Change,'' tells us that it will become progressively less satisfactory if a system does not adapt. The second, ``Increasing Complexity,'' explains that as a system evolves, the complexity will increase unless there is work done to maintain or reduce complexity. Increased complexity can be due to the added code volume from new features or an increasing number of developers editing the code. Unless we actively address this phenomenon of increased complexity during changes, it can impact the maintainability (and the ability of a project to continue evolving) in the future.
 
-Lehman's fifth law, ``Conservation of Familiarity,'' explains how the average incremental growth does not change over time as a system evolves. The people interacting with the system, such as the developers, business persons, or users, must still continue using and working within the system at the same ``level of mastery.'' If the system grows and changes excessively, the mastery will drop, slowing down the next set of changes. This could be because the source code or architecture has become more complex (impacting the developers' ability to adapt and enhance the system) or because the user features have changed so that the system audience needs time to master the new interfaces or new tools. Because of this natural ``slow-down'' for excessive change, the average incremental growth will remain steady. We can see a simplified visual in ``Fig.~\ref{figConservationOfFamiliarity}'' showing that when the number of changes spikes (that is to say, when there is excessive growth in a system), it will be followed by an iteration of fewer changes, leading to a nearly consistent average of incremental growth (the thick, horizontal line) over time.
+Lehman's fifth law, ``Conservation of Familiarity,'' explains how the average incremental growth does not change over time as a system evolves. The people interacting with the system, such as the developers, business persons, or users, must continue using and working within the system at the same ``level of mastery.'' If the system grows and changes excessively, the mastery will drop, slowing down the next set of changes. Slower deployment of additional changes could be because the source code or architecture has become more complex (impacting the developers' ability to adapt and enhance the system) or because the user features have changed. For example, the system audience needs time to master the new interfaces or tools. However, the average incremental growth will remain steady because of this natural ``slow-down'' for excessive change. For example, we can see a simplified visual in ``Fig.~\ref{figConservationOfFamiliarity}'' showing that when the number of changes spikes (excessive growth in a system), it will be followed by an iteration of fewer changes. Over time, excessive growth followed by fewer changes leads to a nearly consistent average of incremental growth (the thick, horizontal line).
 
 \begin{figure}[ht]
     \centerline{
@@ -82,9 +82,9 @@ Lehman's fifth law, ``Conservation of Familiarity,'' explains how the average in
     \label{figConservationOfFamiliarity}
 \end{figure}
 
-In Lehman's sixth law, ``Continuing Growth,'' we see that the system user's satisfaction will not be maintained without continually increasing the functional content. Along a similar idea, the law pertaining to ``Declining Quality'' states that if the operational environment for the system does not change, the system's quality will appear to decline. Yu and Mishra performed focused research on supporting Lehman's Laws, especially in the case of the seventh law pertaining to declining quality, by defining a metric for software quality and reviewing the bug history, growth of size, complexity, and quality of two large open-source systems \cite{yu:2013}. Therefore, we must continue adapting for even the appearance of the maintained quality of a system.
+In Lehman's sixth law, ``Continuing Growth,'' we see that the system user's satisfaction will drop without continually increasing the functional content. Along with a similar idea, the law about ``Declining Quality'' states that if the operational environment for the system does not change, the system's quality will appear to decline. Yu and Mishra performed focused research on supporting Lehman's Laws, especially in the case of the seventh law about declining quality. They did this by defining a metric for software quality and reviewing the bug history, growth of the size, complexity, and quality of two large open-source systems \cite{yu:2013}. Therefore, we must continue adapting for even the appearance of the maintained quality of a system.
 
-With all of these characteristics surrounding the evolution of software, we benefit from the Internet that has positively improved the experience. Two common resources currently available to developers have impacted software evolution \cite{wiki:software-evolution}:
+With many characteristics surrounding software evolution, we benefit from the Internet, which has positively improved the experience. Two common resources currently available to developers have impacted software evolution \cite{wiki:software-evolution}:
 
 \vspace{0.25cm}
 \begin{enumerate}
@@ -97,7 +97,7 @@ These two suggestions are very evident in modern development. For example, a dev
 
 \subsection{Measuring Maintainability} \label{subMeasureMaintainability}
 
-Despite the nuanced differences between \textit{maintainability} and \textit{evolution}, the two characteristics run parallel to each other. If a system is easy to maintain, it will also be easier to evolve. If we can measure our system's maintainability, we can also determine if our system is in a good position to continue evolving to meet our future needs.
+Despite the nuanced differences between \textit{maintainability} and \textit{evolution}, the two characteristics run parallel to each other. It will also be easier to evolve if a system is easy to maintain. If we can measure our system's maintainability, we can also determine if our system is in a good position to continue evolving to meet our future needs.
 
 \vspace{0.25cm}
 \begin{displayquote}
@@ -105,8 +105,6 @@ Despite the nuanced differences between \textit{maintainability} and \textit{evo
 \end{displayquote}
 \vspace{0.25cm}
 
-Several tools attempt to provide some value around these ideas. In this paper, we will focus on the metrics that Pylint provides, specifically looking into the Refactor score of Pylint.
+Several tools attempt to provide some value around these ideas. In this paper, we will focus on the metrics that Pylint provides, specifically looking into their Refactor score of Pylint.
 
-We will look at many open-source Python systems using Pylint and attempt to correlate the data from the Pylint scores to the level of ease in adding new features to the system. This will determine if a system is more maintainable with better Pylint scores. 
-
-\todo{FUTURE EDITION: To do this, we will measure the locality of the changes by the number of files that are edited in a commit. We will also focus on commits that represent new features, not on commits that are bug fixes.}
+We will look at many open-source Python systems using Radon and Pylint, then attempt to correlate the data from the scores to the level of ease in adding new features to the system. This review will determine if a more maintainable system correlates with better Pylint scores. 
