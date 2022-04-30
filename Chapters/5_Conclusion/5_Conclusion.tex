@@ -1,14 +1,14 @@
 \chapter{Conclusions and Recommendations} \label{chapterConclusion}
 
-% This chapter could also be called “Conclusions and Recommendations” or “Conclusions and Implications.” In general, there should be no new information presented here.  It should be a synthesis of information that you’ve already discussed. 
+% This chapter could also be called "Conclusions and Recommendations" or "Conclusions and Implications." In general, there should be no new information presented here. Instead, it should be a synthesis of information that you have already discussed. 
 
-By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful regarding maintainability. Good projects will inevitably continue to grow and evolve. Understanding methods to keep code refactor on a certain level makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.
+By collecting data and drawing our conclusions from it, with help from the insights from the studies done before ours, we may better understand metrics that can be useful regarding maintainability. Good projects will inevitably continue to grow and evolve. For example, understanding methods to keep code refactor on a certain level makes code easy to change. We may also find that projects with worsening scores slow down with updates and have reduced engagement.
 
-When reviewing our data with current project Refactor message ratios, our three worst offenders were \emph{Raven-Python}, \emph{Scrapy}, and \emph{Numba} \cite{data:raven-python}, \cite{data:scrapy}, \cite{data:numba}.  \emph{Raven-Python} has been deprecated in favor of a newer system,  \emph{Sentry-Python}. The other two projects are still quite active with development despite their poor scores. The two active projects are used in thousands of projects each, which may be the reason for continued development despite potential difficulty in maintenance.
+When reviewing our data with current project Refactor message ratios, our three worst offenders were \emph{Raven-Python}, \emph{Scrapy}, and \emph{Numba} \cite{data:raven-python}, \cite{data:scrapy}, \cite{data:numba}.  \emph{Raven-Python} has been deprecated in favor of a newer system,  \emph{Sentry-Python}. Despite their poor scores, the other two projects are still active in development. The two active projects are included in thousands of projects each, which may be the reason for continued development despite the potential difficulty in maintenance.
 
 Projects that may be open source or have many contributors are especially vulnerable to maintainability degrading over the evolution of a project. Having a reliable metric can be very useful in programmatically avoiding code smells and keeping code in a state that is easy to manage through simple metric checks in deployment pipelines.
 
-While not one of our worst refactor-to-SLOC ratios, \emph{SymPy} is a repository with a large number of refactor warnings. We can see an example of code smell issues in reviewing some current symptoms that \emph{SymPy} is experiencing, with only 72\% code coverage and a failing build (see ``Fig.~\ref{figSymPyStatus}''). Despite the engagement and continued development, we suspect that real adaptations and evolution of the software may be difficult with this code.
+While not one of our worst refactor-to-SLOC ratios, \emph{SymPy} is a repository with a large number of refactoring warnings. We can see an example of code smell issues in reviewing some current symptoms that \emph{SymPy} is experiencing, with only 72\% code coverage and a failing build (see "Fig.~\ref{figSymPyStatus}"). Despite the engagement and continued development, we suspect that the actual adaptations and evolution of the software may be complex with this code.
 
 \begin{figure}[ht]
   \centerline{
@@ -18,6 +18,14 @@ While not one of our worst refactor-to-SLOC ratios, \emph{SymPy} is a repository
     \label{figSymPyStatus}
 \end{figure}
 
-\todo{We have further work to do in this study to gain better understanding. With a set of several ``best'' and ``worst'' Python software systems, we will look into the history of the projects' commits. It would be useful to see how the Refactor scores have changed over time, and if the rate at which changes were pushed correlated to the increase or decrease in that Refactor score.}
+\todo{We have further work to do in this study to gain a better understanding. With several "best" and "worst" Python software systems, we will look into the history of the projects' commits. It would be helpful to see how the Refactor scores have changed over time and if the rate at which changes were pushed correlated to the increase or decrease in that Refactor score.}
 
 \todo{Additional data can be gathered from this set that may provide more insights than this first brush of the data provides us. Understanding the impact of structural quality on the evolution of a project can provide compelling perspectives.}
+
+From our set, the very best and worst repositories are still actively improving and evolving, even today. An exception to this is our "worst" repository, raven-python, which was deprecated (this means the code is no longer supported), but in exchange for an improved system. The raven-python community did not die but instead recognized that a better architecture was needed for the system to continue to evolve. So they built a new code system (Sentry-Python) and shifted support there, where they have a better architecture and ability to evolve.
+
+Open-source systems and any project with many contributors or have many changes are vulnerable to degrading quality. It is just the nature of change over time. However, when we review a set of popular repositories that already have a long history of commits (these repositories are still active and over five years old!), we find that they have good maintainability.
+
+Where do we go from here? Regarding the data, we would like to do more studies to understand the correlation between the Pylint metrics and Maintainability Index to gain better insights into our assumptions.
+
+So far, we have found a reinforcement of what many of us already know. Good architecture is vital for software to be able to evolve. Reliable quality metrics can help keep an architecture ready for enhancements. Regardless of the codebase, teams should understand what standards will work best for their software solution. Then auto-enforce these standards in the development pipeline. Automated pipelines keep everyone honest and will improve the project's ability to evolve.
