@@ -5,11 +5,11 @@
 
 % --- Claim B: Review each claim from the introduction
 
-First, let us consider our original understanding of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
+First, let us consider our original interpretation of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
 
-In this study, we will be using Pylint and will focus on the values of the Refactor score regarding a set of open-source Python systems. We must understand what Pylint itself is doing to understand the scores we will be working with, 
+In this study, we will be using Pylint and will focus on the values of the Refactor score regarding a set of open-source Python systems. We must recognize what Pylint itself is doing to understand the scores we will be working with.
 
-Through the documentation of Pylint, we can understand how to use it and the scores it will provide \cite{pylint:main}. The Pylint score itself is calculated by the following equation \cite{pylint:score}:
+Through the documentation of Pylint, we can decipher how to use it and the scores it will provide \cite{pylint:main}. The Pylint score itself is calculated by the following equation \cite{pylint:score}:
 
 \vspace{0.25cm}
 \begin{center}
@@ -42,9 +42,9 @@ Pylint will check the code for code smells based on the definitions for document
 
 We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. However, there are fundamental established design principles that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction. Because of the relation of refactoring scores to the code structure itself, we will be spending much of our focus on this particular value.
 
-Finally, concerning Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard leads to making code more readable and more consistent, which may contribute to the code being more maintainable than without the standards. These standards cover things like indentation spacing, maximum line length, where to insert new lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
+Furthermore, concerning Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard leads to making code more readable and more consistent, which may contribute to the code being more maintainable than without the standards. These standards cover things like indentation spacing, maximum line length, where to insert new lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
 
-Using Radon, we will also collect the Maintainability Index score. As mentioned earlier, many IDEs and other tools calculate this value using a similar equation. Radon calculates the value using the following equation \cite{radon:docs}:
+Using Radon, we will also collect the Maintainability Index score. As mentioned earlier, many IDEs and other tools calculate this value using a similar calculation. Radon calculates the value using the following formula \cite{radon:docs}:
 
 $$
 MI = max[0, 100\frac{171 - 5.2 \ln{V} - 0.23G - 16.2 \ln{L} + 50 \sin{\sqrt{2.4C}}}{171}]
@@ -60,7 +60,7 @@ In this equation, we have the following values:
   \end{itemize}    
 \end{singlespace}
 
-The Radon documents bring up the important note that the Maintainability Index is an experimental metric and should not be taken as seriously as other metrics. However, despite this label being ``experimental,'' we will use this value as a primary indicator to look for correlations in the raw values we will collect.
+The Radon documents bring up the important note that the Maintainability Index is an experimental metric and should not be taken as seriously as other metrics. While it may be true that Maintainability Index is considered ``experimental,'' we will use this value as a primary indicator to look for correlations in the raw values we will collect.
 
 % --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
