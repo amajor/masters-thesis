@@ -1,13 +1,12 @@
 \section{Data: Repository Refactor Messages} \label{appendixRefactorCounts}
 
-\todo{TODO: fill this table with ALL the respositories}
 \begin{singlespace}
   \begin{verbatim}
     -- Find total number of refactor messages
     SELECT 
       t1.name AS "Repository Name",
       SUM(t1.n::numeric) AS "Total Refactor"
-    FROM new_pylint_metrics_by_msg AS t1
+    FROM pylint_metrics_by_msg AS t1
       WHERE t1.code = 'R'
     GROUP BY t1.name
     ORDER BY SUM(t1.n::numeric) DESC;
@@ -17,7 +16,7 @@
       t2.name AS "Repository Name",
       t2.msg AS "Most Common Refactor Message",
       SUM(t2.n::numeric) AS "Most Common Refactor Message Count"
-    FROM new_pylint_metrics_by_msg AS t2
+    FROM pylint_metrics_by_msg AS t2
       WHERE name = 'sympy'  -- set repository name here
       AND code = 'R'
     GROUP BY t2.name, t2.msg
@@ -27,7 +26,7 @@
 \end{singlespace}
 
 \begin{table}[ht]
-  \small
+  \scriptsize
   \centering
   \begin{tabularx}{1.0\textwidth} {
     | l 
@@ -39,8 +38,47 @@
     Repository Name & Msg Count & Top Msg & Top Msg Count \\
     \hline\hline
     sympy & 14,206 & too-many-arguments & 6,601 (46\%) \\ \hline
-    ansible &  10,431 & no-else-return & 1,711 (16\%) \\ \hline
-    salt &  7,814 & too-many-arguments & 1,640 (21\%) \\ \hline
+    ansible & 10,431 & no-else-return & 1,711 (16\%) \\ \hline
+    salt & 7,814 & too-many-arguments & 1,640 (21\%) \\ \hline
+    nova & 2,593 & no-self-use & 679 (26\%) \\ \hline
+    sqlalchemy & 2,040 & no-else-return & 700 (34\%) \\ \hline
+    astropy & 1,965 & no-else-return & 503 (26\%) \\ \hline
+    biopython & 1,930 & no-else-return & 273 (14\%) \\ \hline
+    matplotlib & 1,926 & too-many-arguments & 381 (20\%) \\ \hline
+    django & 1,720 & no-else-return & 397 (23\%) \\ \hline
+    cython & 1,718 & no-else-return & 417 (24\%) \\ \hline
+    celery & 1,626 & no-self-use & 775 (48\%) \\ \hline
+    web2py & 1,555 & no-else-return & 240 (15\%) \\ \hline
+    scikit-learn & 1,485 & too-many-arguments & 363 (24\%) \\ \hline
+    boto & 1,398 & too-many-arguments & 298 (21\%) \\ \hline
+    pip & 1,215 & no-else-return & 191 (16\%) \\ \hline
+    pandas & 1,197 & useless-object-inheritance & 316 (26\%) \\ \hline
+    swift & 1,159 & too-many-arguments & 190 (16\%) \\ \hline
+    buildbot & 1,129 & no-self-use & 177 (16\%) \\ \hline
+    youtube-dl & 1,003 & too-many-locals & 413 (41\%) \\ \hline
+    electrum & 722 & no-self-use & 163 (23\%) \\ \hline
+    conda & 660 & no-else-return & 177 (27\%) \\ \hline
+    aws-cli & 585 & no-self-use & 177 (30\%) \\ \hline
+    networkx & 568 & too-many-locals & 124 (22\%) \\ \hline
+    autobahn-python & 541 & useless-object-inheritance & 97 (18\%) \\ \hline
+    scikit-image & 499 & too-many-arguments & 134 (27\%) \\ \hline
+    mitmproxy & 488 & no-self-use & 133 (27\%) \\ \hline
+    beets & 471 & no-else-return & 137 (29\%) \\ \hline
+    pyramid & 452 & useless-object-inheritance & 116 (26\%) \\ \hline
+    mongo-python-driver & 418 & too-many-arguments & 100 (24\%) \\ \hline
+    scrapy & 381 & useless-object-inheritance & 102 (27\%) \\ \hline
+    werkzeug & 348 & useless-object-inheritance & 95 (27\%) \\ \hline
+    tornado & 326 & useless-object-inheritance & 71 (22\%) \\ \hline
+    luigi & 299 & no-self-use & 77 (26\%) \\ \hline
+    paramiko & 257 & no-self-use & 60 (23\%) \\ \hline
+    django-rest-framework & 241 & no-self-use & 65 (27\%) \\ \hline
+    cobbler & 221 & no-self-use & 64 (29\%) \\ \hline
+    mopidy & 211 & no-self-use & 54 (26\%) \\ \hline
+    peewee & 163 & useless-object-inheritance & 30 (18\%) \\ \hline
+    fail2ban & 157 & no-else-return & 30 (19\%) \\ \hline
+    mongoengine & 145 & no-else-return & 21 (14\%) \\ \hline
+    numba & 126 & too-few-public-methods & 54 (43\%) \\ \hline
+    pelican & 117 & no-else-return & 18 (15\%) \\ \hline
     ranger & 109 & no-else-return & 29 (27\%) \\ \hline
     sentry & 66 & no-self-use & 32 (48\%) \\ \hline
     raven-python & 20 & too-few-public-methods & 7 (35\%) \\ \hline

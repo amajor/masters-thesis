@@ -47,12 +47,12 @@ SELECT
       * 100, 
     2  -- Number of decimal places
   ), '%') AS "Total Project Comment-to-SLOC Ratio"
-FROM new_radon_raw_metrics AS t1_radon_raw
-INNER JOIN new_radon_mi_metric AS t2_radon_mi
+FROM radon_raw_metrics AS t1_radon_raw
+INNER JOIN radon_mi_metric AS t2_radon_mi
   ON t1_radon_raw.module_name = t2_radon_mi.module_name
-    INNER JOIN new_pylint_metrics_by_msg AS t3_python_metrics
+    INNER JOIN pylint_metrics_by_msg AS t3_python_metrics
       ON t1_radon_raw.module_name = t3_python_metrics.module_name
-        INNER JOIN new_repo_details AS t4_repo_details
+        INNER JOIN repo_details AS t4_repo_details
           ON t1_radon_raw.name = t4_repo_details.repo_name_2
 GROUP BY t1_radon_raw.name
 ORDER BY (
@@ -70,63 +70,63 @@ ORDER BY (
 \begin{table}[ht]
   \tiny
   \centering
-  \begin{tabularx}{1.2\textwidth} {
-    | l 
-    | r
-    | r
-    | r
-    | r
-    | r
-    | r
-    | >{\centering\arraybackslash}X |
+  \begin{tabularx}{1.0\textwidth} {
+    | l  % - Repository Name
+    | >{\raggedleft\arraybackslash}p{0.75cm}  % - Refactor Msgs
+    | >{\raggedleft\arraybackslash}p{1cm}  % - Project SLOC
+    | r  % - Ratio
+    | r  % - Avg Project MI
+    | >{\centering\arraybackslash}p{0.75cm}  % - MI Rank
+    | c  % - Maintainability
+    | >{\centering\arraybackslash}p{1cm} |  % - Comment-to-SLOC Ratio
   }
     \hline
     Repository & Refactor Msgs & Project SLOC & Ratio & Avg Project MI & MI Rank & Maintainability & Comment-to-SLOC Ratio \\ \hline\hline
-    raven-python & 20 & 1474 & 1.35 & 87.02 ±13.75 & A & Very high & 8.41\% \\ \hline
-    scrapy & 381 & 58768 & 0.64 & 64.47 ±17.72 & A & Very high & 5.59\% \\ \hline
-    numba & 126 & 20192 & 0.62 & 62.55 ±21.08 & A & Very high & 13.11\% \\ \hline
-    sentry & 66 & 10770 & 0.61 & 87.38 ±19.47 & A & Very high & 8.89\% \\ \hline
-    boto & 1398 & 237761 & 0.58 & 58.00 ±22.88 & A & Very high & 14.91\% \\ \hline
-    celery & 1626 & 302080 & 0.53 & 41.73 ±24.26 & A & Very high & 6.00\% \\ \hline
-    pyramid & 452 & 85302 & 0.52 & 70.25 ±24.18 & A & Very high & 10.29\% \\ \hline
-    mopidy & 211 & 40381 & 0.52 & 59.15 ±20.46 & A & Very high & 7.19\% \\ \hline
-    sympy & 14206 & 2873930 & 0.49 & 31.16 ±26.81 & A & Very high & 8.08\% \\ \hline
-    aws-cli & 585 & 126303 & 0.46 & 61.73 ±20.44 & A & Very high & 15.89\% \\ \hline
-    luigi & 299 & 68973 & 0.43 & 53.56 ±22.51 & A & Very high & 14.81\% \\ \hline
-    networkx & 568 & 147166 & 0.38 & 44.66 ±20.48 & A & Very high & 24.00\% \\ \hline
-    scikit-learn & 1485 & 396109 & 0.37 & 41.74 ±19.67 & A & Very high & 13.88\% \\ \hline
-    peewee & 163 & 44595 & 0.36 & 31.26 ±20.32 & A & Very high & 4.76\% \\ \hline
-    mongo-python-driver & 418 & 117448 & 0.35 & 43.62 ±23.74 & A & Very high & 12.44\% \\ \hline
-    buildbot & 1129 & 318794 & 0.35 & 56.60 ±23.29 & A & Very high & 17.88\% \\ \hline
-    django & 1720 & 485681 & 0.35 & 57.28 ±28.51 & A & Very high & 12.97\% \\ \hline
-    pandas & 1197 & 357537 & 0.33 & 42.07 ±25.86 & A & Very high & 9.24\% \\ \hline
-    mitmproxy & 488 & 148319 & 0.32 & 56.21 ±21.53 & A & Very high & 5.60\% \\ \hline
-    biopython & 1930 & 615445 & 0.31 & 43.54 ±23.97 & A & Very high & 17.19\% \\ \hline
-    django-rest-framework & 241 & 77488 & 0.31 & 50.68 ±28.56 & A & Very high & 9.35\% \\ \hline
-    werkzeug & 348 & 116937 & 0.29 & 34.06 ±20.89 & A & Very high & 6.20\% \\ \hline
-    autobahn-python & 541 & 182842 & 0.29 & 46.86 ±27.75 & A & Very high & 19.61\% \\ \hline
-    sqlalchemy & 2040 & 703340 & 0.29 & 32.98 ±29.94 & A & Very high & 7.17\% \\ \hline
-    cobbler & 221 & 77348 & 0.28 & 58.76 ±22.87 & A & Very high & 12.01\% \\ \hline
-    scikit-image & 499 & 187819 & 0.26 & 53.87 ±23.64 & A & Very high & 9.64\% \\ \hline
-    nova & 2593 & 981563 & 0.26 & 64.72 ±31.14 & A & Very high & 16.51\% \\ \hline
-    paramiko & 257 & 97387 & 0.26 & 43.79 ±22.00 & A & Very high & 13.78\% \\ \hline
-    tornado & 326 & 123535 & 0.26 & 37.14 ±22.48 & A & Very high & 17.28\% \\ \hline
-    conda & 660 & 260363 & 0.25 & 44.82 ±27.94 & A & Very high & 16.42\% \\ \hline
-    beets & 471 & 186165 & 0.25 & 43.66 ±26.32 & A & Very high & 15.64\% \\ \hline
-    astropy & 1965 & 780617 & 0.25 & 40.20 ±28.61 & A & Very high & 19.38\% \\ \hline
-    salt & 7814 & 3131332 & 0.24 & 45.69 ±24.78 & A & Very high & 8.43\% \\ \hline
-    ranger & 109 & 44487 & 0.24 & 45.74 ±25.48 & A & Very high & 9.49\% \\ \hline
-    pelican & 117 & 48096 & 0.24 & 35.95 ±19.42 & A & Very high & 7.82\% \\ \hline
-    swift & 1159 & 523880 & 0.22 & 37.13 ±24.09 & A & Very high & 14.30\% \\ \hline
-    pip & 1215 & 590140 & 0.20 & 47.52 ±28.78 & A & Very high & 12.61\% \\ \hline
-    matplotlib & 1926 & 943406 & 0.20 & 28.85 ±27.37 & A & Very high & 11.10\% \\ \hline
-    fail2ban & 157 & 84340 & 0.18 & 48.41 ±20.03 & A & Very high & 30.77\% \\ \hline
-    mongoengine & 145 & 80473 & 0.18 & 30.75 ±29.57 & A & Very high & 9.24\% \\ \hline
-    ansible & 10429 & 5818380 & 0.17 & 46.82 ±22.87 & A & Very high & 5.98\% \\ \hline
-    web2py & 1555 & 903496 & 0.17 & 37.78 ±29.88 & A & Very high & 10.16\% \\ \hline
-    electrum & 722 & 425576 & 0.16 & 39.41 ±28.06 & A & Very high & 9.14\% \\ \hline
-    youtube-dl & 1003 & 667075 & 0.15 & 54.16 ±19.95 & A & Very high & 5.04\% \\ \hline
-    cython & 1718 & 1183863 & 0.14 & 31.02 ±29.19 & A & Very high & 12.74\% \\ \hline
+    raven-python & 20 & 1,474 & 1.35 & 87.02 ±13.75 & A & Very high & 8.41\% \\ \hline
+    scrapy & 381 & 58,768 & 0.64 & 64.47 ±17.72 & A & Very high & 5.59\% \\ \hline
+    numba & 126 & 20,192 & 0.62 & 62.55 ±21.08 & A & Very high & 13.11\% \\ \hline
+    sentry & 66 & 10,770 & 0.61 & 87.38 ±19.47 & A & Very high & 8.89\% \\ \hline
+    boto & 1,398 & 237,761 & 0.58 & 58.00 ±22.88 & A & Very high & 14.91\% \\ \hline
+    celery & 1626 & 302,080 & 0.53 & 41.73 ±24.26 & A & Very high & 6.00\% \\ \hline
+    pyramid & 452 & 85,302 & 0.52 & 70.25 ±24.18 & A & Very high & 10.29\% \\ \hline
+    mopidy & 211 & 40,381 & 0.52 & 59.15 ±20.46 & A & Very high & 7.19\% \\ \hline
+    sympy & 14,206 & 2,873,930 & 0.49 & 31.16 ±26.81 & A & Very high & 8.08\% \\ \hline
+    aws-cli & 585 & 126,303 & 0.46 & 61.73 ±20.44 & A & Very high & 15.89\% \\ \hline
+    luigi & 299 & 68,973 & 0.43 & 53.56 ±22.51 & A & Very high & 14.81\% \\ \hline
+    networkx & 568 & 147,166 & 0.38 & 44.66 ±20.48 & A & Very high & 24.00\% \\ \hline
+    scikit-learn & 1,485 & 396,109 & 0.37 & 41.74 ±19.67 & A & Very high & 13.88\% \\ \hline
+    peewee & 163 & 44,595 & 0.36 & 31.26 ±20.32 & A & Very high & 4.76\% \\ \hline
+    mongo-python-driver & 418 & 117,448 & 0.35 & 43.62 ±23.74 & A & Very high & 12.44\% \\ \hline
+    buildbot & 1,129 & 318,794 & 0.35 & 56.60 ±23.29 & A & Very high & 17.88\% \\ \hline
+    django & 1,720 & 485,681 & 0.35 & 57.28 ±28.51 & A & Very high & 12.97\% \\ \hline
+    pandas & 1,197 & 357,537 & 0.33 & 42.07 ±25.86 & A & Very high & 9.24\% \\ \hline
+    mitmproxy & 488 & 148,319 & 0.32 & 56.21 ±21.53 & A & Very high & 5.60\% \\ \hline
+    biopython & 1,930 & 615,445 & 0.31 & 43.54 ±23.97 & A & Very high & 17.19\% \\ \hline
+    django-rest-framework & 241 & 77,488 & 0.31 & 50.68 ±28.56 & A & Very high & 9.35\% \\ \hline
+    werkzeug & 348 & 116,937 & 0.29 & 34.06 ±20.89 & A & Very high & 6.20\% \\ \hline
+    autobahn-python & 541 & 182,842 & 0.29 & 46.86 ±27.75 & A & Very high & 19.61\% \\ \hline
+    sqlalchemy & 2,040 & 703,340 & 0.29 & 32.98 ±29.94 & A & Very high & 7.17\% \\ \hline
+    cobbler & 221 & 77,348 & 0.28 & 58.76 ±22.87 & A & Very high & 12.01\% \\ \hline
+    scikit-image & 499 & 187,819 & 0.26 & 53.87 ±23.64 & A & Very high & 9.64\% \\ \hline
+    nova & 2,593 & 981,563 & 0.26 & 64.72 ±31.14 & A & Very high & 16.51\% \\ \hline
+    paramiko & 257 & 97,387 & 0.26 & 43.79 ±22.00 & A & Very high & 13.78\% \\ \hline
+    tornado & 326 & 123,535 & 0.26 & 37.14 ±22.48 & A & Very high & 17.28\% \\ \hline
+    conda & 660 & 260,363 & 0.25 & 44.82 ±27.94 & A & Very high & 16.42\% \\ \hline
+    beets & 471 & 186,165 & 0.25 & 43.66 ±26.32 & A & Very high & 15.64\% \\ \hline
+    astropy & 1,965 & 780,617 & 0.25 & 40.20 ±28.61 & A & Very high & 19.38\% \\ \hline
+    salt & 7,814 & 3,131,332 & 0.24 & 45.69 ±24.78 & A & Very high & 8.43\% \\ \hline
+    ranger & 109 & 44,487 & 0.24 & 45.74 ±25.48 & A & Very high & 9.49\% \\ \hline
+    pelican & 117 & 48,096 & 0.24 & 35.95 ±19.42 & A & Very high & 7.82\% \\ \hline
+    swift & 1,159 & 523,880 & 0.22 & 37.13 ±24.09 & A & Very high & 14.30\% \\ \hline
+    pip & 1,215 & 590,140 & 0.20 & 47.52 ±28.78 & A & Very high & 12.61\% \\ \hline
+    matplotlib & 1,926 & 943,406 & 0.20 & 28.85 ±27.37 & A & Very high & 11.10\% \\ \hline
+    fail2ban & 157 & 84,340 & 0.18 & 48.41 ±20.03 & A & Very high & 30.77\% \\ \hline
+    mongoengine & 145 & 80,473 & 0.18 & 30.75 ±29.57 & A & Very high & 9.24\% \\ \hline
+    ansible & 10,429 & 5,818,380 & 0.17 & 46.82 ±22.87 & A & Very high & 5.98\% \\ \hline
+    web2py & 1,555 & 903,496 & 0.17 & 37.78 ±29.88 & A & Very high & 10.16\% \\ \hline
+    electrum & 722 & 425,576 & 0.16 & 39.41 ±28.06 & A & Very high & 9.14\% \\ \hline
+    youtube-dl & 1,003 & 667,075 & 0.15 & 54.16 ±19.95 & A & Very high & 5.04\% \\ \hline
+    cython & 1,718 & 1,183,863 & 0.14 & 31.02 ±29.19 & A & Very high & 12.74\% \\ \hline
   \end{tabularx}
   \caption{Total refactor messages per repository, total project source line of code (SLOC), the ratio of refactor messages to SLOC, average Maintainability Index (MI) with standard deviation, and code comment-to-SLOC ratio.}
   \label{table:allRefactorSLOCRatio}

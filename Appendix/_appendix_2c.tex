@@ -3,11 +3,11 @@
 
 This section contains information from the repositories that were on the edges of refactor message counts.
 
-The sections for the projects with the highest ratio of refactor messages compared to the source lines of code are contained in Subsections \ref{appendixSubRavenPython} (Raven-Python), \ref{appendixSubScrapy} (Scrapy), and \ref{appendixSubNumba} (Numba).
+The sections for the projects with the highest ratio of refactor messages compared to the source lines of code are contained in Subsections \ref{appendixSubRavenPython} (\emph{Raven-Python}), \ref{appendixSubScrapy} (\emph{Scrapy}), and \ref{appendixSubNumba} (\emph{Numba}).
 
-The sections for the projects with the lowest ratio of refactor messages compared to the source lines of code are contained in Subsections \ref{appendixSubCython} (Cython), \ref{appendixSubYouTube} (YouTube-DL), and \ref{appendixSubElectrum} (Electrum).
+The sections for the projects with the lowest ratio of refactor messages compared to the source lines of code are contained in Subsections \ref{appendixSubCython} (\emph{Cython}), \ref{appendixSubYouTube} (\emph{YouTube-DL}), and \ref{appendixSubElectrum} (\emph{Electrum}).
 
-The sections for the projects with the most total refactor messages are contained in Subsections \ref{appendixSubSympy} (Sympy),  \ref{appendixSubAnsible} (Ansible), and \ref{appendixSubSalt} (Salt).
+The sections for the projects with the most total refactor messages are contained in Subsections \ref{appendixSubSympy} (\emph{Sympy}),  \ref{appendixSubAnsible} (\emph{Ansible}), and \ref{appendixSubSalt} (\emph{Salt}).
 
 \begin{singlespace}
   \begin{verbatim}
@@ -15,7 +15,7 @@ The sections for the projects with the most total refactor messages are containe
       t2.name AS "Repository Name",
       t2.msg AS "Most Common Refactor Message",
       SUM(t2.n::numeric) AS "Most Common Refactor Message Count"
-    FROM new_pylint_metrics_by_msg AS t2
+    FROM pylint_metrics_by_msg AS t2
       WHERE name = 'sympy'  -- Change repository name for each one
       AND code = 'R'
     GROUP BY t2.name, t2.msg
@@ -28,9 +28,9 @@ The sections for the projects with the most total refactor messages are containe
 
 \newpage
 \subsection{Raven-Python: Common Refactor Messages} \label{appendixSubRavenPython}
-This repository, Raven-Python \cite{data:raven-python}, had the highest ratio of refactor messages when compared to the number of source lines of code.
+This repository, \emph{Raven-Python} \cite{data:raven-python}, had the highest ratio of refactor messages when compared to the number of source lines of code.
 
-Only 6 were returned because there is such a low number of refactor warning messages for this project.
+Only 6 were returned because there is such a low number of refactor warning messages for this project. These represent \underline{all} of the project's refactor messages.
 
 \begin{table}[ht]
   \small
@@ -50,13 +50,13 @@ Only 6 were returned because there is such a low number of refactor warning mess
     raven-python & inconsistent-return-statements & 1 \\ \hline
     raven-python & too-many-branches & 1 \\ \hline
   \end{tabularx}
-  \caption{The 6 most common refactor messages for Raven-Python.}
+  \caption{The 6 most common refactor messages for \emph{Raven-Python}.}
   \label{table:ravenPythonWorst10}
 \end{table}
 
 \newpage
 \subsection{Scrapy: Common Refactor Messages} \label{appendixSubScrapy}
-This repository, Scrapy \cite{data:scrapy}, had the second highest ratio of refactor messages when compared to the number of source lines of code.
+This repository, \emph{Scrapy} \cite{data:scrapy}, had the second highest ratio of refactor messages when compared to the number of source lines of code.
 
 \begin{table}[ht]
   \small
@@ -80,13 +80,13 @@ This repository, Scrapy \cite{data:scrapy}, had the second highest ratio of refa
     scrapy & no-else-raise & 4 \\ \hline
     scrapy & too-many-return-statements & 4 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Scrapy.}
+  \caption{The 10 most common refactor messages for \emph{Scrapy}.}
   \label{table:scrapyWorst10}
 \end{table}
 
 \newpage
 \subsection{Numba: Common Refactor Messages} \label{appendixSubNumba}
-This repository, Numba \cite{data:numba}, had the third highest ratio of refactor messages when compared to the number of source lines of code.
+This repository, \emph{Numba} \cite{data:numba}, had the third highest ratio of refactor messages when compared to the number of source lines of code.
 
 \begin{table}[ht]
   \small
@@ -110,7 +110,7 @@ This repository, Numba \cite{data:numba}, had the third highest ratio of refacto
     numba & too-many-return-statements & 2 \\ \hline
     numba & too-many-instance-attributes & 2 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Numba.}
+  \caption{The 10 most common refactor messages for \emph{Numba}.}
   \label{table:numbaWorst10}
 \end{table}
 
@@ -118,7 +118,7 @@ This repository, Numba \cite{data:numba}, had the third highest ratio of refacto
 
 \newpage
 \subsection{Cython: Common Refactor Messages} \label{appendixSubCython}
-This repository, Cython \cite{data:cython}, had the lowest ratio of refactor messages when compared to the number of source lines of code.
+This repository, \emph{Cython} \cite{data:cython}, had the lowest ratio of refactor messages when compared to the number of source lines of code.
 
 \begin{table}[ht]
   \small
@@ -142,13 +142,13 @@ This repository, Cython \cite{data:cython}, had the lowest ratio of refactor mes
     cython & inconsistent-return-statements & 61 \\ \hline
     cython & too-many-instance-attributes & 53 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Cython.}
+  \caption{The 10 most common refactor messages for \emph{Cython}.}
   \label{table:cythonWorst10}
 \end{table}
 
 \newpage
 \subsection{YouTube-DL: Common Refactor Messages} \label{appendixSubYouTube}
-This repository, YouTube-DL \cite{data:youtube-dl}, had the second lowest ratio of refactor messages when compared to the number of source lines of code.
+This repository, \emph{YouTube-DL} \cite{data:youtube-dl}, had the second lowest ratio of refactor messages when compared to the number of source lines of code.
 
 \begin{table}[ht]
   \small
@@ -172,13 +172,13 @@ This repository, YouTube-DL \cite{data:youtube-dl}, had the second lowest ratio 
     youtube-dl & useless-object-inheritance & 26 \\ \hline
     youtube-dl & too-many-nested-blocks & 19 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for YouTube-DL.}
+  \caption{The 10 most common refactor messages for \emph{YouTube-DL}.}
   \label{table:youtubeWorst10}
 \end{table}
 
 \newpage
 \subsection{Electrum: Common Refactor Messages} \label{appendixSubElectrum}
-This repository, Electrum \cite{data:electrum}, had the third lowest ratio of refactor messages when compared to the numbe
+This repository, \emph{Electrum} \cite{data:electrum}, had the third lowest ratio of refactor messages when compared to the numbe
 
 \begin{table}[ht]
   \small
@@ -202,7 +202,7 @@ This repository, Electrum \cite{data:electrum}, had the third lowest ratio of re
     electrum & too-many-branches & 32 \\ \hline
     electrum & too-many-public-methods & 26 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Electrum.}
+  \caption{The 10 most common refactor messages for \emph{Electrum}.}
   \label{table:electrumWorst10}
 \end{table}
 
@@ -210,7 +210,7 @@ This repository, Electrum \cite{data:electrum}, had the third lowest ratio of re
 
 \newpage
 \subsection{Sympy: Common Refactor Messages} \label{appendixSubSympy}
-This repository is SymPy \cite{data:sympy}, one of the repositories with the highest count of refactor warning messages.
+This repository is \emph{SymPy} \cite{data:sympy}, one of the repositories with the highest count of refactor warning messages.
 
 \begin{table}[ht]
   \small
@@ -234,13 +234,13 @@ This repository is SymPy \cite{data:sympy}, one of the repositories with the hig
     sympy & too-many-nested-blocks & 159 \\ \hline
     sympy & too-many-ancestors & 148 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for SymPy.}
+  \caption{The 10 most common refactor messages for \emph{SymPy}.}
   \label{table:sympyWorst10}
 \end{table}
 
 \newpage
 \subsection{Ansible: Common Refactor Messages} \label{appendixSubAnsible}
-This repository is Ansible \cite{data:ansible}, one of the repositories with the highest count of refactor warning messages.
+This repository is \emph{Ansible} \cite{data:ansible}, one of the repositories with the highest count of refactor warning messages.
 
 \begin{table}[ht]
   \small
@@ -264,13 +264,13 @@ This repository is Ansible \cite{data:ansible}, one of the repositories with the
     ansible & too-few-public-methods & 512 \\ \hline
     ansible & too-many-nested-blocks & 446 \\ \hline  
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Ansible.}
+  \caption{The 10 most common refactor messages for \emph{Ansible}.}
   \label{table:ansibleWorst10}
 \end{table}
 
 \newpage
 \subsection{Salt: Common Refactor Messages} \label{appendixSubSalt}
-This repository is Salt \cite{data:salt}, one of the repositories with the highest count of refactor warning messages.
+This repository is \emph{Salt} \cite{data:salt}, one of the repositories with the highest count of refactor warning messages.
 
 \begin{table}[ht]
   \small
@@ -294,6 +294,6 @@ This repository is Salt \cite{data:salt}, one of the repositories with the highe
     salt & too-few-public-methods & 206 \\ \hline
     salt & useless-object-inheritance & 206 \\ \hline
   \end{tabularx}
-  \caption{The 10 most common refactor messages for Salt.}
+  \caption{The 10 most common refactor messages for \emph{Salt}.}
   \label{table:saltWorst10}
 \end{table}

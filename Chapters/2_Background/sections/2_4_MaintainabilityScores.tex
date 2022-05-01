@@ -5,8 +5,6 @@
 
 % --- Claim B: Review each claim from the introduction
 
-% \todo{TODO: What is the equation for maintainability index?}
-
 First, let us consider our original understanding of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
 
 In this study, we will be using Pylint and will focus on the values of the Refactor score regarding a set of open-source Python systems. We must understand what Pylint itself is doing to understand the scores we will be working with, 
@@ -20,16 +18,15 @@ Through the documentation of Pylint, we can understand how to use it and the sco
 \vspace{0.25cm}
 
 Numbers closer to \code{10} reflect systems that have fewer errors, fewer warnings, and overall better structure and consistency. In the above equation, we are using the following values \cite{pylint:docs}:
-
-\vspace{0.25cm}
-\begin{itemize}
+\begin{singlespace}
+  \begin{itemize}
     \item \textbf{statement} (\code{s}): the total number of statements analyzed
     \item \textbf{error} (\code{e}): the total number of errors, which are likely bugs in the code
     \item \textbf{warning} (\code{w}): the total number of warnings, which are python specific problems
     \item \textbf{refactor} (\code{r}): the total number of refactor warnings for bad code smells
     \item \textbf{convention} (\code{c}): the total number of convention warnings for programming standard violations
-\end{itemize}
-\vspace{0.25cm}
+  \end{itemize}
+\end{singlespace}
 
 The Refactor score is of particular interest to us and considers many features meticulously outlined on the Pylint site \cite{pylint:refactor}. These types of warnings include many checks, like prompting when to simplify a boolean condition, a useless \code{return}, and more. This score, in particular, will be part of our focus.
 
@@ -43,10 +40,27 @@ Pylint will check the code for code smells based on the definitions for document
 \end{displayquote}
 \vspace{0.25cm}
 
-% \todo{TODO: expand on this idea more}
 We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. However, there are fundamental established design principles that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction. Because of the relation of refactoring scores to the code structure itself, we will be spending much of our focus on this particular value.
 
 Finally, concerning Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard leads to making code more readable and more consistent, which may contribute to the code being more maintainable than without the standards. These standards cover things like indentation spacing, maximum line length, where to insert new lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
+
+Using Radon, we will also collect the Maintainability Index score. As mentioned earlier, many IDEs and other tools calculate this value using a similar equation. Radon calculates the value using the following equation \cite{radon:docs}:
+
+$$
+MI = max[0, 100\frac{171 - 5.2 \ln{V} - 0.23G - 16.2 \ln{L} + 50 \sin{\sqrt{2.4C}}}{171}]
+$$
+
+In this equation, we have the following values:
+\begin{singlespace}
+  \begin{itemize}
+    \item $V$ is the Halstead Volume
+    \item $G$ is the total Cyclomatic Complexity
+    \item $L$ is the number of Source Lines of Code (SLOC)
+    \item $C$ is the percent of comment lines (important: converted to radians)
+  \end{itemize}    
+\end{singlespace}
+
+The Radon documents bring up the important note that the Maintainability Index is an experimental metric and should not be taken as seriously as other metrics. However, despite this label being ``experimental,'' we will use this value as a primary indicator to look for correlations in the raw values we will collect.
 
 % --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
