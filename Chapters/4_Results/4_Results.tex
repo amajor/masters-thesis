@@ -125,4 +125,6 @@ To view the same repository set with their Maintainability Index averages, we ha
   \label{figHistogramAvgMI}
 \end{figure}
 
-\todo{TODO: add section on documentation scores here}
+Another metric that we collected was the number of lines in the repositories were designated as comments. While not necessarily the primary documentation for a software solution, inline comments can sometimes contain useful information.
+
+For each project, we calculated the ratio of comments to source lines of code (SLOC). Our ``best'' repository, \emph{Cython}, had a comment-to-SLOC ratio of 12.74\%. On the other side of the table, \emph{Raven-Python} had a ratio of 8.41\%. These values alone cannot determine what kind of documentation is contained within the code, but could be an interesting metric for further study. However, it was found that both sites do have extensive documentation available \cite{docs:cython}, \cite{docs:raven-python}. You can find a table with all ratios in Appendix Table \ref{table:allRefactorSLOCRatio}.
