@@ -24,6 +24,11 @@ This paper will review how structural quality can impact software evolution.
     * One to two page description of the paper topic including 6 to 10 references that you intend to use in your research.
   * [Course Paper](./courseproject.pdf)
     * This is a 10-12 page paper created for the Software Architecture graduate level course at Lewis University.
+* Masters Thesis
+  * [Thesis Paper](./masters_thesis.pdf)
+  * [Thesis Presentation](./masters_thesis_slides.pdf)
+    * [Presentation Slides with Notes](./masters_thesis_slides_NOTES.pdf)
+    * [Note Slides Only](./masters_thesis_slides_NOTES_ONLY.pdf)
 
 ## Code
 
