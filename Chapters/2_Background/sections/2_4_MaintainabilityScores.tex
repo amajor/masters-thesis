@@ -5,60 +5,72 @@
 
 % --- Claim B: Review each claim from the introduction
 
-% \todo{TODO: What is the equation for maintainability index?}
+First, let us consider our original interpretation of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
 
-First, let us consider our original understanding of software maintainability. While this definition focuses primarily on bug fixes and minor enhancements, maintainable projects should also have ease in their ability to evolve. Therefore, we can study the impact maintainability (structural quality) has on software evolution by reviewing the scores provided by automated code review tools.
+In this study, we will be using Pylint and will focus on the values of the Refactor score regarding a set of open-source Python systems. We must recognize what Pylint itself is doing to understand the scores we will be working with.
 
-In this study, we will be using Pylint and will be focused on the values of the Refactor score regarding a set of open-source Python systems. To understand the scores we will be working with, we must understand what Pylint itself is doing. 
-
-Through the documentation of Pylint, we can understand how to use it and the scores it will provide \cite{pylint:main}. The Pylint score itself is calculated by the following equation \cite{pylint:score}:
+Through the documentation of Pylint, we can decipher how to use it and the scores it will provide \cite{pylint:main}. The Pylint score itself is calculated by the following equation \cite{pylint:score}:
 
 \vspace{0.25cm}
 \begin{center}
-\code{10.0-((float(5*e+w+r+c)/s)*10)}
+\code{10.0 - (( float( 5 * e + w + r + c) / s ) * 10 )}
 \end{center}
 \vspace{0.25cm}
 
-Numbers closer to \code{10} reflect systems that have fewer errors, fewer warnings, and have overall better structure and consistency. In the above equation, we are using the following values \cite{pylint:docs}:
-
-\vspace{0.25cm}
-\begin{itemize}
+Numbers closer to \code{10} reflect systems that have fewer errors, fewer warnings, and overall better structure and consistency. In the above equation, we are using the following values \cite{pylint:docs}:
+\begin{singlespace}
+  \begin{itemize}
     \item \textbf{statement} (\code{s}): the total number of statements analyzed
     \item \textbf{error} (\code{e}): the total number of errors, which are likely bugs in the code
     \item \textbf{warning} (\code{w}): the total number of warnings, which are python specific problems
     \item \textbf{refactor} (\code{r}): the total number of refactor warnings for bad code smells
     \item \textbf{convention} (\code{c}): the total number of convention warnings for programming standard violations
-\end{itemize}
-\vspace{0.25cm}
+  \end{itemize}
+\end{singlespace}
 
-The Refactor score is of special interest to us and considers many features that are meticulously outlined on the Pylint site \cite{pylint:refactor}. These types of warnings include a number of checks, such as when a boolean condition could be simplified, or a useless \code{return}, and so on. This score, in particular, will be part of our focus.
+The Refactor score is of particular interest to us and considers many features meticulously outlined on the Pylint site \cite{pylint:refactor}. These types of warnings include many checks, like prompting when to simplify a boolean condition, a useless \code{return}, and more. This score, in particular, will be part of our focus.
 
-To calculate the Refactor score, Pylint will check the code for code smells based on the definitions for checks that have been documented. For every infraction, the score increases by one count. 
+Pylint will check the code for code smells based on the definitions for documented checks to calculate the Refactor score. For every infraction, the score increases by one count. 
 
 % -- How Pylint Refactor errors are related to architecture smells ------------
 
 \vspace{0.25cm}
 \begin{displayquote}
-``In computer programming, a \textbf{code smell} is any characteristic in the source code of a program that possibly indicates a deeper problem.'' \cite{wiki:code-smells}
+  ``In computer programming, a \textbf{code smell} is any characteristic in the source code of a program that possibly indicates a deeper problem.'' \cite{wiki:code-smells}
 \end{displayquote}
 \vspace{0.25cm}
 
-% \todo{TODO: expand on this idea more}
-We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. There are fundamental design principles that have been established that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and, when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction.
+We can use these Refactor scores to help us spot architecture smells. After all, code smells can point the way to deeper problems in our system. However, there are fundamental established design principles that we should consider when creating software; code smells alert us to areas that have deviated from these principles. These smells are drivers for refactoring and when addressed, can help us maintain the integrity of our architecture rather than creating a patchwork construction. Because of the relation of refactoring scores to the code structure itself, we will be spending much of our focus on this particular value.
 
-% -- Examples from our data set of the most common Refactor messages ----------
-Because of the relation of refactor scores to the code structure itself, we will be spending much of our focus on this particular value. \todo{The most common Refactor error returned in our data set was the \code{no-else-return} message. This particular message highlights when an unnecessary block of code follows an if-statement that contains a \code{return}. The second most common Refactor message was \code{too-few-public-methods}, which reminds the developer to consider whether that class is appropriate to create.}
+Furthermore, concerning Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard leads to making code more readable and more consistent, which may contribute to the code being more maintainable than without the standards. These standards cover things like indentation spacing, maximum line length, where to insert new lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
 
-Finally, in respect to Python, it is also helpful to be familiar with PEP 8, as this is the default set of standards that Pylint uses to judge Python code \cite{pylint:pep8}. This standard can be used to make code more readable and more consistent, which may contribute to the code being more maintainable. These standards cover things like indentation spacing, maximum line length, where to break lines, how to handle imports, and more. By defining a set of standards, teams can ensure they have a defined set of rules so that any contributors to the code understand the expectations (and so that automated systems like Pylint can enforce those standards to maintain readability and consistency).
+Using Radon, we will also collect the Maintainability Index score. As mentioned earlier, many IDEs and other tools compute this value using a similar formula. Radon calculates the value using the following equation \cite{radon:docs}:
+
+$$
+MI = max[0, 100\frac{171 - 5.2 \ln{V} - 0.23G - 16.2 \ln{L} + 50 \sin{\sqrt{2.4C}}}{171}]
+$$
+
+\noindent
+In this equation, we have the following values:
+\begin{singlespace}
+  \begin{itemize}
+    \item $V$ is the Halstead Volume
+    \item $G$ is the total Cyclomatic Complexity
+    \item $L$ is the number of Source Lines of Code (SLOC)
+    \item $C$ is the percent of comment lines (important: converted to radians)
+  \end{itemize}    
+\end{singlespace}
+
+The Radon documents bring up the important note that the Maintainability Index is an experimental metric and should not be taken as seriously as other metrics. While it may be true that Maintainability Index is considered ``experimental,'' we will use this value as a primary indicator to look for correlations in the raw values we will collect.
 
 % --- Claim B: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
 \subsection{Other Maintainability Characteristics} \label{subOtherCharacteristics}
 
-The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea focusing on cohesion and coupling over time for a project \cite{zhou:2020}. In a software system, we desire low coupling (allowing for changes to one area to remain independent of changes to another area) and high cohesion (indicating reduced complexity in modules, which improves maintainability). Through a few experiments on open-source software systems, the authors determined that their algorithm that calculated metrics was capable of improving package structures to have high cohesion and low coupling. Their study gives us confidence that metrics around the software's structure can provide value in keeping systems in a maintainable state, which allows for software evolution.
+The authors of ``Measurement and refactoring for package structure based on complex network'' recently reviewed a similar idea focusing on cohesion and coupling over time for a project \cite{zhou:2020}. In a software system, we desire low coupling (allowing for changes to one area to remain independent of changes to another area) and high cohesion (indicating reduced complexity in modules, which improves maintainability). Through a few experiments on open-source software systems, the authors determined that their algorithm that calculated metrics could improve package structures to have high cohesion and low coupling. Their study gives us confidence that metrics around the software's structure can provide value in keeping systems in a maintainable state, which allows for software evolution.
 
-Another variable that may impact the maintainability of code is readability. For example, in the article ``How does code readability change during software evolution?'' the authors have addressed this concern and found that most source codes were readable within the sample they reviewed. Additionally, a minority of commits changed the readability; if a file was created as less readable, it was likely that it remained that way and did not improve \cite{piantadosi:2020}. This variable (readability) in the maintainability of a software system can influence how easy or difficult it is to make a change. The authors also found that big commits, usually associated to adaptive changes (a form of software evolution), were the most prone to reduce code readability \cite{piantadosi:2020}. This assumes that smaller commits are almost always better and can lead to more readable code.
+Another variable that may impact the maintainability of code is readability. For example, in the article ``How does code readability change during software evolution?'' the authors have addressed this concern and found that most source codes were readable within the sample they reviewed. Additionally, a minority of commits changed the readability; if a file is less readable, it was likely that it remained that way and did not improve \cite{piantadosi:2020}. This variable (readability) in the maintainability of a software system can influence how easy or difficult it is to make a change. The authors also found that big commits, usually associated with adaptive changes (a form of software evolution), were the most prone to reduce code readability \cite{piantadosi:2020}. We assume that smaller commits are almost always better and can lead to more readable code.
 
-Piantadosi et al. found that changes in readability, whether improvements or disintegrations, often occurred unintentionally \cite{piantadosi:2020}. By enforcing the PEP 8 standard, we know that Pylint is encouraging systems to remain readable. Therefore, projects that use some form of automated system in their pipeline benefit from keeping their project on track in this regard, limiting the effects of readability on a software's potential for evolution.
+Piantadosi et al. found that changes in readability, whether improvements or disintegrations, often occurred unintentionally \cite{piantadosi:2020}. By enforcing the PEP 8 standard, we know that Pylint is encouraging systems to remain readable. Therefore, projects that use some form of automated system in their pipeline benefit from keeping their project on track, limiting the effects of readability on a software's potential for evolution.
 
-The paper ``Standardized code quality benchmarking for improving software maintainability'' provides additional insights into how the code's maintainability is impacted by the technical quality of source code \cite{baggen:2012}. Within their paper, the authors seek to show four key points: (1) how easy it is to determine where and how the change is made, (2) how easy it is to implement the change, (3) how easy it is to avoid unexpected effects, and (4) how easy it is to validate the changes. Their approach has shown that some tools and methods can be used to improve and maintain technical quality within their projects, allowing systems to continue to evolve at a reasonable pace.
+The paper ``Standardized code quality benchmarking for improving software maintainability'' provides insights into how the code's maintainability is impacted by the technical quality of source code \cite{baggen:2012}. Within their paper, the authors seek to show four key points: (1) how easy it is to determine where and how the change is made, (2) how easy it is to implement the change, (3) how easy it is to avoid unexpected effects, and (4) how easy it is to validate the changes. Their approach has shown that some tools and methods can improve and maintain technical quality within their projects, allowing systems to continue to evolve at a reasonable pace.

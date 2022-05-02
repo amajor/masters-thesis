@@ -1,5 +1,134 @@
 # Supporting Documents
 
+## Spreadsheets
+
+Information has been gathered and organized in Google Spreadsheets in order to
+understand the data. You can find copies of the spreadsheets below.
+
+* Filtered Repositories 
+  * [Google Sheet](https://docs.google.com/spreadsheets/d/1qIyOSli28WGFCRCH7v7OL79zOm2wITmFz70vlBlPGN8/edit?usp=sharing)
+  * [Excel Download Version](./Spreadsheets/Filtered%20Repositories.xlsx)
+* Final Repository Set
+  * [Google Sheet](https://docs.google.com/spreadsheets/d/14dJZ0UlfvQ-opwzeiR3mYqNDzONMj2Uqb6tDACKT-og/edit?usp=sharing)
+  * [Excel Download Version](./Spreadsheets/Thesis%20Repositories.xlsx)
+
+---
+
+## [Design Principles and Design Patterns](./Reviewed/DesignPrinciplesAndPatterns.pdf)
+
+> The immediate cause of the degradation of the design is well understood. The requirements have been changing in ways that the initial design did not anticipate. Often these changes need to be made quickly, and may be made by engineers who are not familiar with the original design philosophy. 
+
+_From [Wikipedia](https://en.wikipedia.org/wiki/SOLID):_
+
+The SOLID ideas are:
+
+1. The **single-responsibility principle**: "There should never be more than one reason for a class to change." In other words, every class should have only one responsibility.
+2. The **open–closed principle**: "Software entities ... should be open for extension, but closed for modification."
+3. The **Liskov substitution principle**: "Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it." See also design by contract.
+4. The **interface segregation principle**: "Many client-specific interfaces are better than one general-purpose interface."
+5. The **dependency inversion principle**: "Depend upon abstractions, not concretions."
+
+The SOLID acronym was introduced later, around 2004, by Michael Feathers.
+
+### [Single Responsibility Principle](./Reviewed/RobertMartin_SingleResponsibilityPrinciple.pdf)
+
+> This principle was described in the work of Tom DeMarco and Meilir Page-Jones. They called it cohesion.
+
+> SRP: The Single Responsibility Principle
+> THERE SHOULD NEVER BE MORE THAN ONE REASON FOR A CLASS TO CHANGE.
+
+---
+
+## [Review of approaches to manage architectural knowledge in Agile Global Software Development](./Reviewed/iet-sen.2016.0197.pdf)
+
+> Nowadays, Agile and Global Software Development (AGSD) has brought benefits and new challenges to the software industry. Among the main challenges is Architecture Knowledge Management (AKM), due to the following reasons: (i) in Agile Software Development team members prefer to convey knowledge in a face-to-face manner, over transmitting it through formal documents; and (ii) an efficient AKM in Global Software Development involves managing explicit knowledge. These opposite paradigms turn AKM into an unsolved issue in AGSD. In this study, the authors present a systematic mapping review about AKM in AGSD. From this review, they identified nine approaches that AGSD companies use to overcome the AKM challenge, which are grouped in three areas: (i) documentation artefact-based, (ii) communication-based, and (iii) methodological-based. Also, they found that the selected papers evenly support the three phases of the integrated knowledge management cycle (creation/capture, sharing/dissemination and acquisition/application), although only 7% of them support the capture of architectural knowledge in a formalised way. Finally, they conclude proposing critical points to consider in the implementation of AKM solutions in AGSD, and presenting their directions of future work.
+
+---
+
+## [A systematic literature review of open source software quality assessment models](./Reviewed/A-systematic-literature-review-of-open-source-software-quality-assessment-models.pdf)
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
+
+> **Background:** Many open source software (OSS) quality assessment models are proposed and available in the literature. However, there is little or no adoption of these models in practice. In order to guide the formulation of newer models so they can be acceptable by practitioners, there is need for clear discrimination of the existing models based on their specific properties. Based on this, the aim of this study is to perform a systematic literature review to investigate the properties of the existing OSS quality assessment models by classifying them with respect to their quality characteristics, the methodology they use for assessment, and their domain of application so as to guide the formulation and development of newer models. Searches in IEEE Xplore, ACM, Science Direct, Springer and Google Search is performed so as to retrieve all relevant primary studies in this regard. Journal and conference papers between the year 2003 and 2015 were considered since the first known OSS quality model emerged in 2003.
+
+> **Results:** A total of 19 OSS quality assessment model papers were selected. To select these models we have developed assessment criteria to evaluate the quality of the existing studies. Quality assessment models are classified into five categories based on the quality characteristics they possess namely: single-attribute, rounded category, community-only attribute, non-community attribute as well as the non-quality in use models. Our study reflects that software selection based on hierarchical structures is found to be the most popular selection method in the existing OSS quality assessment models. Furthermore, we found that majority (47%) of the existing models do not specify any domain of application.
+
+> **Conclusions:** In conclusion, our study will be a valuable contribution to the community and helps the quality assessment model developers in formulating newer models and also to the practitioners (software evaluators) in selecting suitable OSS in the midst of alternatives.
+
+This study has a lot of interesting data points about the process quality model characteristics (found in ISO 25010) and how maintainability is the most important attribute being measured in Open Source Software (OSS) in the different quality assessment models out there.
+
+### [The SQO-OSS Quality Model: Measurement Based Open Source Software Evaluation](./Reviewed/Samoladas2008_Chapter_TheSQO-OSSQualityModelMeasurem.pdf)
+
+> Software quality evaluation has always been an important part of software business. The quality evaluation process is usually based on hierarchical quality models that measure various aspects of software quality and deduce a characterization of the product quality being evaluated. The particular nature of open source software has rendered existing models inappropriate for detailed quality evaluations. In this paper, we present a hierarchical quality model that evaluates source code and community processes, based on automatic calculation of metric values and their correlation to a set of predefined quality profiles.
+
+---
+
+## [Gamification for software process improvement: a practical approach](./Reviewed/iet-sen.2018.5120.pdf)
+
+> Gamification is a research field that is intended to increase motivation, so it is especially indicated in human capital intensive environments such as the software industry. Within Software Engineering, one of the main issues regarding software process improvement (SPI) is personnel motivation in specific SPI initiatives. These issues are stronger in small and medium software development companies where employees have to deal with the pressure of deadlines and occasional work overload. To address the adoption of SPI initiatives, the researchers implemented a defined gamification framework for deployment in SPI efforts in order to increase motivation among software workers and to enhance SPI results. The framework was rolled out in a small Spanish software development organisation, which is conducting internal SPI initiatives. To validate the effectiveness of the implemented framework, a controlled experiment was carried out in which an experimental group adopted SPI improvements using a gamification approach. The implementation results show that the application of the framework does not increase personnel motivation in SPI tasks although it contributes to enhancing the SPI tasks performance. This study discusses the limitations and recommendations to implement appropriately the SPI-gamification framework in the scope of small and medium software development companies.
+
+While an interesting topic, this paper is about implementing gamefication within an organization and does not directly apply to the open source systems that we're reviewing. It is an interesting idea, but does not directly correlate with Maintainability Index and software evolution.
+
+---
+
+## [Understanding software evolution with software cities](./Reviewed/1473871612438785.pdf)
+
+> Software cities are visualizations of software systems in the form of virtual cities. They are used as platforms to integrate a large variety of product- and process-related analysis data. Their usability, however, for real-world software development often suffers from their inability to appropriately deal with software changes. Even small structural changes can disrupt the overall structure of the city, which in turn corrupts the mental maps of its users. In this article we describe a systematic approach to utilize the city metaphor for the visualization of evolving software systems as growing software cities. The main contribution is a new layout approach which explicitly takes the development history of software systems into account. The approach has two important effects: first, it creates a stable gestalt of software cities even when the underlying software systems evolve; thus, by preserving its users’ mental maps these cities are especially suitable for use during ongoing system development. Second, it makes history directly visible in the city layouts, which allows for supporting novel analysis scenarios. We illustrate such scenarios by presenting several thematic cities’ maps, each capturing specific development history aspects.
+
+Systematic approach to utilize the city metaphor:
+1. Creates a stable gestalt of software cities even when the underlying software systems evolve
+2. It makes history directly visible in the city layouts
+
+The EvoStreets approach follows 3 models to build up the map:
+1. The **primary model** for software cities captures structural and analysis data.
+    - Structural data refer to the static software structure, i.e. the decomposition into subsystems and modules, as well as dependencies among modules.
+2. The secondary model is a 2.5D **geometric model**, representing primary model data
+    - captures the main structural and evolutionary properties of the software system
+    - provides a specific, stable gestalt for each software system
+      - mainly influenced by the particular layout of the system elements
+3. **Thematic tertiary models**
+    - designed to support specific application scenarios by visualizing particular aspects of a given software system and its development history
+
+> The EvoStreets approach particularly focuses on aspects of evolution by capturing the information about the creation time of system elements in the layout and by creating stable layout sequences during the evolution of systems. This allows for supporting several application scenarios which are based on information about the history of development activities and their effects on the system structure. Typical questions developers and project managers in this context ask are “How did this component evolve?”, “Who is working on what?”,29 or “Who owns a piece of code?” and “What is the history of a piece of code?”.
+
+---
+
+## [A Systematic Literature Review of Machine Learning Techniques for Software Maintainability Prediction](./Reviewed/Alsolai_Roper_IST_2019_A_systematic_literature_review_of_machine_learning_techniques.pdf)
+
+> **Context:** Software maintainability is one of the fundamental quality attributes of software engineering. The accurate prediction of software maintainability is a significant challenge for the effective management of the software maintenance process. 
+
+> **Objective:** The major aim of this paper is to present a systematic review of studies related to the prediction of maintainability of object-oriented software systems using machine learning techniques. This review identifies and investigates a number of research questions to comprehensively summarize, analyse and discuss various viewpoints concerning software maintainability measurements, metrics, datasets, evaluation measures, individual models and ensemble models. 
+
+> **Method:** The review uses the standard systematic literature review method applied to the most common computer science digital database libraries from January 1991 to July 2018. 
+
+> **Results:** We survey 56 relevant studies in 35 journals and 21 conference proceedings. The results indicate that there is relatively little activity in the area of software maintainability prediction compared with other software quality attributes. CHANGE maintenance effort and the maintainability index were the most commonly used software measurements (dependent variables) employed in the selected primary studies, and most made use of class-level product metrics as the independent variables. Several private datasets were used in the selected studies, and there is a growing demand to publish datasets publicly. Most studies focused on regression problems and performed k-fold cross-validation. Individual prediction models were employed in the majority of studies, while ensemble models relatively rarely. 
+
+> **Conclusion:** Based on the findings obtained in this systematic literature review, ensemble models demonstrated increased accuracy prediction over individual models, and have been shown to be useful models in predicting software maintainability. However, their application is relatively rare and there is a need to apply these, and other, models to an extensive variety of datasets with the aim of improving the accuracy and consistency of results.
+
+---
+
+## [An Extensive Analysis of Machine Learning Based Boosting Algorithms for Software Maintainability Prediction](./Reviewed/ijimai7_2_9_0.pdf)
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
+
+> Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability & growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.
+
+> This study would open new doors for the software developers for carrying out comparatively more precise predictions well in time and hence reduce the overall maintenance costs.
+
+---
+
+## [Programs, Life Cycles, and Laws of Software Evolution](./Reviewed/lehman.pdf)
+
+> By classifying programs according to their relationship to the environment in which they are executed, the paper identities the sources of evolutionary pressure on computer applications and programs and shows why this results in a process of never ending maintenance activity. The resultant life cycle processes are then briefly discussed. The paper then introduces laws of Program Evolution that have been formulated following quantitative studies of the evolution of a number of different systems. Finally an example is provided of the application of Evolution Dynamics models to program release plnnning.
+
+---
+
+## [An Empirical Study of Lehman’s Law on Software Quality Evolution](./Reviewed/Yu_SoftwareQualityEvolution.pdf)
+
+> Software systems must change to adapt to new functional requirements and nonfunctional requirements. According to Lehman’s laws of software evolution, on the one side, the size and the complexity of a software system will continually increase in its life time; on the other side, the quality of a software system will decrease unless it is rigorously maintained and adapted. Lehman’s laws of software evolution, especially of those on software size and complexity, have been widely validated. However, there are few empirical studies of Lehman’s law on software quality evolution, despite the fact that quality is one of the most important measurements of a software product. This paper defines a metric—accumulated defect density—to measure the quality of evolving software systems. We mine the bug reports and measure the size and complexity growth of four evolution lines of Apache Tomcat and Apache Ant projects. Based on these studies, Lehman’s law on software quality evolution is examined and evaluated.
+
+---
+
 ## [Predicting Maintainability with Object-Oriented Metrics - An Empirical Comparison](./Reviewed/Jahnke03.pdf)
 
 From Dr. Safwan Omari:
@@ -84,6 +213,8 @@ Default Equation:
 
 ## [Standardized code quality benchmarking for improving software maintainability](./Reviewed/Standardized-code-quality-benchmarking.pdf)
 
+_Refers to [ISO 9126](https://www.iso.org/standard/22749.html), which becomes [ISO 25010](https://www.iso.org/standard/35733.html)._
+
 - Technical quality of source code impacts software maintainability
   1. how easy it is to determine where and how that change can be performed
   2. how easy it is to implement that change
@@ -114,6 +245,8 @@ Default Equation:
 
 ## [ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html)
 ### Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models
+
+_Refers to [ISO 25010](https://www.iso.org/standard/35733.html)._
 
 > THIS STANDARD WAS LAST REVIEWED AND CONFIRMED IN 2017. 
 > THEREFORE THIS VERSION REMAINS CURRENT.

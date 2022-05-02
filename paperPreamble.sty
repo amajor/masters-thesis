@@ -3,7 +3,7 @@
 % Preset Packages
 \usepackage{cite} % Used to cite sources
 \usepackage[hyphens]{url} % Used to prevent hypens in URLs
-\usepackage{hyperref} % Used to make URLs clickable
+\usepackage[hidelinks]{hyperref} % Used to make URLs clickable
 \usepackage{graphicx} % Used to set the image path
 \usepackage{wrapfig} % Used to let text wrap around images
 \usepackage{xcolor} % Used to provide font color
@@ -11,7 +11,12 @@
 \usepackage{setspace} % Used to provide line spacing
 \usepackage{import} % Used to import additional pages
 \usepackage{tabularx} % Used to set fixed width on tables
-% \usepackage{tabluar} % Used to create signature lines on signature page
+
+
+\usepackage{caption} % Used to set the size of figure captions
+% Available values for font sizes in the captions are 
+% scriptsize, footnotesize, small, normalsize, large, Large
+\captionsetup{font=footnotesize,labelfont=footnotesize}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}

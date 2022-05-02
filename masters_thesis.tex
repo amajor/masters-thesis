@@ -22,6 +22,7 @@
 % =============================================================================
 % =  BEGINNING OF THE DOCUMENT
 % =============================================================================
+
 \begin{document}
 
 % Include Page Numbers - Roman Numerals for Front Matter
@@ -65,7 +66,9 @@
 % =============================================================================
 
 \newpage
-\tableofcontents
+\begin{singlespace}
+  \tableofcontents
+\end{singlespace}
 
 % =============================================================================
 % =  List of Tables
@@ -73,7 +76,9 @@
 
 \newpage
 \addcontentsline{toc}{section}{List of Tables}
-\listoftables
+\begin{singlespace}
+  \listoftables
+\end{singlespace}
 
 % =============================================================================
 % =  List of Figures
@@ -81,7 +86,9 @@
 
 \newpage
 \addcontentsline{toc}{section}{List of Figures}
-\listoffigures
+\begin{singlespace}
+  \listoffigures
+\end{singlespace}
 
 % =============================================================================
 % =  Paper Content
@@ -91,11 +98,63 @@
 \cleardoublepage% \clearpage
 \pagenumbering{arabic}
 
+% \todo{========== INSERT SOMEWHERE ==========} 
+
+% \begin{figure}[ht]
+%   \centerline{
+%     \includegraphics[width=0.7\columnwidth]{Lehman_Figure4.png}
+%   }
+%   \caption{Lehman's depiction of ``E-Programs'' \cite{lehman:1980}}
+%   \label{figEPrograms}
+% \end{figure}
+
+% The programs we write become part of the world around that it models. These programs, especially with the advent of mobile technology, have become embedded in our world. Lehman recognized this decades ago and acknowledged the relationship of these types of programs to our world, as seen in ``Fig. \ref{figEPrograms}.'' \cite{lehman:1980}
+
+% ``Software Maintainability is an indispensable factor to acclaim for the quality of particular software. It describes the ease to perform several maintenance activities to make a software adaptable to the modified environment. The availability \& growing popularity of a wide range of Machine Learning (ML) algorithms for data analysis further provides the motivation for predicting this maintainability.'' \cite{gupta:2021}
+
+% ``This study would open new doors for the software developers for carrying out comparatively more precise predictions well in time and hence reduce the overall maintenance costs.'' \cite{gupta:2021}
+
+% ``There are ten software maintainability measurements used in selected primary studies: CHANGE maintenance effort, corrective maintenance, adaptive maintenance effort, maintenance evaluation by maintainability index, maintenance evaluation by change proneness, maintenance time, maintenance cost, maintenance attributes, maintenance components and other measurements.'' \cite{alsolai:2019}
+
+% There have been studies done to help visualize the evolution of software through the use of city maps. \cite{steinbruckner:2012}
+
+% The EvoStreets approach follows 3 models to build up the map \cite{steinbruckner:2012}:
+% \begin{enumerate}
+%   \item The \textbf{primary model} for software cities captures structural and analysis data.
+%   \begin{itemize}
+%     \item Structural data refer to the static software structure, i.e. the decomposition into subsystems and modules, as well as dependencies among modules.
+%   \end{itemize}
+%   \item The secondary model is a 2.5D \textbf{geometric model}, representing primary model data
+%   \begin{itemize}
+%     \item captures the main structural and evolutionary properties of the software system
+%     \item provides a specific, stable gestalt for each software system
+%     \item --mainly influenced by the particular layout of the system elements
+%   \end{itemize}
+%   \item \textbf{Thematic tertiary models}
+%   \begin{itemize}
+%     \item designed to support specific application scenarios by visualizing particular aspects of a given software system and its development history
+%   \end{itemize}
+% \end{enumerate}
+
+% ``Software process improvement (SPI) is seen as the dominant approach to improving software products in software development organisations [1].'' \cite{herranz:2019}
+
+% % [1] --> Shih, C.-C., Huang, S.-J.: ‘Exploring the relationship between organizational culture and software process improvement deployment’, Inf. Manage., 2010, 47, (5–6), pp. 271–281
+
+% ``SPI has become the primary approach to improving software quality and reliability, employee and customer satisfaction, and return on investment [2].'' \cite{herranz:2019}
+
+% % [2] --> Mathiassen, L., Ngwenyama, O.K., Aaen, I.: ‘Managing change in software process improvement’, IEEE Softw.., 2005, 22, (6), pp. 84–91
+
+% ``The result of this study shows that maintainability is the most significant and ubiquitous product quality characteristic considered in the literature while usability is the most significant attribute in the quality in use category.'' \cite{adewumi:2016}
+
+% \todo{========== END THINGS TO INSERT ==========}
+
+% Chapter one defines the overall importance of the problem areas and provides an introduction into what you did.
 \newpage
 \include{Chapters/1_Introduction/1_Introduction}
 \include{Chapters/1_Introduction/sections/1_1_MaintainabilityAndPylint.tex}
 \include{Chapters/1_Introduction/sections/1_2_PaperStructure.tex}
 
+% Chapter two is why you did it in the context of what was previously known.
 \newpage
 \include{Chapters/2_Background/2_Background}
 \include{Chapters/2_Background/sections/2_1_TheProblem.tex}
@@ -104,14 +163,17 @@
 \include{Chapters/2_Background/sections/2_5_Documentation.tex}
 \include{Chapters/2_Background/sections/2_6_RelatedWorks.tex}
 
+% Chapter three is how you did it.
 \newpage
 \include{Chapters/3_Methodology/3_Methodology}
 \include{Chapters/3_Methodology/sections/3_1_InitialRepositorySet.tex}
 \include{Chapters/3_Methodology/sections/3_2_FilteredRespositorySet.tex}
 
+% Chapter four is what you found.
 \newpage
 \include{Chapters/4_Results/4_Results}
 
+% Chapter five is what it all means – putting the pieces together, (what’s your contribution to the research field).
 \newpage
 \include{Chapters/5_Conclusion/5_Conclusion}
 
@@ -120,7 +182,9 @@
 % =============================================================================
 
 \newpage
-\include{references}
+\begin{singlespace}
+  \include{references}
+\end{singlespace}
 
 % =============================================================================
 % =  Appendices
@@ -128,15 +192,20 @@
 
 \newpage
 \include{Appendix/_appendix_1}
+\include{Appendix/_appendix_2a}
+\include{Appendix/_appendix_2b}
+\include{Appendix/_appendix_2c}
+\include{Appendix/_appendix_3}
 
 % =============================================================================
 % =  Author Bibliography (Optional)
 % =============================================================================
 
-\newpage
-% \include{Ancillary Pages/_bibliography_page}
+% \newpage
+% \include{Ancillary Pages/_bibliography_page.tex}
 
 % =============================================================================
 % =  END OF THE DOCUMENT
 % =============================================================================
+
 \end{document}

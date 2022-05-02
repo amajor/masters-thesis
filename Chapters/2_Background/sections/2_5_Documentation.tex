@@ -1,40 +1,34 @@
 % -----------------------------------------------------------------------------
 % -  (C) Documentation can improve maintainability.
 % -----------------------------------------------------------------------------
-\subsection{Documentation and Maintainability} \label{subDocumentation}
+\subsection{Documentation \& Maintainability} \label{subDocumentation}
 
 % --- Claim C: Review each claim from the introduction
 
-Our assumption is that the Refactor score in projects should correlate to the evolution of the system. The first pass through the data is not conclusive in this particular detail, as the projects reviewed have many other factors contributing to the evolution of the project (number of contributors, size of the code system, etc.). Our assumption is that the correlation between software quality and software evolution would indicate that the better-scoring code systems are readable in themselves. In addition, it would be helpful to understand whether there are any similarities in how a system is documented that could contribute to improved software evolution of a system.
-
-% \todo{TODO: what kind of documentation do the ``good'' projects have?}
-
-% \todo{TODO: what kind of documentation do the ``bad'' projects have?}
+We reason that the Refactor score in projects should correlate to the system's evolution. The first pass through the data is not conclusive in this detail, as the projects reviewed have many other factors contributing to the evolution of the project (number of contributors, size of the code system, and more). We assume that the correlation between software quality and software evolution would indicate that the better-scoring code systems are readable. In addition, it would be helpful to understand whether there are any similarities in the system's documentation that could contribute to improved software evolution of a system.
 
 % --- Claim C: Identify the evidence (analysis and comparison, theorems, measurements, case studies)
 
-The textbook, ``Software Architecture in Practice,'' chapter 18 provides some insight in documentation around architecture \cite{book:software-architecture-in-practice}:
+In the textbook ``Software Architecture in Practice,'' chapter 18 provides some insight into documentation around architecture \cite{book:software-architecture-in-practice}:
 
 \vspace{0.25cm}
 \begin{displayquote}
-``If you go to the trouble of creating a strong architecture, one that you expect to stand the test of time, then you \textit{must} go to the trouble of describing it in enough detail, without ambiguity, and organizing it so that others can quickly find and update the needed information.''
+  ``If you go to the trouble of creating a strong architecture, one that you expect to stand the test of time, then you \textit{must} go to the trouble of describing it in enough detail, without ambiguity, and organizing it so that others can quickly find and update the needed information.''
 \end{displayquote}
 \vspace{0.25cm}
 
 The book describes how documentation holds the results of significant design decisions, providing valuable insights into decisions down the road. While not directly related to the Pylint Refactor score and not within the source code itself, it is still helpful to remind ourselves that documentation can also influence the ability of a software system to evolve.
 
-\todo{Our ``best scores'' (regarding the current Pylint Refactor score) were found to have relatively organized and useful documentation. The code repository for \emph{Munki} provided documentation for previous versions, lending insight into design decisions as the software evolved \cite{data:munki}. The repository for \emph{Raven}, however, was a deprecated version that has since been replaced by a paid platform known as \emph{Sentry}, but had ample documentation \cite{data:raven-python}. It is possible that the ``death'' of that software system was not lack of evolution, but rather a business decision. \emph{ElastAlert} was another system with good scores and easy-to-follow documentation, though it is focused more for the use of the system rather than how to enhance the system itself \cite{data:elastalert}.}
-
-\todo{When reviewing our ``worst offenders'' in current Refactor scores, it was noted that even with poor scores, these repositories were able to continue to see engagement from developers. While further inspection will be needed to understand whether the code itself is evolving or just has engagement from a maintenance level, it is interesting to note that there is decent documentation provided. \emph{SymPy} goes as far as documenting the architecture for the software as well as design decisions, enabling developers to better understand the structure as they make contributions \cite{data:sympy-docs}.}
-
 \vspace{0.25cm}
 \begin{displayquote}
-``Our study has shown that the primary studies provide empirical evidence on the positive effect of documentation of designs pattern instances on programme comprehension, and therefore, maintainability.''
+  ``Our study has shown that the primary studies provide empirical evidence on the positive effect of documentation of designs pattern instances on programme comprehension, and therefore, maintainability.''
 \end{displayquote}
 
 \begin{displayquote}
-``...developers should pay more effort to add such documentation, even if in the form of simple comments in the source code.''
+  ``...developers should pay more effort to add such documentation, even if in the form of simple comments in the source code.''
 \end{displayquote}
 \vspace{0.25cm}
 
-In research done by Wedyan and Abufakher (quoted above), it was found that documenting design patterns was useful in enhancing code understanding \cite{wedyan:2020}. In turn, the comprehensibility impacts the maintainability of the code in a positive way, which continues to reinforce the impact that documentation can have and how it ties well into considerations for software structure.
+In research done by Wedyan and Abufakher (quoted above), documenting design patterns helped enhance code understanding \cite{wedyan:2020}. In turn, comprehensibility impacts the maintainability of the code positively, reinforcing the impact that documentation can have and how it ties nicely into considerations for software structure.
+
+Borrego et al. discussed that software development teams must have access to architecture knowledge, as that is the base on which they will build and understand the technical part of any software development cycle \cite{borrego:2017}. However, there is recognition that an absence of knowledge management is a factor in the failure of a development project \cite{borrego:2017}. Bjørnson and Dingsøyr noted that software engineering knowledge is managed chiefly through repositories that will support knowledge flows \cite{bjornson:2008}.

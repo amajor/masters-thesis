@@ -290,3 +290,4 @@ TSWLatexianTemp*
 # Additional to remove.
 .DS_Store
 .idea/*
+Supporting Data/.idea/*

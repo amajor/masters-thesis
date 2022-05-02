@@ -1,6 +1,37 @@
-\addcontentsline{toc}{section}{References}
-\section*{Appendix A} \label{sectionAppendixA}
+\setcounter{chapter}{7}
 
-Type or paste your appendices here. Appendices are a place to organize and include all of the “extra” material that is important to your research work but that is too detailed for the main text.  Examples can include: specific analytical methods, computer code, spreadsheets of data, details of statistical analyses, etc.  But, these materials do not speak for themselves.  There should be a reference to these materials from the main chapters (complete details included in Appendix A) and there should be some text at the beginning of each appendix to briefly explain what the information is and means that is included in that appendix.
+\chapter*{Appendix} \label{chapterAppendix}
+\addcontentsline{toc}{chapter}{Appendix}
 
-\todo{TODO: Consider a list of the pylint messages for refactor scores, etc.}
+\section{Pylint: Refactor Scores} \label{appendixPylintRefactor}
+
+The score in Pylint is a value out of 10, with 10 being the best. Pylint has a number of types of messages:
+\begin{singlespace}
+  \begin{enumerate}
+    \item Convention
+    \item Error
+    \item Fatal
+    \item Information
+    \item Refactor
+    \item Warning
+  \end{enumerate}
+\end{singlespace}
+
+There is a very large list of all messages at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html}{Overview of All Pylint Messages}.
+
+We spend most of our time reviewing the Refactor messages, found at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html#refactor}{Pylint Refactor Messages}.
+
+Additionally, the Convention messages are also helpful for review, found at \href{https://pylint.pycqa.org/en/latest/messages/messages_list.html#convention}{Pylint Convention Messages}.
+
+\section{Radon: Maintainability Index} \label{appendixRadonRefactor}
+
+In this paper, we use Radon as one method for finding the Maintainability Index (MI) for projects, at the module (file) level. This grading scale is provided by Radon to align with its scores \cite{radon:docs}.
+
+\begin{center}
+  \begin{tabular}{ c c c }
+    MI Score & Rank & Maintainability \\ \hline\hline
+    100 - 20 & A & Very high \\ \hline
+    19 - 10 & B & Medium \\ \hline
+    9 - 0 & C & Extremely Low \\ \hline    
+  \end{tabular}
+\end{center}

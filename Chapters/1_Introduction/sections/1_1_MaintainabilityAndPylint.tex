@@ -1,9 +1,13 @@
-\section{Maintainability Index and Pylint Refactor Scores}
+\section{Maintainability Index \& Refactor Scores}
 
-Pylint is a static analysis tool that identifies several classes of code quality concerns. Particularly relevant to our study are refactor violations, which report on various code smells. We can assume that there must be some correlation between Maintainability Index and the type and number of code smells in a software system, quantified by the Pylint refactor score.
+``Software maintainability is one of the fundamental external quality attributes and is recognised as a research area of primary concern in software engineering \cite{alsolai:2019}.'' As such, we need to find ways to measure the maintainability of a software system. As mentioned earlier, many OSS quality models already include maintainability as a characteristic measurement.
 
-This study explores such assumptions and systematically investigates any correlation between the Maintainability Index metric and the Pylint Refactor score. Furthermore, we perform analysis on specific refactor violations to reveal and shed light on the relative effectiveness of the different refactor violations and their relationship to Maintainability Index.
+Pylint is a static analysis tool that identifies several classes of code quality concerns. Refactor violations are relevant to our study, which reports various code smells. However, we can assume there must be some correlation between the Maintainability Index and the type and number of code smells in a software system, quantified by the Pylint refactor score.
 
-The structural quality of a software system will impact the software evolution. If the project has poor structural quality, the architecture will minimize its ability to evolve, and the software system will eventually ``die-off'' so to speak.
+To compute various code metrics, Radon is another Python tool available \cite{radon:docs}. One such score that Radon provides is the Maintainability Index (MI), which tells us how easy it should be to support and change the program. Radon calculates this value using a formula that consists of SLOC (Source Lines Of Code), Cyclomatic Complexity, and Halstead volume.
 
-We will look at many open-source Python systems using Pylint and attempt to correlate the data from the Pylint scores to the level of ease in adding new features to the system. This will determine if a system is more maintainable with better Pylint scores.
+This study explores such assumptions and systematically investigates any correlation between Radon's Maintainability Index metric and the Pylint Refactor message count. Furthermore, we perform analysis on specific refactor violations to reveal and shed light on the relative effectiveness of the different refactor violations and their relationship to Maintainability Index.
+
+The structural quality of a software system will impact the software evolution. If the project has poor structural quality, the architecture will minimize its ability to evolve, and the software system will eventually ``die off'' so to speak.
+
+We will look at many open-source Python systems using Pylint and Radon and attempt to correlate the data from the scores to the level of ease in adding new features to the system. The Pylint and Radon results will determine if a system is more maintainable with better scores.
